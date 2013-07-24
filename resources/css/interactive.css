@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/*character style*/
+.text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #555555;
+}
+.bignumber {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 200%;
+	color: #026CB6;
+}
+
+.tooltip_title{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #026CB6;
+	text-transform: uppercase;
+}

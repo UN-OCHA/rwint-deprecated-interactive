@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+<!-- jQuery to load the file with AJAX needed to show the markers from the CSV -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<!-- Convert CSV to GeoJSON - Should be downloaded and use as local resource -->
+<script src="/js/csv2geojson.js"></script>
+
+<link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+<style>
+body { margin:0; padding:0; }
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+  /* Color should not be #FFF, so that the tooltip content can be seen */
+  color: #666;
+}
+#intro {
+  position:absolute;
+  top:20px;
+  left:50px;
+  z-index:100;
+  width: 500px;
+}
+
+</style>
+<title>Pakistan - Interactive</title>
+<link href="/css/interactive.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div id='intro'><span class="tooltip_title">Displacement in north-west Pakistan</span><br>
+<span class="text">Pakistan's regions of Baluchistan, the Federally Administered Tribal Areas (FATA) and Khyber-Pakhtunkhwa (formerly known as North West Frontier Province) that border Afghanistan have suffered years of violence between militants and government security forces since 2008.<br>
+In recent years, severe flooding has affected millions in Pakistan, and worsened the plight of those who had fled fighting.</span>
+</div>
+
+<div id='map'></div>
+
+<script>
+  // Create a map and overwrite min, max zoom and set the center and default zoom level.
+  var map = L.mapbox.map('map', 'reliefweb.1_AVMU_World', {zoomControl: false, minZoom: 4, maxZoom: 7})
+    .setView([30, 71], 6);
+
+  // Set zoom control to the right.
+  new L.Control.Zoom({ position: 'topright' }).addTo(map);
+
+  var externalTooltip = true;
+
+  // Add custom popups to each using our custom feature properties.
+  map.markerLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+    feature = marker.feature;
+
+    // Create custom popup content.
+    var popupContent =  '<span class="tooltip_title">' + feature.properties.camp + ' camp</span><br>' +
+                        'in ' + feature.properties.district + ' district<br>' +
+                        '<span class="bignumber">' + feature.properties.IDP_130714 + '</span> IDPs';
+
+    // http://leafletjs.com/reference.html#popup.
+    marker.bindPopup(popupContent,{
+      closeButton: false,
+      minWidth: 100
+    });
+  });
+
+  // Display the tooltip at the position of the marker when the mouse is over a marker.
+  map.markerLayer.on('mouseover', function(e) {
+  e.layer.openPopup();
+  });
+  map.markerLayer.on('mouseout', function(e) {
+  e.layer.closePopup();
+  });
+
+  // Load the data from a "published" google spreadsheet.
+  // File > Publish to Web > Select 'Sheet' > Start publishing.
+  // Replace 'key' below with the spreadsheet key.
+  var key = '0Ap0itMVUpmqcdGxmYnNQeVJiNTd2Y0p0eU1zVGEwV2c';
+  var url = 'https://docs.google.com/spreadsheet/pub?key=' + key + '&single=true&gid=0&output=csv';
+  $.get(url, function(data) {
+  map.markerLayer.setGeoJSON(csv2geojson.csv2geojson(data));
+  });
+
+  // Define circle options
+  // http://leafletjs.com/reference.html#circle
+  var circle_options = {
+    color: '#fff',      // Stroke color
+    opacity: 1,         // Stroke opacity
+    weight: 1,         // Stroke weight
+    fillColor: '#ED1C24',  // Fill color
+    fillOpacity: 0.6    // Fill opacity
+  };
+  //would like to replace the circle size with the Field "circle_size" on https://docs.google.com/spreadsheet/pub?key=0Ap0itMVUpmqcdGxmYnNQeVJiNTd2Y0p0eU1zVGEwV2c&single=true&gid=2&output=csv
+  var circle_size = 100000;
+  //would like to grab automatically the longitude and latitude from https://docs.google.com/spreadsheet/pub?key=0Ap0itMVUpmqcdGxmYnNQeVJiNTd2Y0p0eU1zVGEwV2c&single=true&gid=2&output=csv
+  var circle = L.circle([33.9169627, 71.8071181], circle_size, circle_options).addTo(map);
+
+  </script>
+
+</body>
+</html>
