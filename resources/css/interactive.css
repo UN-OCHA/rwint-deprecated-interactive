@@ -1,19 +1,47 @@
 @charset "utf-8";
 
-/*character style*/
-.text {
+body {
+  margin:0;
+  padding:0;
+}
+#map {
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
+  /* Color should not be #FFF, so that the tooltip content can be seen */
+  color: #666;
+}
+
+/* Tooltip style */
+#map .marker-tooltip .camp {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: #026CB6;
+	text-transform: uppercase;
+}
+#map .marker-tooltip .district {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
 	color: #555555;
 }
-.bignumber {
+#map .marker-tooltip .idp-number {
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bold;
-	font-size: 200%;
+	font-size: 150%;
 	color: #026CB6;
 }
 
-.tooltip_title{
+/* Intro */
+#intro {
+  position:absolute;
+  top:20px;
+  left:50px;
+  z-index:100;
+  width: 500px;
+}
+#intro h2 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
 	font-weight: bold;
