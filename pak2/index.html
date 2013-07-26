@@ -29,7 +29,7 @@ In recent years, severe flooding has affected millions in Pakistan, and worsened
   // Variables from post page.
   var center_lon = 30;
   var center_lat = 71;
-  var zoom_min = 4;
+  var zoom_min = 5;
   var zoom_max = 7;
   var zoom_default = 6;
   var data_key = '0Ap0itMVUpmqcdGxmYnNQeVJiNTd2Y0p0eU1zVGEwV2c';
@@ -66,6 +66,7 @@ In recent years, severe flooding has affected millions in Pakistan, and worsened
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
   
   //add layers
+  L.mapbox.tileLayer('reliefweb.pak_flooda_2012_ocha').addTo(map);
   L.mapbox.tileLayer('reliefweb.pak_base_pco').addTo(map);
 
   // Add custom popups to each using our custom feature properties.
