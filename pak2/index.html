@@ -6,6 +6,9 @@
 L_PREFER_CANVAS = true;
 </script>
 <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
+  <![endif]-->
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 <script src="/resources/js/csv2geojson.js"></script>
 <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
@@ -61,20 +64,21 @@ In recent years, severe flooding has affected millions in Pakistan, and worsened
 
   // Set zoom control to the right.
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
+  
+  //add layers
+  L.mapbox.tileLayer('reliefweb.pak_base_pco').addTo(map);
 
   // Add custom popups to each using our custom feature properties.
   map.markerLayer.on('layeradd', function(e) {
     var marker = e.layer,
     feature = marker.feature;
 
-    var camp = feature.properties.Name;
     var district = feature.properties.District
-    var IDP_number = parseInt(feature.properties.IDP_family_130714) + parseInt(feature.properties.IDP_ind_130714);
+    var IDP_number = parseInt(feature.properties.IDP_ind_130714);
 
     // Create custom popup content.
     var popupContent =  '<div class="marker-tooltip">' +
-                        '<span class="camp">' + camp + ' camp</span>' + '</br>' +
-                        '<span class="district">in ' + district + ' district</span>' + '</br>' +
+                        '<span class="district">' + district + ' district</span>' + '</br>' +
                         '<span class="idp-number">' + IDP_number + '</span> IDPs' +
                         '</div>';
 
