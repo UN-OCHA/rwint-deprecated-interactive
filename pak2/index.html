@@ -6,20 +6,21 @@
 L_PREFER_CANVAS = true;
 </script>
 <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
-  <!--[if lte IE 8]>
-    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' >
-  <![endif]-->
 <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-<script src="/resources/js/csv2geojson.js"></script>
+<script src="resources/js/csv2geojson.js"></script>
 <link href='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
-<link href="/resources/css/interactive.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]>
+<link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' />
+<![endif]-->
+<link href="resources/css/interactive.css" rel="stylesheet" type="text/css" />
 <title>Pakistan - Interactive</title>
 </head>
 <body>
 
 <div id='intro'>
 <h2>Displacement in north-west Pakistan</h2>
-Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhwa (KP) province in north-western Pakistan has displaced over 4 million people since 2008, of whom 3 million have returned home. Over 1 million people remain displaced across KP and FATA. About 11 per cent of the internally displaced people (IDPs) live in camps; the rest are in host communities. </div>
+Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhwa (KP) province in north-western Pakistan has displaced over 4 million people since 2008, of whom 3 million have returned home. Over 1 million people remain displaced across KP and FATA. About 11 per cent of the internally displaced people (IDPs) live in camps; the rest are in host communities.
+</div>
 
 <div id='map'></div>
 
@@ -31,27 +32,98 @@ Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhw
   var zoom_max = 7;
   var zoom_default = 6;
   var data_key = '0Ap0itMVUpmqcdGxmYnNQeVJiNTd2Y0p0eU1zVGEwV2c';
-  var data_sheet_id = '2';
+  // Just add the ID of the spreadsheet to the end of the following URL.
+  var data_url = 'https://docs.google.com/spreadsheet/pub?key=' + data_key + '&single=true&output=csv&gid=';
 
-  // Define the style of the circle markers.
-  var circle_min_size = 10000;
-  var circle_options = {
-    color: '#f00',      // Stroke color
-    opacity: 0.8,         // Stroke opacity
-    weight: 2,         // Stroke weight
-    fillColor: '#ED1C24',  // Fill color
-    fillOpacity: 0.6    // Fill opacity
-  };
+  /*******************************
+   * Marker Layer from CSV class *
+   *******************************/
 
-  // Defined the function used to style the markers.
-  L.mapbox.marker.style = function (feature, latlon) {
-    var radius = circle_min_size;
-    if (feature.properties && feature.properties.circle_size) {
-      // Get the circle size. Would be better not to have the comma.
-      radius = parseInt(feature.properties.circle_size.replace(',', ''));
+  var CSVMarkerLayer = L.FeatureGroup.extend({
+    options: {
+      style: L.mapbox.marker.style,
+      popup: function() { return ''; },
+      hover: true
+    },
+
+    initialize: function(_, options) {
+      L.setOptions(this, options);
+
+      this._layers = {};
+
+      if (typeof _ === 'string') {
+        this.loadUrl(_);
+      }
+      else if (_ && typeof _ === 'object') {
+        this.setGeoJosn(_);
+      }
+
+      if (this.options.hover) {
+        this.on('mouseover', function(e) {
+          e.layer.openPopup();
+        }).on('mouseout', function(e) {
+          e.layer.closePopup();
+        });
+      }
+    },
+
+    setGeoJson: function(_) {
+      this._geojson = _;
+      this.clearLayers();
+      this._initialize(_);
+    },
+
+    getGeoJson: function(_) {
+      return this._geojosn;
+    },
+
+    loadUrl: function(url) {
+      var xhr = new XMLHttpRequest();
+
+      xhr.onprogress = function() {};
+
+      xhr.onload = L.bind(function() {
+        this.setGeoJson(csv2geojson.csv2geojson(xhr.responseText));
+        this.fire('ready');
+      }, this);
+
+      xhr.onerror = L.bind(function (error) {
+        this.fire('error', {error: error || true});
+      }, this);
+
+      xhr.open('GET', url, true);
+      xhr.send(null);
+
+      return this;
+    },
+
+    _initialize: function(json) {
+      var features = L.Util.isArray(json) ? json : json.features;
+
+      if (features) {
+        for (var i = 0, l = features.length; i < l; i++) {
+          this._initialize(features[i]);
+        }
+      }
+      else if (json.geometries || json.geometry) {
+        var layer = L.GeoJSON.geometryToLayer(json, this.options.style);
+        var popup = this.options.popup(json);
+
+        if (popup) {
+          layer.bindPopup(popup,{
+            closeButton: false,
+            minWidth: 100
+          });
+        }
+
+        this.addLayer(layer);
+      }
     }
-    return L.circle(latlon, radius || circle_min_size, circle_options);
-  };
+  });
+
+  /*****************************
+   * Map Creation starts here. *
+   *****************************/
 
   // Create a map and overwrite min, max zoom and set the center and default zoom level.
   var map = L.mapbox.map('map', 'reliefweb.1_AVMU_World', {
@@ -62,47 +134,64 @@ Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhw
 
   // Set zoom control to the right.
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
-  
+
   //add layers
   L.mapbox.tileLayer('reliefweb.pak_flooda_2012_ocha').addTo(map);
   L.mapbox.tileLayer('reliefweb.pak_base_pco').addTo(map);
 
-  // Add custom popups to each using our custom feature properties.
-  map.markerLayer.on('layeradd', function(e) {
-    var marker = e.layer,
-    feature = marker.feature;
+  // Create the IDP layer.
+  var IDP_layer = new CSVMarkerLayer(data_url + 2, {
+    // Marker styling function. Draw cicles.
+    style: function(feature, latlon) {
+      // Get the circle size. Would be better not to have the comma.
+      radius = parseInt(feature.properties.circle_size.replace(',', ''));
 
-    var district = feature.properties.District
-    var IDP_number = parseInt(feature.properties.IDP_ind_130714);
+      return L.circle(latlon, radius, {
+        color: '#f00',        // Stroke color
+        opacity: 0.8,         // Stroke opacity
+        weight: 2,            // Stroke weight
+        fillColor: '#ED1C24', // Fill color
+        fillOpacity: 0.6      // Fill opacity
+      });
+    },
 
-    // Create custom popup content.
-    var popupContent =  '<div class="marker-tooltip">' +
-                        '<span class="district">' + district + ' district</span>' + '</br>' +
-                        '<span class="idp-number">' + IDP_number + '</span> IDPs' +
-                        '</div>';
+    // Popup content function.
+    popup: function(feature) {
+      var district = feature.properties.District;
+      var IDP_number = feature.properties.IDP_ind_130714;
+      return '<div class="marker-tooltip">' +
+             '<span class="district">' + district + ' district</span>' + '</br>' +
+             '<span class="idp-number">' + IDP_number + '</span> IDPs' +
+             '</div>';
+    }
+  }).addTo(map);
 
-    // @see http://leafletjs.com/reference.html#popup
-    marker.bindPopup(popupContent,{
-      closeButton: false,
-      minWidth: 100
-    });
-  });
+  // Create the Camp layer.
+  var camp_layer = new CSVMarkerLayer(data_url + 0, {
+    // Marker styling function. Normal markers.
+    style: function(feature, latlon) {
+      var properties = feature.properties;
+      properties['marker-size'] = 'medium';
+      properties['marker-color'] = '#7e7e7e';
+      properties['marker-symbol'] = 'village';
+      return L.marker(latlon, {
+        icon: L.mapbox.marker.icon(properties),
+      });
+    },
 
-  // Display the tooltip at the position of the marker when the mouse is over a marker.
-  map.markerLayer.on('mouseover', function(e) {
-    e.layer.openPopup();
-  });
-  map.markerLayer.on('mouseout', function(e) {
-    e.layer.closePopup();
-  });
-
-  // Load the data from a "published" google spreadsheet.
-  // File > Publish to Web > Select 'Sheet' > Start publishing.
-  // Data_key is the spreadsheet key.
-  var url = 'https://docs.google.com/spreadsheet/pub?key=' + data_key + '&single=true&gid=' + data_sheet_id + '&output=csv';
-  $.get(url, function(data) {
-    map.markerLayer.setGeoJSON(csv2geojson.csv2geojson(data));
-  });
+    // Popup content function.
+    popup: function(feature) {
+      var district = feature.properties.district;
+      var camp = feature.properties.camp;
+      var IDP_number = feature.properties.IDP_130714;
+      return '<div class="marker-tooltip">' +
+             '<span class="district">' + district + ' district</span>' + '</br>' +
+             '<span class="camp">' + camp + ' camp</span>' + '</br>' +
+             '<span class="idp-number">' + IDP_number + '</span> IDPs' +
+             '</div>';
+      return '';
+    }
+  }).addTo(map);
 </script>
 </body>
 </html>
