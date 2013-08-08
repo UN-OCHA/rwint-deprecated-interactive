@@ -1,5 +1,8 @@
 # Auto detect text files and perform LF normalization
-* text
+*.html  text
+*.js    text
+*.css   text
+*.md    text
 
 # Custom for Visual Studio
 *.cs     diff=csharp
@@ -20,3 +23,11 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+*.png   binary
+*.jpg   binary
+*.eot   binary
+*.otf   binary
+*.svg   binary
+*.ttf   binary
+*.woff  binary
