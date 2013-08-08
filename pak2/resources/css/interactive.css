@@ -1,15 +1,197 @@
 @charset "utf-8";
 
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
-#map {
-  position:absolute;
-  top:0;
+a {
+  text-decoration: none;
+  font: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+a:active,
+a:focus,
+li {
+  outline: none;
+}
+
+.button {
+  color: #fff;
+  font-weight: bold;
+  background: #404040;
+  display: block;
+  text-align: center;
+  padding: 5px 15px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+.button.left {
+  border-radius: 4px 0px 0px 4px;
+  border-right: none;
+}
+.button.middle {
+  border-radius: 0;
+  border-right: none;
+}
+.button.right {
+  border-radius: 0 4px 4px 0;
+}
+.button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+.button:active,
+.button.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+}
+#header a {
+  color: white;
+  line-height: 40px;
+  padding: 0 20px;
+}
+#header a.title {
+  float: left;
+  font-size: 16px;
+}
+#header ul.pages {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+#header ul.pages li {
+  float: left;
+}
+#header ul.pages li a{
+  color: grey;
+}
+#header a.ocha {
+  float: right;
+  margin-top: 5px;
+  padding-right: 0;
+  width: 124px;
+  background: url("../images/logo-ocha.png") no-repeat scroll 0 0 transparent;
+  text-indent: -999999px;
+}
+
+#sidebar {
+  position: absolute;
+  top: 40px;
+  left: 0;
   bottom:0;
-  width:100%;
-  /* Color should not be #FFF, so that the tooltip content can be seen */
+  width: 400px;
+  z-index: 10;
+}
+#sidebar .background {
+  background-color: #000;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom:0;
+  width: 100%;
+}
+
+#sidebar ul.navigation {
+  position: relative;
+  margin:0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+#sidebar ul.navigation li {
+  display: inline-block;
+}
+#sidebar .categories {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  width: 370px;
+  padding: 15px;
+  color: white;
+  border-top: 1px solid white;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#sidebar .fundings-container {
+  position: relative;
+}
+#sidebar .fundings {
+  position: relative;
+  width: 380px;
+  height: 240px;
+}
+#sidebar .fundings .tooltip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #666;
+  padding: 2px 4px;
+  height: 20px;
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+
+#sidebar .headlines ul {
+  position: relative;
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+#sidebar .headlines .headline {
+  border-top: 1px solid #fff;
+  margin-top: 20px;
+}
+#sidebar .headlines .headline:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+#sidebar .headlines .headline .title {
+  margin-bottom: 10px;
+}
+#sidebar .headlines .headline .title a {
+  color: #fff;
+}
+#sidebar .headlines .headline .title a:hover {
+  text-decoration: underline;
+}
+#sidebar .headlines .headline .date {
+  color: #999;
+  font-size: 11px;
+}
+#sidebar .headlines .headline .summary {
+  margin-top: 10px;
+  color: #eee;
+}
+
+#map {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  width: 100%;
   color: #666;
 }
 
