@@ -33,7 +33,6 @@
   new L.Control.Zoom({ position: 'topright' }).addTo(map);
 
   //add layers
-  L.mapbox.tileLayer('reliefweb.pak_flooda_2012_ocha').addTo(map);
   L.mapbox.tileLayer('reliefweb.pak_base_pco').addTo(map);
 
   // Create the IDP layer.
