@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
   /**
    * CSV Layer.
@@ -38,7 +39,7 @@
       this._initialize(_);
     },
 
-    getGeoJson: function(_) {
+    getGeoJson: function() {
       return this._geojosn;
     },
 
@@ -143,7 +144,7 @@
         var radius = feature.properties[this.options.circle.property];
         if (radius) {
           // Get the circle size. Would be better not to have the comma.
-          radius = parseInt(radius.replace(',', ''));
+          radius = parseInt(radius.replace(',', ''), 10);
         }
         else {
           radius = 10000;
@@ -177,28 +178,6 @@
       }
     }
   });
-
-  /**
-   * CSV Graph.
-   */
-  var CSVGraph = null;
-
-  // Allow to get back an array of resolved/rejected objects.
-  if (jQuery.when.all===undefined) {
-    jQuery.when.all = function(deferreds) {
-      var deferred = new jQuery.Deferred();
-      $.when.apply(jQuery, deferreds).then(
-        function() {
-          deferred.resolve(Array.prototype.slice.call(arguments));
-        },
-        function() {
-          deferred.fail(Array.prototype.slice.call(arguments));
-        }
-      );
-      return deferred;
-    }
-  }
-
 
   L.maptools = {};
 

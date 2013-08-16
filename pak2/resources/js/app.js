@@ -1,4 +1,6 @@
 (function() {
+  'use strict';
+
   // Variables from post page.
   var center_lon = 30;
   var center_lat = 71;
@@ -39,7 +41,7 @@
   L.mapbox.tileLayer('reliefweb.pak_base_pco').addTo(map);
 
   // Create the IDP layer.
-  var IDP_layer = L.maptools.circlelayer(data_url + 2, {
+  L.maptools.circlelayer(data_url + 2, {
     tooltip: function(feature) {
       var district = feature.properties.District;
       var IDP_number = feature.properties.IDP_ind_130714;
@@ -51,7 +53,7 @@
   }).addTo(map);
 
   // Create the Camp layer.
-  var camp_layer = L.maptools.markerlayer(data_url + 0, {
+  L.maptools.markerlayer(data_url + 0, {
     tooltip: function(feature) {
       var district = feature.properties.district;
       var camp = feature.properties.camp;
@@ -61,7 +63,6 @@
              '<span class="camp">' + camp + ' camp</span>' + '</br>' +
              '<span class="idp-number">' + IDP_number + '</span> IDPs' +
              '</div>';
-      return '';
     }
   }).addTo(map);
 
@@ -77,41 +78,38 @@
   var fundingLoaded = false;
   function getFunding(country) {
     if (!fundingLoaded) {
-      var currentYear = new Date().getFullYear();
-
-      function tooltipMouseOver(event) {
+      var tooltipMouseOver = function (event) {
         var item = event.hoveredItem;
         var tooltip = $(event.target).next('.tooltip');
         tooltip.html(formatFunding(item.value));
         tooltip.css('top', (item.bottom - tooltip.outerHeight()).toString() + 'px');
         tooltip.css('left', (((item.right + item.left) / 2) - (tooltip.outerWidth() / 2)).toString() + 'px');
         tooltip.removeClass('hidden');
-      }
+      };
 
-      function tooltipMouseOut(event) {
+      var tooltipMouseOut = function (event) {
         var tooltip = $(event.target).next('.tooltip');
         tooltip.addClass('hidden');
-      }
+      };
 
       // Appeals.
       $.get('http://fts.rwdev.org/api/v1/appeal/country/' + country + '.xml', {}, function(data) {
-        var json = $.xml2json(data).Appeal;
-        var appeals = [];
-        var year = 0;
-        var currentAppeal = false;
-        var appeal = null;
-        var target = null;
-        var context = null;
+        var json = $.xml2json(data).Appeal,
+            appeals = [],
+            year = 0,
+            currentAppeal = false,
+            appeal = null,
+            i, l;
 
-        for (var i = 0, l = json.length; i < l; i++) {
+        for (i = 0, l = json.length; i < l; i++) {
           appeal = json[i];
           appeal = {
-            id: parseInt(appeal.id),
-            emergencyId: parseInt(appeal.emergency_id),
-            year:  parseInt(appeal.year),
-            requested: parseInt(appeal.current_requirements),
-            received: parseInt(appeal.funding),
-            pledges: parseInt(appeal.pledges),
+            id: parseInt(appeal.id, 10),
+            emergencyId: parseInt(appeal.emergency_id, 10),
+            year:  parseInt(appeal.year, 10),
+            requested: parseInt(appeal.current_requirements, 10),
+            received: parseInt(appeal.funding, 10),
+            pledges: parseInt(appeal.pledges, 10),
             type: appeal.type
           };
           if (appeal.requested > 0) {
@@ -144,7 +142,7 @@
           var y = canvas.height / 2;
           var lastend = 0;
 
-          for (var i = 0; i < percentageData.length; i++) {
+          for (i = 0; i < percentageData.length; i++) {
             context.fillStyle = percentageColor[i];
             context.beginPath();
             context.moveTo(x, y);
@@ -155,8 +153,9 @@
           }
 
           $.get('http://fts.rwdev.org/api/v1/cluster/appeal/' + currentAppeal.id + '.xml', {}, function(data) {
-            var clusters = $.xml2json(data).Cluster;
-            var cluster = null;
+            var clusters = $.xml2json(data).Cluster,
+                cluster = null,
+                i, l;
 
             // Clusters chart.
             var series = [[],[]];
@@ -170,10 +169,10 @@
               mouseout: tooltipMouseOut,
               scaleStepHop: 50000000
             };
-            for (var j = 0, k = clusters.length; j < k; j++) {
-              cluster = clusters[j];
-              cluster.received = parseInt(cluster.funding);
-              cluster.requested = parseInt(cluster.current_requirement);
+            for (i = 0, l = clusters.length; i < l; i++) {
+              cluster = clusters[i];
+              cluster.received = parseInt(cluster.funding, 10);
+              cluster.requested = parseInt(cluster.current_requirement, 10);
               cluster.remaining = cluster.requested - cluster.received;
               options.labels.push(capitalize(cluster.name));
               series[0].push(cluster.received);
@@ -185,8 +184,8 @@
             series = [[],[]];
             options.scaleStepHop = 100000000;
             options.labels = [];
-            for (var j = 0, k = appeals.length; j < k; j++) {
-              appeal = appeals[j];
+            for (i = 0, l = appeals.length; i < l; i++) {
+              appeal = appeals[i];
               options.labels.push(appeal.year);
               series[0].push(appeal.received);
               series[1].push(appeal.remaining);
@@ -232,13 +231,14 @@
         limit: 5
       };
       $.get(url, $.param(params), function (data) {
+        var content = [], fields, date, source, i, l;
+
         data = data.data.list;
-        var content = [];
-        var now = new Date();
-        for (var i = 0, l = data.length; i < l; i++) {
-          var fields = data[i].fields;
-          var date = new Date(fields.date.original);
-          var source = '';
+
+        for (i = 0, l = data.length; i < l; i++) {
+          fields = data[i].fields;
+          date = new Date(fields.date.original);
+          source = '';
           if (fields.source) {
             if (fields.source[0].shortname) {
               source = fields.source[0].shortname;

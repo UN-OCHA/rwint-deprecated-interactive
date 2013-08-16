@@ -14,7 +14,7 @@ SimpleChart.bind = function (fn, obj) {
   return function () {
     return fn.apply(obj, args || arguments);
   };
-}
+};
 
 // Merge properties of given objects.
 SimpleChart.extend = function (target) {
@@ -88,7 +88,7 @@ SimpleChart.Class.extend = function (properties) {
 
   NewClass.prototype.setOptions = function (options) {
     this.options = SimpleChart.extend({}, this.options, options);
-  }
+  };
 
   return NewClass;
 };
@@ -313,7 +313,9 @@ SimpleChart.Chart = SimpleChart.Class.extend({
     }
   },
 
+  // To override.
   draw: function (animationStep) {
+    return animationStep;
   },
 
   animate: function () {
@@ -356,9 +358,7 @@ SimpleChart.AxesChart = SimpleChart.Chart.extend({
   },
 
   initializeDrawing: function () {
-    var i, j, l, m,
-        context = this.context,
-        data = this.data,
+    var context = this.context,
         options = this.options,
         padding = options.scalePadding,
         width = this.width,
@@ -367,13 +367,11 @@ SimpleChart.AxesChart = SimpleChart.Chart.extend({
         labelCount = labels.length,
         labelHeight = options.fontSize,
         labelWidth = 0,
-        labelWidthAvg = 0,
         labelWidthMax = 0,
-        labelPadding = options.scalePadding,
         formatDataValue = options.formatDataValue,
-        valueBounds,
         stepMaxWidth,
-        stepMinWidth;
+        stepMinWidth,
+        i;
 
     // Set context font.
     context.font = options.fontStyle + ' ' + options.fontWeight + ' ' + options.fontSize + 'px ' + options.fontFamily;
@@ -441,7 +439,7 @@ SimpleChart.AxesChart = SimpleChart.Chart.extend({
     return {
       min: valueMin,
       max: valueMax
-    }
+    };
   },
 
   calculateStepBounds: function (valueMin, valueMax) {
@@ -467,7 +465,7 @@ SimpleChart.AxesChart = SimpleChart.Chart.extend({
 
     stepRange = stepMax - stepMin;
     stepCount = Math.ceil(stepRange / stepHop);
-    
+
     return {
       count: stepCount,
       hop: stepHop,
@@ -528,7 +526,6 @@ SimpleChart.AxesChart = SimpleChart.Chart.extend({
         labelCount = labels.length,
         labelHeight = options.fontSize,
         labelHeightHalf = labelHeight / 2,
-        formatDataValue = options.formatDataValue,
         stepCount = this.steps.count,
         stepLabels = this.steps.labels,
         axisLineColor = options.scaleAxisLineColor,
@@ -536,7 +533,6 @@ SimpleChart.AxesChart = SimpleChart.Chart.extend({
         gridLineColor = options.scaleGridLineColor,
         gridLineWidth = options.scaleGridLineWidth,
         width = this.width,
-        height = this.width,
         yAxisOffsetX = this.yAxisOffsetX,
         xAxisOffsetY = this.xAxisOffsetY,
         xAxisLabelsAngle = this.xAxisLabelsAngle,
@@ -547,7 +543,7 @@ SimpleChart.AxesChart = SimpleChart.Chart.extend({
         yGridOffsetX = cellWidth / 2,
         yGridOffsetY = labelHeightHalf - paddingQuarter,
         yGridOffsetH = xAxisOffsetY + paddingQuarter,
-        x, y, i, l;
+        x, y, i;
 
     context.fillStyle = options.fontColor;
 
@@ -799,9 +795,6 @@ SimpleChart.Bar = SimpleChart.AxesChart.extend({
         data = this.data,
         barLineWidth = this.options.barLineWidth,
         datasetCount = data.length,
-        stepMin = this.steps.min,
-        stepHop = this.steps.hop,
-        cellHeight = this.cellHeight / stepHop,
         i, j, l, x, y, h, w,
         item, value, dataset;
 

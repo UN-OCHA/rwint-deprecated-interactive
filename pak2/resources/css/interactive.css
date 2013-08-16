@@ -315,4 +315,6 @@ li {
 .timeline-popup-content iframe {
   width: 100%;
   height: 600px;
+  border: none;
+  border-width: 0;
 }
