@@ -11,11 +11,6 @@
   // Just add the ID of the spreadsheet to the end of the following URL.
   var data_url = 'https://docs.google.com/spreadsheet/pub?key=' + data_key + '&single=true&output=csv&gid=';
 
-  // Prevent scrolling.
-  $('body').on('touchmove', function (event) {
-    event.preventDefault();
-  });
-
   // Setup the scrollbar on the categories sidebar.
   $('#sidebar .categories').niceScroll({
     preservenativescrolling: false,
@@ -261,13 +256,6 @@
     }
   }
 
-  // Make sure canvas have proper width and height;
-  $('canvas').each(function () {
-    var target = $(this);
-    target.attr('width', target.css('width'));
-    target.attr('height', target.css('height'));
-  });
-
   // Hide/show categories.
   $('#sidebar .navigation .button').click(function(event) {
     event.preventDefault();
@@ -288,17 +276,5 @@
     else if (target === 'updates') {
       getUpdates('pakistan');
     }
-  });
-
-  // Show timeline popup.
-  $('.timeline-popup-show').click(function(event){
-    event.preventDefault(); // Disable normal link function so that it doesn't refresh the page.
-    $('.timeline-popup-container').show(); // Display the popup.
-  });
-
-  // Hide timeline popup.
-  $('.timeline-popup-hide').click(function(event) {
-    event.preventDefault();
-    $('.timeline-popup-container').hide(); // Hide the popup.
   });
 })();
