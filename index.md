@@ -17,4 +17,4 @@ title: Interactive Maps
 
 #### Manually generated list of links.
 
-- [Pakistan - Interactive](/pak2)
+- [Pakistan - Interactive](/pak)
