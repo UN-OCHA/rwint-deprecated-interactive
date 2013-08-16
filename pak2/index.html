@@ -10,8 +10,6 @@
 <link href='resources/css/font-awesome.css' rel='stylesheet' type='text/css' />
 <link href='resources/css/leaflet.awesome-markers.css' rel='stylesheet' type='text/css' />
 <link href='resources/css/interactive.css' rel='stylesheet' type='text/css' />
-<link href='resources/css/popup_box.css' rel='stylesheet' type='text/css'>
-
 
 <script type="text/javascript">
   // Prevent scrolling.
@@ -22,25 +20,19 @@
 </head>
 
 <body ontouchmove='touchMove(event);'>
-      <!-- Popup box for timeline -->
-            <!-- Your Content Here -->
 <div id='header'>
   <a href='/' class='title'>Pakistan - Interactive</a>
   <ul class='pages'>
     <li>
-    <div class="main-content">
-      <a href='#'>Timeline</a>
-    </div>
-    </li> 
-    
-    <li>
+      <a href='#' class='timeline-popup-show'>Timeline</a>
+    </li><li>
       <a href='#'>Partners</a>
     </li>
   </ul>
   <a href='http://unocha.org' target='_blank' class='ocha'>UN OCHA</a>
 </div>
 <div id='sidebar'>
-  <div class='background'></div>; 
+  <div class='background'></div>;
   <ul class='navigation'>
     <li>
       <a href='#overview' class='button left active'>Overview</a>
@@ -55,24 +47,41 @@
       <h2>Overview</h3>
       <div class='content'>
         <h3>Displacement in north-west Pakistan</h3>
-        <p>Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhwa (KP) province in north-western Pakistan has displaced over 4 million people since 2008, of whom 3 million have returned home. Over 1 million people remain displaced across KP and FATA. About 11 per cent of the internally displaced people (IDPs) live in camps; the rest are in host communities.<br>&nbsp;</p>
-        <button class="show-popup"><span class="button">Timeline of events</span></button>
-        <!--popup box-->
-        <div class="overlay-bg">
-            <div class="overlay-content">
-            <iframe src='http://embed.verite.co/timeline/?source=0Ap0itMVUpmqcdHV3dXBBTUMyTG5RTGlKdWFsWFhDRkE&font=Bevan-PotanoSans&maptype=toner&lang=en&height=600' width='100%' height='600' frameborder='0'></iframe>
-                <button class="close-btn">Close</button>
-            </div>
+        <div class="description">
+          <p>Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhwa (KP) province in north-western Pakistan has displaced over 4 million people since 2008, of whom 3 million have returned home. Over 1 million people remain displaced across KP and FATA. About 11 per cent of the internally displaced people (IDPs) live in camps; the rest are in host communities.<br>&nbsp;</p>
         </div>
-        
+
+        <div class="timeline">
+          <a href="#" class="button timeline-popup-show">Timeline of events</a>
+          <!--timeline popup box-->
+          <div class="timeline-popup-container">
+              <div class="timeline-popup-content">
+                <iframe src='http://embed.verite.co/timeline/?source=0Ap0itMVUpmqcdHV3dXBBTUMyTG5RTGlKdWFsWFhDRkE&font=Bevan-PotanoSans&maptype=toner&lang=en&height=600' width='100%' height='600' frameborder='0'></iframe>
+                <a href="#" class="button timeline-popup-hide">Close</a>
+              </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class='category funding hidden'>
       <h2>Funding</h2>
       <div class='content'>
-        <h3>Total funding per year</h3>
-        <div class="fundings-container">
-          <canvas class="fundings"></canvas>
+        <h3>Latest Appeal</h3>
+        <div class="appeal">
+          <div class="requested hidden"><div class="value"></div><div class="label">requested</div></div>
+          <div class="received hidden"><div class="value"></div><div class="label">received</div></div>
+          <div class="funded hidden"><canvas class="percentage"></canvas><div class="value"></div><div class="label">funded</div></div>
+        </div>
+
+        <h3>Clusters</h3>
+        <div class="clusters chart-container">
+          <canvas class="chart"></canvas>
+          <div class="tooltip hidden"></div>
+        </div>
+
+        <h3>Appeals history</h3>
+        <div class="appeals chart-container">
+          <canvas class="chart"></canvas>
           <div class="tooltip hidden"></div>
         </div>
       </div>
@@ -91,13 +100,12 @@
 <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
 <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 <script src='resources/js/libs/jquery.nicescroll.min.js'></script>
-<script src='resources/js/libs/jquery.xml.min.js'></script>
-<script src='resources/js/libs/Chart.js'></script>
+<script src='resources/js/libs/jquery.xml2json.js'></script>
 <script src='resources/js/libs/csv2geojson.js'></script>
 <script src='resources/js/libs/leaflet.awesome-markers.js'></script>
+<script src='resources/js/libs/SimpleChart.js'></script>
 <script src='resources/js/library.js'></script>
 <script src='resources/js/app.js'></script>
-<script src='resources/js/popup_box.js'></script>
 
 </body>
 </html>

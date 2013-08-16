@@ -136,15 +136,15 @@ li {
 	left: 1px;
 }
 
-#sidebar .fundings-container {
+#sidebar .chart-container {
   position: relative;
 }
-#sidebar .fundings {
+#sidebar .chart {
   position: relative;
-  width: 380px;
-  height: 240px;
+  width: 370px;
+  height: 370px;
 }
-#sidebar .fundings .tooltip {
+#sidebar .tooltip {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -189,6 +189,40 @@ li {
 #sidebar .headlines .headline .summary {
 	margin-top: 10px;
 	color: #333;
+}
+
+#sidebar .appeal div {
+  display: inline-block;
+  height: 35px;
+  width: 80px;
+}
+#sidebar .appeal .value {
+  font-size: 20px;
+  color: #0988bb;
+  height: 20px;
+}
+#sidebar .appeal .label {
+  font-size: 11px;
+  height: 15px;
+}
+#sidebar .appeal .funded .percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+}
+#sidebar .requested {
+  background: url("../images/appeal-requested.png") no-repeat scroll 0 0 transparent;
+  padding-left: 40px;
+}
+#sidebar .received {
+  background: url("../images/appeal-received.png") no-repeat scroll 0 0 transparent;
+  padding-left: 40px;
+}
+#sidebar .funded {
+  position: relative;
+  padding-left: 40px;
 }
 
 #map {
@@ -236,4 +270,28 @@ li {
 	font-weight: bold;
 	color: #026CB6;
 	text-transform: uppercase;
+}
+
+/** Timeline Popup **/
+.timeline-popup-container {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height:100%;
+	width: 100%;
+	background: #000; /* fallback */
+	background: rgba(0,0,0,0.75);
+	opacity: 0.9;
+}
+.timeline-popup-content {
+	background: #fff;
+	padding: 1%;
+	width: 60%;
+	position: relative;
+	top: 15%;
+	left: 40%;
+	margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
+	border-radius: 4px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.9);
 }

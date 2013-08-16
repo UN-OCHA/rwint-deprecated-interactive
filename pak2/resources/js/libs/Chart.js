@@ -346,7 +346,8 @@ window.Chart = function(context){
 			animation : true,
 			animationSteps : 60,
 			animationEasing : "easeOutQuart",
-			onAnimationComplete : null
+			onAnimationComplete : null,
+      stacked : false
 		};
 		var config = (options) ? mergeChartConfig(chart.Bar.defaults,options) : chart.Bar.defaults;
 
@@ -1052,15 +1053,34 @@ window.Chart = function(context){
 
 		function drawBars(animPc){
 			ctx.lineWidth = config.barStrokeWidth;
+
+      var offsetY = [];
+      for (var h = 0; h < data.labels.length; h++) {
+        offsetY.push(0);
+      }
+
 			for (var i=0; i<data.datasets.length; i++){
-					ctx.fillStyle = data.datasets[i].fillColor;
-					ctx.strokeStyle = data.datasets[i].strokeColor;
-          data.datasets[i].items = [];
+        ctx.fillStyle = data.datasets[i].fillColor;
+        ctx.strokeStyle = data.datasets[i].strokeColor;
+        data.datasets[i].items = [];
+
 				for (var j=0; j<data.datasets[i].data.length; j++){
-          var left = yAxisPosX + config.barValueSpacing + valueHop*j + barWidth*i + config.barDatasetSpacing*i + config.barStrokeWidth*i,
+          var offsetX = barWidth * i + config.barDatasetSpacing * i + config.barStrokeWidth * i,
+              barHeight = animPc * calculateOffset(data.datasets[i].data[j], calculatedScale, scaleHop),
+              left = yAxisPosX + config.barValueSpacing + valueHop*j,
               top = xAxisPosY,
               right = left + barWidth,
-              bottom = top - animPc*calculateOffset(data.datasets[i].data[j],calculatedScale,scaleHop)+(config.barStrokeWidth/2);
+              bottom = top - barHeight + (config.barStrokeWidth / 2);
+
+          if (!config.stacked) {
+            left += offsetX;
+            right += offsetX;
+          }
+          else {
+            top -= offsetY[j];
+            bottom -= offsetY[j];
+            offsetY[j] += barHeight;
+          }
 
 					ctx.beginPath();
 					ctx.moveTo(left, top);
@@ -1237,7 +1257,12 @@ window.Chart = function(context){
 			xAxisLength = width - longestText - widestXLabel;
 			valueHop = Math.floor(xAxisLength/(data.labels.length));
 
-			barWidth = (valueHop - config.scaleGridLineWidth*2 - (config.barValueSpacing*2) - (config.barDatasetSpacing*data.datasets.length-1) - ((config.barStrokeWidth/2)*data.datasets.length-1))/data.datasets.length;
+      if (!config.stacked) {
+        barWidth = (valueHop - config.scaleGridLineWidth*2 - (config.barValueSpacing*2) - (config.barDatasetSpacing*data.datasets.length-1) - ((config.barStrokeWidth/2)*data.datasets.length-1))/data.datasets.length;
+      }
+      else {
+        barWidth = (valueHop - config.scaleGridLineWidth*2 - (config.barValueSpacing*2) - (config.barDatasetSpacing*data.datasets.length-1));
+      }
 
 			yAxisPosX = width-widestXLabel/2-xAxisLength;
 			xAxisPosY = scaleHeight + config.scaleFontSize/2;
@@ -1284,12 +1309,29 @@ window.Chart = function(context){
 		function getValueBounds() {
 			var upperValue = Number.MIN_VALUE;
 			var lowerValue = Number.MAX_VALUE;
-			for (var i=0; i<data.datasets.length; i++){
-				for (var j=0; j<data.datasets[i].data.length; j++){
-					if ( data.datasets[i].data[j] > upperValue) { upperValue = data.datasets[i].data[j] };
-					if ( data.datasets[i].data[j] < lowerValue) { lowerValue = data.datasets[i].data[j] };
-				}
-			};
+      if (!config.stacked) {
+        for (var i=0; i<data.datasets.length; i++){
+          for (var j=0; j<data.datasets[i].data.length; j++){
+            if ( data.datasets[i].data[j] > upperValue) { upperValue = data.datasets[i].data[j] };
+            if ( data.datasets[i].data[j] < lowerValue) { lowerValue = data.datasets[i].data[j] };
+          }
+        };
+      }
+      else {
+        var offset = [];
+        for (var o = 0; o < data.labels.length; o++) {
+          offset.push(0);
+        }
+        for (var i=0; i<data.datasets.length; i++){
+          for (var j=0; j<data.datasets[i].data.length; j++){
+            offset[j] += data.datasets[i].data[j];
+          }
+        };
+        for (var v = 0; v < data.labels.length; v++){
+          if (offset[v] > upperValue) { upperValue = offset[v] };
+          if (offset[v] < lowerValue) { lowerValue = offset[v] };
+        }
+      }
 
 			var maxSteps = Math.floor((scaleHeight / (labelHeight*0.66)));
 			var minSteps = Math.floor((scaleHeight / labelHeight*0.5));
@@ -1396,13 +1438,21 @@ window.Chart = function(context){
 	        var labels = [];
 	        populateLabels(labelTemplateString, labels, numberOfSteps, graphMin, stepValue);
 
+          console.log({
+		        steps : numberOfSteps,
+				stepValue : stepValue,
+				graphMin : graphMin,
+				labels : labels
+
+	        });
+          
 	        return {
 		        steps : numberOfSteps,
 				stepValue : stepValue,
 				graphMin : graphMin,
 				labels : labels
 
-	        }
+	        };
 
 			function calculateOrderOfMagnitude(val){
 			  return Math.floor(Math.log(val) / Math.LN10);
