@@ -9,17 +9,20 @@
   // Just add the ID of the spreadsheet to the end of the following URL.
   var data_url = 'https://docs.google.com/spreadsheet/pub?key=' + data_key + '&single=true&output=csv&gid=';
 
+  // Prevent scrolling.
+  $('body').on('touchmove', function (event) {
+    event.preventDefault();
+  });
+
   // Setup the scrollbar on the categories sidebar.
-  $('document').ready(function() {
-    $('#sidebar .categories').niceScroll({
-        preservenativescrolling: false,
-        cursorwidth: '8px',
-        cursorborder: 'none',
-        cursorborderradius:'0px',
-        cursorcolor:"#000000",
-        autohidemode: false,
-        background:"#333333"
-     });
+  $('#sidebar .categories').niceScroll({
+    preservenativescrolling: false,
+    cursorwidth: '8px',
+    cursorborder: 'none',
+    cursorborderradius:'0px',
+    cursorcolor:"#000000",
+    autohidemode: false,
+    background:"#333333"
   });
 
   // Create a map and overwrite min, max zoom and set the center and default zoom level.
@@ -71,9 +74,9 @@
   }
 
   // Get and display the fundings Graph from FTS.
-  var fundings = false;
-  function getFundings(country) {
-    if (!fundings) {
+  var fundingLoaded = false;
+  function getFunding(country) {
+    if (!fundingLoaded) {
       var currentYear = new Date().getFullYear();
 
       function tooltipMouseOver(event) {
@@ -193,14 +196,14 @@
           });
         }
       }, 'xml');
-      fundings = true;
+      fundingLoaded = true;
     }
   }
 
   // Get latest headlines about IDPs in Pakistan from ReliefWeb.
-  var headlines = false;
-  function getHeadlines(country) {
-    if (!headlines) {
+  var updatesLoaded = false;
+  function getUpdates(country) {
+    if (!updatesLoaded) {
     var url = 'http://api.rwlabs.org/v0/report/list';
       var params = {
         fields: {
@@ -252,9 +255,9 @@
           );
         }
         content = "<ul>\n<li class='headline'>\n" + content.join("</li>\n<li class='headline'>\n") + "</li>\n</ul>\n";
-        $('#sidebar .category.timeline .headlines').html(content);
+        $('#sidebar .category.updates .headlines').html(content);
       }, 'json');
-      headlines = true;
+      updatesLoaded = true;
     }
   }
 
@@ -280,10 +283,10 @@
     $('#sidebar .categories').getNiceScroll().resize();
 
     if (target === 'funding') {
-      getFundings('pakistan');
+      getFunding('pakistan');
     }
-    else if (target === 'timeline') {
-      getHeadlines('pakistan');
+    else if (target === 'updates') {
+      getUpdates('pakistan');
     }
   });
 

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html><head>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
 <title>Pakistan - Interactive</title>
 <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 <link href='resources/css/normalize.css' rel='stylesheet' type='text/css' />
@@ -10,16 +12,9 @@
 <link href='resources/css/font-awesome.css' rel='stylesheet' type='text/css' />
 <link href='resources/css/leaflet.awesome-markers.css' rel='stylesheet' type='text/css' />
 <link href='resources/css/interactive.css' rel='stylesheet' type='text/css' />
-
-<script type="text/javascript">
-  // Prevent scrolling.
-  function touchMove(event) {
-    event.preventDefault();
-  }
-</script>
 </head>
 
-<body ontouchmove='touchMove(event);'>
+<body>
 <div id='header'>
   <a href='/' class='title'>Pakistan - Interactive</a>
   <ul class='pages'>
@@ -39,27 +34,20 @@
     </li><li>
       <a href='#funding' class='button middle'>Funding</a>
     </li><li>
-      <a href='#timeline' class='button right'>Updates</a>
+      <a href='#updates' class='button right'>Updates</a>
     </li>
   </ul>
   <div class='categories'>
     <div class='category overview'>
-      <h2>Overview</h3>
+      <h2>Overview</h2>
       <div class='content'>
         <h3>Displacement in north-west Pakistan</h3>
-        <div class="description">
-          <p>Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhwa (KP) province in north-western Pakistan has displaced over 4 million people since 2008, of whom 3 million have returned home. Over 1 million people remain displaced across KP and FATA. About 11 per cent of the internally displaced people (IDPs) live in camps; the rest are in host communities.<br>&nbsp;</p>
+        <div class="section description">
+          <p>Conflict in the Federally Administered Tribal Areas (FATA) and Khyber Pakhtunkhwa (KP) province in north-western Pakistan has displaced over 4 million people since 2008, of whom 3 million have returned home. Over 1 million people remain displaced across KP and FATA. About 11 per cent of the internally displaced people (IDPs) live in camps; the rest are in host communities.</p>
         </div>
 
-        <div class="timeline">
+        <div class="section timeline">
           <a href="#" class="button timeline-popup-show">Timeline of events</a>
-          <!--timeline popup box-->
-          <div class="timeline-popup-container">
-              <div class="timeline-popup-content">
-                <iframe src='http://embed.verite.co/timeline/?source=0Ap0itMVUpmqcdHV3dXBBTUMyTG5RTGlKdWFsWFhDRkE&font=Bevan-PotanoSans&maptype=toner&lang=en&height=600' width='100%' height='600' frameborder='0'></iframe>
-                <a href="#" class="button timeline-popup-hide">Close</a>
-              </div>
-          </div>
         </div>
       </div>
     </div>
@@ -67,35 +55,43 @@
       <h2>Funding</h2>
       <div class='content'>
         <h3>Latest Appeal</h3>
-        <div class="appeal">
+        <div class="section appeal">
           <div class="requested hidden"><div class="value"></div><div class="label">requested</div></div>
           <div class="received hidden"><div class="value"></div><div class="label">received</div></div>
           <div class="funded hidden"><canvas class="percentage"></canvas><div class="value"></div><div class="label">funded</div></div>
         </div>
 
         <h3>Clusters</h3>
-        <div class="clusters chart-container">
+        <div class="section clusters chart-container">
           <canvas class="chart"></canvas>
           <div class="tooltip hidden"></div>
         </div>
 
         <h3>Appeals history</h3>
-        <div class="appeals chart-container">
+        <div class="section appeals chart-container">
           <canvas class="chart"></canvas>
           <div class="tooltip hidden"></div>
         </div>
       </div>
     </div>
-    <div class='category timeline hidden'>
+    <div class='category updates hidden'>
       <h2>Latest Updates</h2>
       <div class='content'>
-        <div class='headlines'></div>
+        <div class='section headlines'></div>
       </div>
     </div>
   </div>
 </div>
 
 <div id='map'></div>
+
+<!-- timeline popup box -->
+<div class="timeline-popup-container">
+  <div class="timeline-popup-content">
+    <iframe src='http://embed.verite.co/timeline/?source=0Ap0itMVUpmqcdHV3dXBBTUMyTG5RTGlKdWFsWFhDRkE&amp;font=Bevan-PotanoSans&maptype=toner&amp;lang=en&amp;height=600' frameborder='0'></iframe>
+    <a href="#" class="button timeline-popup-hide">Close</a>
+  </div>
+</div>
 
 <script src='http://api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
 <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>

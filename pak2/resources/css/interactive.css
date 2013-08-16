@@ -135,7 +135,17 @@ li {
 	-webkit-overflow-scrolling: touch;
 	left: 1px;
 }
+#sidebar .category > h2 {
+  margin-bottom: 25px;
+}
+#sidebar .category .content > h3 {
+  margin-bottom: 20px;
+}
+#sidebar .section {
+  margin-bottom: 30px;
+}
 
+/** Charts **/
 #sidebar .chart-container {
   position: relative;
 }
@@ -158,39 +168,7 @@ li {
   line-height: 20px;
 }
 
-#sidebar .headlines ul {
-  position: relative;
-  margin:0;
-  padding: 0;
-  list-style: none;
-}
-#sidebar .headlines .headline {
-  border-top: 1px solid #fff;
-  margin-top: 20px;
-}
-#sidebar .headlines .headline:first-child {
-  border-top: none;
-  padding-top: 0;
-  margin-top: 0;
-}
-#sidebar .headlines .headline .title {
-  margin-bottom: 10px;
-}
-#sidebar .headlines .headline .title a {
-  color: #026CB6;
-}
-#sidebar .headlines .headline .title a:hover {
-  text-decoration: underline;
-}
-#sidebar .headlines .headline .date {
-  color: #999;
-  font-size: 11px;
-}
-#sidebar .headlines .headline .summary {
-	margin-top: 10px;
-	color: #333;
-}
-
+/** Funding tab **/
 #sidebar .appeal div {
   display: inline-block;
   height: 35px;
@@ -225,6 +203,41 @@ li {
   padding-left: 40px;
 }
 
+/** Updates tab **/
+#sidebar .headlines ul {
+  position: relative;
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+#sidebar .headlines .headline {
+  border-top: 1px solid #000;
+  margin-top: 20px;
+}
+#sidebar .headlines .headline:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+#sidebar .headlines .headline .title {
+  margin-bottom: 10px;
+}
+#sidebar .headlines .headline .title a {
+  color: #026CB6;
+}
+#sidebar .headlines .headline .title a:hover {
+  text-decoration: underline;
+}
+#sidebar .headlines .headline .date {
+  color: #999;
+  font-size: 11px;
+}
+#sidebar .headlines .headline .summary {
+	margin-top: 10px;
+	color: #333;
+}
+
+/** Map **/
 #map {
   position: absolute;
   top: 50px;
@@ -273,6 +286,9 @@ li {
 }
 
 /** Timeline Popup **/
+.timeline {
+  position: relative;
+}
 .timeline-popup-container {
 	display: none;
 	position: fixed;
@@ -280,6 +296,7 @@ li {
 	left: 0;
 	height:100%;
 	width: 100%;
+  z-index: 2000;
 	background: #000; /* fallback */
 	background: rgba(0,0,0,0.75);
 	opacity: 0.9;
@@ -294,4 +311,8 @@ li {
 	margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
 	border-radius: 4px;
 	box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+.timeline-popup-content iframe {
+  width: 100%;
+  height: 600px;
 }
