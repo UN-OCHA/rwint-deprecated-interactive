@@ -286,9 +286,6 @@ li {
 }
 
 /** Timeline Popup **/
-.timeline {
-  position: relative;
-}
 .timeline-popup-container {
 	display: none;
 	position: fixed;
@@ -298,8 +295,7 @@ li {
 	width: 100%;
   z-index: 2000;
 	background: #000; /* fallback */
-	background: rgba(0,0,0,0.75);
-	opacity: 0.9;
+	background: rgba(0, 0, 0, 0.75);
 }
 .timeline-popup-content {
 	background: #fff;
@@ -310,7 +306,7 @@ li {
 	left: 40%;
 	margin: 0 0 0 -20%; /* add negative left margin for half the width to center the div */
 	border-radius: 4px;
-	box-shadow: 0 0 5px rgba(0,0,0,0.9);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 .timeline-popup-content iframe {
   width: 100%;
