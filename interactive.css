@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+.big_number {
+	font-size: 25px;
+	color: #026CB6;
+}
+.graph_title {
+	font-size: 12px;
+	font-weight: bold;
+	color: #F47932;
+}
+.number_text {
+	font-size: 12px;
+}
+.blue_line {
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #026CB6;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #026CB6;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
