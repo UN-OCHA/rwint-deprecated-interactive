@@ -10,4 +10,8 @@
 <file name="leaflet.awesome-markers.css" server="http://unocha.org/interactive/" local="130296303610000000" remote="130298957910000000" />
 <file name="normalize.css" server="http://unocha.org/interactive/" local="130296303610000000" remote="130298957950000000" />
 <file name="site.css" server="http://unocha.org/interactive/" local="130296303610000000" remote="130298957980000000" />
+<file name="normalize.css" server="www3.unog.ch" local="130296303610000000" remote="130319022000000000" />
+<file name="font-awesome.css" server="www3.unog.ch" local="130296303590000000" remote="130319022000000000" />
+<file name="leaflet.awesome-markers.css" server="www3.unog.ch" local="130296303610000000" remote="130319022000000000" />
+<file name="interactive.css" server="www3.unog.ch" local="130296303610000000" remote="130319022000000000" />
 </dwsync>

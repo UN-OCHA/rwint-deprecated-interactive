@@ -10,4 +10,10 @@
 <file name="leaflet.awesome-markers.min.js" server="http://unocha.org/interactive/" local="130296303650000000" remote="130298958620000000" />
 <file name="maptools.js" server="http://unocha.org/interactive/" local="130296303650000000" remote="130298958650000000" />
 <file name="simplechart.js" server="http://unocha.org/interactive/" local="130296303650000000" remote="130298958680000000" />
+<file name="jquery.nicescroll.min.js" server="www3.unog.ch" local="130296303640000000" remote="130319022000000000" />
+<file name="jquery.xml2json.js" server="www3.unog.ch" local="130296303640000000" remote="130319022000000000" />
+<file name="csv2geojson.js" server="www3.unog.ch" local="130296303630000000" remote="130319022000000000" />
+<file name="leaflet.awesome-markers.js" server="www3.unog.ch" local="130296303640000000" remote="130319022000000000" />
+<file name="simplechart.js" server="www3.unog.ch" local="130296303650000000" remote="130319022000000000" />
+<file name="maptools.js" server="www3.unog.ch" local="130296303650000000" remote="130319022000000000" />
 </dwsync>
