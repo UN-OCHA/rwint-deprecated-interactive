@@ -36,7 +36,7 @@
       for (var i = grades.length - 1; i >= 0; i--) {
         div.innerHTML += '<i style="background:' + legend.getColor(grades[i] + 1) + ';"></i> ';
         if (i === 0) {
-          div.innerHTML += '&lt; ' + commas(grades[i]) + '<br/>';
+          div.innerHTML += '&lt; ' + commas(grades[i + 1]) + '<br/>';
         }
         else if (grades[i + 1]) {
           div.innerHTML += commas(grades[i] + 1) + ' &ndash; ' + commas(grades[i + 1]) + '<br/>';
