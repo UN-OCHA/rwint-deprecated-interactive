@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ReliefWeb - Statistics</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<!-- Sections -->
+<!--<div id="intro" class="section">
+    <div class="logo"><img src="css/images/logo-reliefweb.png" /></div>
+    <div class="description">
+        <p><strong>Informing humanitarians worldwide.</strong></p>
+        <p>ReliefWeb has been the leading source for reliable and timely humanitarian information on global crises and disasters since 1996.</p>
+    </div>
+</div>-->
+
+<h3 class="section-header">Country overview</h3>
+<div id="map" class="section"></div>
+
+<!--<h3 class="section-header">Statistics overview</h3>
+<div id="details" class="section"></div>-->
+
+<!-- Libraries -->
+<script src="js/simple_statistics.js"></script>
+<script src="js/spin.min.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/topojson.v1.min.js"></script>
+<script src="js/queue.v1.min.js"></script>
+<script src="js/colorbrewer.js"></script>
+
+<!-- Application -->
+<script src="js/rwapi.js"></script>
+<script src="js/section.intro.js"></script>
+<script src="js/section.map.js"></script>
+<script src="js/section.details.js"></script>
+<script>
+(function () {
+  //sections.intro('intro').load();
+  sections.map('map').load();
+  //sections.details('details').load();
+})();
+</script>
+
+</body>
+</html>

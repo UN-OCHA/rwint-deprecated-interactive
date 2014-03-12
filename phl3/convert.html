@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>XSLX to CSV converter</title>
+<link href="css/converter.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+<h1>XSLX to CSV converter</h1>
+
+<div id="drop">Drop an XLSX or XLSM or XLSB file here to see sheet data.</div>
+<input type="file" id="input" />
+<textarea id="b64data">... or paste a base64-encoding here</textarea>
+<input type="button" id="dotext" value="Click here to process the base64 text"/>
+
+<a id="anchor" href="#"></a>
+
+<pre id="out"></pre>
+</div>
+
+<script src="js/spin.min.js"></script>
+<script src="js/jszip.js"></script>
+<script src="js/xlsx.js"></script>
+<script src="js/converter.js"></script>
+
+</body>
+</html>
