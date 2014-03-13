@@ -379,7 +379,7 @@
       spinner.spin(container.node());
 
       loader
-          .defer(d3.csv, 'data/data.csv')
+          .defer(d3.csv, 'data/data.csv.json')
           .defer(d3.json, 'data/un.countries.topojson')
           .defer(d3.json, 'data/un.boundaries.topojson')
           .defer(d3.json, 'data/un.phl.topojson');
