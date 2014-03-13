@@ -76,14 +76,18 @@ i {
   min-height: 600px;
 }
 h3.section-header {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   text-align: center;
-  background: #000;
+  background: #026CB6;
   height: 50px;
   line-height: 50px;
-  vertical-align: middle;
   margin: 0;
   color: #fff;
-  text-transform: uppercase;
+  display: block;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  z-index: 2;
 }
 
 #intro {
@@ -144,7 +148,7 @@ h3.section-header {
 }
 
 #map {
-  background: #eee;
+  background: rgb(233, 238, 249);
 }
 
 #details h4 {
@@ -459,4 +463,8 @@ text.value{
 
 #intro .line {
   stroke-width: 5px;
+}
+
+path {
+  stroke-linecap: round;
 }
