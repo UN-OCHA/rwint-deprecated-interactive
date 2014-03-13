@@ -223,14 +223,15 @@ h3.section-header {
   /*background: rgba(255,255,255,0.8);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);*/
   background: rgba(255,255,255,0.8);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  border: 2px solid #aaa;
 
   font-family: Arial, Helvetica, sans-serif;
   color: #555;
 
   pointer-events: auto;
-  cursor: auto;
+  /*cursor: auto;*/
 
   clear: both;
 }
@@ -263,30 +264,31 @@ h3.section-header {
 .control.selector {
   padding: 5px;
   text-transform: capitalize;
-  width: 145px;
+  width: 140px;
 }
 .control.selector i {
   font-size: 12px;
   margin-left: 3px;
   margin-right: 5px;
-  vertical-align: bottom;
 }
 .control.selector input,
 .control.selector label {
   cursor: pointer;
+}
+.control.selector input[type="radio"] {
+  margin: 3px 1px;
 }
 .control.legend {
   padding: 5px;
   font-size: 12px;
   line-height: 14px;
   color: #555;
-  width: 145px;
+  width: 140px;
 }
 .control.legend > i {
   width: 20px;
   height: 14px;
   float: left;
-  margin-left: 3px;
   margin-right: 8px;
   opacity: 1.0;
 }
@@ -299,6 +301,45 @@ h3.section-header {
   color: #777;
   margin-left: 3px;
   margin-right: 5px;
+}
+
+.control.minimap {
+  width: 150px;
+  height: 150px;
+  background: rgba(235, 235, 235, 0.81);
+  overflow: hidden;
+}
+.control.minimap canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+.control.minimap svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 2;
+}
+.control.minimap .selection {
+  position: absolute;
+  /*outline: 1px solid rgba(255, 120, 0, 0.5);
+  background: rgba(255, 120, 0, 0.2);*/
+  z-index: 2;
+  stroke: #111111;
+  stroke-width: 1px;
+  fill-opacity: 0.15;
+  fill: #000000;
+  /* fill: url(#minimapGradient); */
+  /* filter: url(#minimapDropShadow); */
+  cursor: move;
+}
+body.dragging {
+  cursor: move;
 }
 
 /**

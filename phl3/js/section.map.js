@@ -38,8 +38,8 @@
       var position = d3.mouse(container.node()),
           x = position[0],
           y = position[1],
-          w = parseInt(label.style('width')),
-          right = (x > parseInt(container.style('width')) / 2);
+          w = parseInt(label.style('width'), 10),
+          right = (x > parseInt(container.style('width'), 10) / 2);
 
       label.classed('left', right).classed('right', !right)
           .style({
@@ -50,7 +50,7 @@
 
     function addDateSelector() {
       var control = layerControl.select('.top.right').append('div')
-          .attr('class', 'control year selector');
+          .attr('class', 'control date selector');
 
       var formatter = d3.time.format.utc('%Y/%m/%d'),
           i, options = [];
@@ -66,7 +66,7 @@
 
       control.append('select')
           .on('change', function () {
-            dateCurrent = parseInt(this.value);
+            dateCurrent = parseInt(this.value, 10);
             updateMap();
           })
           .html(options.reverse().join(''));
@@ -119,6 +119,137 @@
       layerControl.select('.control.legend').html(html);
     }
 
+    function addMiniMap(data) {
+      var control = layerControl.select('.bottom.right').append('div')
+          .attr('class', 'control minimap');
+
+      var width = 150,
+          height = 150,
+          mesh = topojson.mesh(data, data.objects.layer1, function(a, b) { return a === b; });
+
+      var minimapProjection = d3.geo.mercator().scale(1).translate([0,0]);
+
+      var minimapPath = d3.geo.path().projection(minimapProjection);
+
+      var b = minimapPath.bounds(mesh),
+          s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+          t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+
+      minimapProjection.scale(s).translate(t);
+
+      var context = control.append('canvas')
+          .attr('width', width)
+          .attr('height', height)
+          .node().getContext('2d');
+
+      context.strokeStyle = '#ccc';
+      context.fillStyle = '#fff';
+      context.beginPath();
+      minimapPath.context(context)(mesh);
+      context.fill();
+      context.stroke();
+
+      var minimapOldScale = 0;
+
+      var minimapZoom = d3.behavior.zoom()
+        .center([width / 2, height / 2])
+        .scaleExtent([1, 256])
+        .on('zoom', function () {
+          var l = minimapProjection.invert(d3.mouse(control.node())),
+              p = projection(l),
+              c = zoom.center(),
+              t = zoom.translate(),
+              s = zoom.scale();
+
+          zoom.translate([c[0] - p[0] * s, c[1] - p[1] * s]);
+
+          s = d3.event.scale / zoom.scale();
+
+          var n = Math.log(s) / Math.LN2,
+              k = s > minimapOldScale ? Math.ceil(n) : Math.floor(n),
+              z = Math.pow(2, k);
+
+          minimapOldScale = z;
+
+          applyZoom(0, z);
+        });
+
+      var drag = d3.behavior.drag()
+          //.origin(function(d) { return d; })
+          .on("dragstart", dragstarted)
+          .on("drag", dragged)
+          .on("dragend", dragended);
+
+      var selection = control.append('svg')
+          .attr('width', width)
+          .attr('height', height)
+          .call(minimapZoom)
+          //.call(minimapZoom)
+        .append("rect")
+          .attr('class', 'selection')
+          .attr("x", 0)
+          .attr("y", 0)
+          .attr("width", width)
+          .attr("height", height)
+          //.attr('stroke', '#ff7800')
+          //.attr('stroke-opacity', 0.5)
+          //.attr('fill', '#ff7800')
+          //.attr('fill-opacity', 0.2)
+          .call(drag);
+
+
+
+      b = minimapPath.bounds(mesh);
+
+      minimap = {
+        width: width,
+        height: height,
+        center: [(width - (b[1][0] - b[0][0])) / 2, (height - (b[1][1] - b[0][1])) / 2],
+        selection: selection,
+        projection: minimapProjection,
+        zoom: minimapZoom,
+        update: function () {
+          var b = d3.select('.focus').node().getBoundingClientRect(),
+              s = this.height / b.height,
+              h = s * window.innerHeight,
+              w = s * window.innerWidth,
+              x = -s * b.left + this.center[0],
+              y = -s * b.top + this.center[1];
+
+          this.selection
+            .attr("x", x)
+            .attr("y", y)
+            .attr("width", w)
+            .attr("height", h);
+
+          this.zoom.translate(zoom.translate());
+          this.zoom.scale(zoom.scale());
+        }
+      }
+    }
+
+    function dragstarted(d) {
+      d3.event.sourceEvent.stopPropagation();
+      d3.select('body').classed("dragging", true);
+    }
+
+    function dragged(d) {
+      var t = zoom.translate(),
+          s = zoom.scale();
+      zoom.translate([t[0] - d3.event.dx * 2 * s, t[1] - d3.event.dy * 2 * s]);
+      scaleMap();
+    }
+
+    function dragended(d) {
+      d3.select('body').classed("dragging", false);
+    }
+
+    function updateMiniMap() {
+      if (minimap) {
+        minimap.update();
+      }
+    }
+
     function addZoom() {
       var control = layerControl.select('.top.left').append('div')
           .attr('class', 'control zoom');
@@ -134,31 +265,46 @@
           .on('click', function () { applyZoom(-1); });
     }
 
+    function handleZoom() {
+      var s = d3.event.scale,
+          n = Math.log(s) / Math.LN2,
+          k = s > oldScale ? Math.ceil(n) : Math.floor(n),
+          z = Math.pow(2, k);
+
+      oldScale = z;
+
+      applyZoom(0, z / s);
+    }
+
     // Redraw the map based on the zoom level or translation.
     function applyZoom(offset, multiplier) {
-      if (!d3.event || d3.event.type !== 'zoom') {
-        var t = zoom.translate(),
-            s = zoom.scale(),
-            c = zoom.center(),
-            d = zoom.scaleExtent(),
-            m = multiplier || 1,
-            o = offset || 0,
-            n = Math.log(s * m) / Math.LN2,
-            k = (o >= 0 ? Math.floor(n) : Math.ceil(n)) + o,
-            l = [(c[0] - t[0]) / s, (c[1] - t[1]) / s],
-            z = Math.max(d[0], Math.min(d[1], Math.pow(2, k))),
-            p = [l[0] * z + t[0], l[1] * z + t[1]];
+      var t = zoom.translate(),
+          s = zoom.scale(),
+          c = zoom.center(),
+          d = zoom.scaleExtent(),
+          m = multiplier || 1,
+          o = offset || 0,
+          n = Math.log(s * m) / Math.LN2,
+          k = (o >= 0 ? Math.floor(n) : Math.ceil(n)) + o,
+          l = [(c[0] - t[0]) / s, (c[1] - t[1]) / s],
+          z = Math.max(d[0], Math.min(d[1], Math.pow(2, k))),
+          p = [l[0] * z + t[0], l[1] * z + t[1]];
 
-        zoom.scale(z);
-        zoom.translate([t[0] + c[0] - p[0], t[1] + c[1] - p[1]]);
-      }
+      zoom.scale(z);
+      zoom.translate([t[0] + c[0] - p[0], t[1] + c[1] - p[1]]);
+
       scaleMap();
     }
 
     function scaleMap() {
       var t = zoom.translate(),
           s = zoom.scale(),
+          c = zoom.center(),
+          tx = Math.min(c[0] - bounds[0][0] * s, Math.max(t[0], c[0] - bounds[1][0] * s)),
+          ty = Math.min(c[1] - bounds[0][1] * s, Math.max(t[1], c[1] - bounds[1][1] * s)),
           dashArray = ['none', [2 / s, 2 / s].join(','), 1 / s];
+
+      t = zoom.translate([tx, ty]).translate();
 
       svg.attr('transform', 'translate(' + t.join(',') + ')scale(' + s + ')');
 
@@ -172,9 +318,7 @@
         .attr('stroke-width', 0.2 / s)
         .attr('stroke-dasharray', function (d) { return dashArray[d.properties.type]; });
 
-      /*projection.translate([projectionTranslate[0] + t[0], projectionTranslate[1] + t[1]]);
-      projection.scale(projectionScale * s);
-      drawCanvas();*/
+      updateMiniMap();
     }
 
     function getPixelRatio(context) {
@@ -204,24 +348,20 @@
 
     // Draw the map.
     function drawMap(world, boundaries, country) {
-      /*var json = topojson.feature(world, world.objects.layer1);
+      var jsonWorld = topojson.feature(world, world.objects.layer1),
+          jsonCountry = topojson.feature(country, country.objects.layer1);
 
-      json.features = json.features.filter(function(feature) {
-        return feature.properties.iso3 !== 'PHL';
-      });
+      var b = path.bounds(jsonCountry),
+          s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
+          t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
 
-      canvas.datum(json);
+      projection.scale(s).translate(t);
 
-      drawCanvas();
-
-      addZoom();
-
-      return;*/
-
+      bounds = path.bounds(jsonCountry);
 
       var dashArray = ['none', '2,2', '1'];
 
-      var features = topojson.feature(world, world.objects.layer1).features.filter(function(f) { return f.properties.iso3 !== 'PHL'; });
+      var features = jsonWorld.features.filter(function(f) { return f.properties.iso3 !== 'PHL'; });
 
       // Add the countries.
       svg.selectAll('.country')
@@ -236,23 +376,14 @@
       svg.append('g')
           .attr('class', 'focus')
         .selectAll('.municipality')
-          .data(topojson.feature(country, country.objects.layer1).features)
+          .data(jsonCountry.features)
         .enter().append('path')
           .attr('class', 'municipality')
           .attr('d', path)
           .attr('fill', '#fff')
           .attr('stroke', 'none');
-          //.attr('stroke', '#f00')
-          //.attr('stroke-width', 0.2);
 
-      /*svg.append('path')
-          .datum(topojson.mesh(country, country.objects.layer1, function(a, b) { return a !== b; }))
-          .attr('d', path)
-          .attr('class', 'boundaries inner')
-          .attr('fill', 'none')
-          .attr('stroke', '#ccc')
-          .attr('stroke-width', 0.2);*/
-
+      // Country international boundaries.
       svg.append('path')
           .datum(topojson.mesh(country, country.objects.layer1, function(a, b) { return a === b; }))
           .attr('d', path)
@@ -281,22 +412,15 @@
           .attr('stroke-width', 0.2)
           .attr('stroke-dasharray', function (d) { return dashArray[d.properties.type]; });
 
-      var j = topojson.feature(country, country.objects.layer1),
-          b = path.bounds(j),
-          p = projection(d3.geo.centroid(j)),
-          c = zoom.center(),
-          t = [c[0] - p[0], c[1] - p[1]],
-          s = .9 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height);
-
-      // Center the map.
-      zoom.translate(t);
-      // Scale the map.
-      applyZoom(0, s);
+      scaleMap();
 
       addZoom();
       addDateSelector();
       addIndexSelector();
       addLegend();
+      addMiniMap(country);
+
+      updateMiniMap();
     }
 
     function setData(data) {
@@ -380,10 +504,9 @@
 
       loader
           .defer(d3.csv, 'data/data.csv.json')
-          .defer(d3.json, 'data/un.countries.topojson')
+          .defer(d3.json, 'data/un.countries-ms3.topojson')
           .defer(d3.json, 'data/un.boundaries.topojson')
           .defer(d3.json, 'data/un.phl.topojson');
-          //.defer(d3.json, rwapi.countries());
 
       loader.await(function (error, data, world, boundaries, country, countries) {
         spinner.stop();
@@ -431,7 +554,9 @@
         indexes = {'affectedPeople': 'Affected People', 'IDP': 'Displaced People', 'damagedHouses': 'Damaged Houses'},
         stats = {},
         activeIndex = 'affectedPeople',
-        dateMin = 0, dateMax = 0, dateCurrent = 0;
+        dateMin = 0, dateMax = 0, dateCurrent = 0,
+        minimap, originalScale, originalTranslate,
+        bounds;
 
     // Add layers.
     var layerMap = container.append('div').attr('class', 'layer-map'),
@@ -453,38 +578,25 @@
         projectionTranslate = [width / 2, height / 2];
 
     var projection = d3.geo.mercator()
-        .scale(projectionScale)
-        .translate(projectionTranslate);
+        .scale(1)
+        .translate([0, 0]);
 
     var path = d3.geo.path().projection(projection);
 
+    var oldScale = 0;
     var zoom = d3.behavior.zoom()
         .center([width / 2, height / 2])
-        .scaleExtent([1, 59])
-        .on('zoom', applyZoom);
+        .scaleExtent([1, 256])
+        .on('zoom', handleZoom);
 
     zoom(layerMap);
 
-    /*var canvas = layerMap.append('div')
-        .attr('class', 'background')
-        .style({
-          'position': 'absolute',
-          'top': 0,
-          'left': 0,
-          'width': width + 'px',
-          'height': height + 'px',
-          'overflow': 'hidden'
-        })
-      .append('canvas')
-        .attr('width', width)
-        .attr('height', height)
-        .style({
-          'position': 'absolute',
-          'left': 0,
-          'top': 0
-        });
-
-    var context = canvas.node().getContext("2d");*/
+    window.onresize = function () {
+      updateMiniMap();
+    };
+    window.onscroll = function () {
+      updateMiniMap();
+    };
 
     var svg = layerMap.append('svg')
         //.attr('width', width)
@@ -493,7 +605,6 @@
         .attr('height', '100%')
         .attr('preserveAspectRatio', 'xMidYMin slice')
         .attr('viewBox', '0 0 ' + width + ' ' + height)
-        //.call(zoom)
       .append('g')
         .on('mousemove', moveLabel)
         .on('mouseover', showLabel)
