@@ -1,0 +1,3141 @@
+NAME,ADMIN1,ISLANDNAME,CLASS,LONGITUDE,LATITUDE
+Manila,National Capital Region, ,1,120.98215,14.600657
+Davao,Southern Mindanao, ,2,125.613701,7.08008
+Quezon City,National Capital Region, ,2,121.065399,14.66287
+Puerto Princesa, ,Palawan,3,118.730003,9.741373
+Argao,Central Visayas, ,3,123.607803,9.882679
+Tanjay,Central Visayas, ,3,123.1605,9.519707
+Mambajao,Northern Mindanao,Mantabuan Island,3,124.716797,9.256152
+Zamboanguita,Negros Oriental, ,3,123.202499,9.102529
+Dipolog,Western Mindanao, ,3,123.346397,8.592052
+Oroquieta,Northern Mindanao, ,3,123.808998,8.485413
+Cagayan de Oro,Northern Mindanao, ,3,124.646698,8.481277
+Tambulig,Western Mindanao, ,3,123.490097,8.093769
+Marawi,Central Mindanao, ,3,124.291901,8.002695
+Cotabato,Central Mindanao, ,3,124.242897,7.223017
+Zamboanga,Western Mindanao, ,3,122.068604,6.90553
+Butuan,Northern Mindanao, ,3,125.545303,8.947501
+Malaybalay,Northern Mindanao, ,3,125.133003,8.158616
+Tagum,Southern Mindanao, ,3,125.840599,7.478607
+Guagua,Central Luzon, ,3,120.632103,14.96001
+Baliuag,Central Luzon, ,3,120.896698,14.95294
+Pulilan,Central Luzon, ,3,120.850197,14.90464
+Malolos,Central Luzon, ,3,120.810997,14.84608
+Olongapo,Central Luzon, ,3,120.282799,14.83084
+Meycauayan,Central Luzon, ,3,120.910004,14.71585
+San Mateo,Southern Tagalog, ,3,121.124001,14.69819
+Antipolo,Southern Tagalog, ,3,121.1744,14.58734
+Taytay,Southern Tagalog, ,3,121.132004,14.56681
+Cavite,Cavite City, ,3,120.8936,14.48035
+Binangonan,Southern Tagalog, ,3,121.197899,14.46921
+Binãn,Southern Tagalog, ,3,121.080902,14.33612
+Naic,Southern Tagalog, ,3,120.768097,14.31414
+Santa Rosa,Southern Tagalog, ,3,121.107597,14.3132
+Santa Cruz,Southern Tagalog, ,3,121.414497,14.2835
+Calamba,Southern Tagalog, ,3,121.169296,14.21405
+San Pablo,Southern Tagalog, ,3,121.3265,14.07105
+Lucena,Southern Tagalog, ,3,121.612297,13.93528
+Naga,Bicol, ,3,123.178596,13.62589
+Bulan,Bicol, ,3,123.875,12.67223
+Calbayog,Eastern Visayas, ,3,124.600304,12.06994
+Kalibo,Western Visayas, ,3,122.367203,11.71187
+Roxas,Western Visayas, ,3,122.755402,11.58655
+Babatñgon,Leyte, ,3,124.8498,11.42654
+Barugo,Leyte, ,3,124.738503,11.32407
+Carigara,Leyte, ,3,124.692802,11.30355
+Palo,Eastern Visayas, ,3,124.9953,11.15766
+Bogo,Central Visayas, ,3,124.0037,11.05144
+Ormoc,Eastern Visayas, ,3,124.612801,11.00698
+Burauen,Eastern Visayas, ,3,124.894302,10.97422
+Fabrica,Western Visayas, ,3,123.357002,10.89291
+Silay,Western Visayas, ,3,122.973999,10.80328
+San Jose,Western Visayas, ,3,121.944298,10.75484
+Talisay,Western Visayas, ,3,122.968697,10.7394
+Iloilo,Iloilo City, ,3,122.570602,10.69688
+Danao,Danao City, ,3,124.030296,10.52716
+Cebu,Central Visayas, ,3,123.898399,10.30723
+Calamba,Central Visayas, ,3,123.283096,10.17616
+Tacloban,Tacloban City, ,3,125.003502,11.24775
+Tanauan,Eastern Visayas, ,3,125.019402,11.10983
+Guiuan,Eastern Visayas, ,3,125.719498,11.03693
+Dulag,Eastern Visayas, ,3,125.033699,10.95462
+Cabanatuan,Central Luzon, ,3,120.968597,15.48902
+Tarlac,Central Luzon, ,3,120.594803,15.48677
+Angeles,Central Luzon, ,3,120.591599,15.1442
+San Miguel,Central Luzon, ,3,120.9758,15.14355
+San Fernando,Central Luzon, ,3,120.690498,15.03053
+Bacarra,Ilocos, ,3,120.606102,18.253679
+Laoag,Ilocos, ,3,120.591698,18.19762
+San Nicolas,Ilocos, ,3,120.5896,18.171511
+Tuguegarao,Cagayan Valley, ,3,121.7155,17.61783
+Cabagan,Cagayan Valley, ,3,121.748802,17.432369
+Santiago,Cagayan Valley, ,3,121.545898,16.68663
+Baguio,Cordillera Administrative Region, ,3,120.594803,16.41259
+Dagupan,Ilocos, ,3,120.337196,16.0382
+Dumaguete,Central Visayas, ,3,123.310366,9.314125
+Bacolod,Western Visayas, ,3,122.951934,10.674907
+Kabankalan,Western Visayas, ,4,122.814201,9.990565
+Tagbilaran,Central Visayas, ,4,123.862602,9.648423
+Bais,Central Visayas, ,4,123.122299,9.595244
+Pamplona,Central Visayas, ,4,123.119797,9.469587
+Santa Catalina,Central Visayas, ,4,122.862801,9.339905
+Dauin,Central Visayas, ,4,123.263298,9.189611
+Sagay,Northern Mindanao,Mantabuan Island,4,124.726196,9.109797
+Siaton,Central Visayas, ,4,123.036697,9.067833
+Talisayan,Northern Mindanao, ,4,124.888,8.995666
+Dapitan,Western Mindanao, ,4,123.432198,8.657005
+Dohinob,Western Mindanao, ,4,123.197601,8.528844
+Iligan,Central Mindanao, ,4,124.240097,8.2328
+Liloy,Zamboanga del Norte, ,4,122.670502,8.118947
+Molave,Western Mindanao, ,4,123.539803,8.067546
+Tangub,Northern Mindanao, ,4,123.750198,8.064722
+Tubod,Central Mindanao, ,4,123.795403,8.04415
+Pagadian,Western Mindanao, ,4,123.437103,7.829801
+Kabasalan,Western Mindanao, ,4,122.762901,7.799747
+Siocon,Western Mindanao, ,4,122.134903,7.703259
+Malangas,Western Mindanao, ,4,123.032898,7.634746
+Margosatubig,Western Mindanao, ,4,123.168404,7.566452
+Alicia,Western Mindanao, ,4,122.935699,7.511891
+Midsayap,Central Mindanao, ,4,124.532303,7.192894
+Salunayan,Central Mindanao, ,4,124.4972,7.153264
+Dulawan,Central Mindanao, ,4,124.500099,7.017999
+Basilan, ,Sacol Island,4,121.971497,6.704546
+Lamitan,Western Mindanao,Sacol Island,4,122.139397,6.658152
+Jolo,Western Mindanao, ,4,120.991997,6.04894
+Parang,Western Mindanao, ,4,120.9058,5.918724
+Pilar,Northern Mindanao,Tona Island,4,126.100899,9.870277
+Surigao,Northern Mindanao, ,4,125.484398,9.784664
+Gigaquit,Surigao del Norte, ,4,125.6978,9.597066
+Cantilan,Surigao del Sur, ,4,125.970802,9.342014
+Magsaysay,Misamis Oriental, ,4,125.191902,9.027555
+Buena Vista,Northern Mindanao, ,4,125.411697,8.968865
+Lianga,Southern Mindanao, ,4,126.0923,8.634224
+Hinatuan,Southern Mindanao, ,4,126.319,8.370713
+Bislig,Southern Mindanao, ,4,126.320396,8.214384
+Dulugon,Northern Mindanao, ,4,125.051598,7.862392
+Mati,Southern Mindanao, ,4,126.215202,6.957314
+Digos,Southern Mindanao, ,4,125.356499,6.754249
+Lais,Southern Mindanao, ,4,125.643997,6.305599
+Polomoloc,Southern Mindanao, ,4,125.065201,6.228593
+Gen. Santos City,Southern Mindanao, ,4,125.1717,6.113789
+San Marcelino,Central Luzon, ,4,120.157997,14.98034
+San Antonio,Central Luzon, ,4,120.091698,14.95414
+Castillejos,Central Luzon, ,4,120.202103,14.93719
+Dinalupihan,Central Luzon, ,4,120.464203,14.87008
+Hermosa,Central Luzon, ,4,120.506897,14.83251
+Orani,Central Luzon, ,4,120.534302,14.80101
+Samal,Central Luzon, ,4,120.540199,14.76815
+Balanga,Central Luzon, ,4,120.5411,14.67713
+Pilar,Central Luzon, ,4,120.562798,14.66257
+Marikina,National Capital Region, ,4,121.099701,14.64095
+Orion,Central Luzon, ,4,120.579002,14.61869
+Tanay,Southern Tagalog, ,4,121.292099,14.49675
+Mariveles,Central Luzon, ,4,120.484596,14.43623
+Imus,Southern Tagalog, ,4,120.935303,14.43022
+Siniloan,Southern Tagalog, ,4,121.447197,14.42437
+Binakayan,Cavite, ,4,120.866402,14.42268
+General Trias,Southern Tagalog, ,4,120.880997,14.38453
+Paete,Southern Tagalog, ,4,121.484497,14.36513
+Carmona,Southern Tagalog, ,4,121.0588,14.3136
+Buenavista,Southern Tagalog, ,4,120.904404,14.30687
+Lumban,Southern Tagalog, ,4,121.459,14.29798
+Paracale,Bicol, ,4,122.786201,14.28085
+Pagsanjan,Southern Tagalog, ,4,121.453003,14.27604
+Silang,Southern Tagalog, ,4,120.969902,14.21853
+Canlubang,Southern Tagalog, ,4,121.1091,14.2156
+Mauban,Southern Tagalog, ,4,121.7295,14.1977
+Looc,Southern Tagalog, ,4,120.632797,14.16615
+Labo,Bicol, ,4,122.829903,14.16014
+Nagcarlan,Southern Tagalog, ,4,121.413002,14.13877
+Mendez Nunez,Southern Tagalog, ,4,120.905899,14.13705
+Lucban,Southern Tagalog, ,4,121.554199,14.11963
+Daet,Bicol, ,4,122.957298,14.11453
+Tanauan,Southern Tagalog, ,4,121.149902,14.08792
+Nasugbu,Southern Tagalog, ,4,120.635002,14.07357
+Pandan,Bicol, ,4,124.169197,14.05161
+Tayabas,Southern Tagalog, ,4,121.595901,14.03409
+Atimonan,Southern Tagalog, ,4,121.910103,13.99792
+Pagbilao,Southern Tagalog, ,4,121.686401,13.97048
+Binubusan,Southern Tagalog, ,4,120.637703,13.96906
+Sariaya,Southern Tagalog, ,4,121.527603,13.96877
+Calauag,Quezon, ,4,122.290802,13.95609
+Lipa,Southern Tagalog, ,4,121.166801,13.94372
+Gumaca,Southern Tagalog, ,4,122.103401,13.91954
+Panganiban,Bicol, ,4,124.302101,13.91465
+Cuenca,Southern Tagalog, ,4,121.055199,13.89995
+Lubang,Mindoro Occidental, ,4,120.043297,13.88729
+Lopez,Southern Tagalog, ,4,122.261902,13.88326
+Taal,Southern Tagalog, ,4,120.921303,13.87901
+Rosario,Southern Tagalog, ,4,121.205902,13.84899
+Liboro,Bicol, ,4,122.734703,13.82627
+Batangas,Southern Tagalog, ,4,121.060501,13.76151
+Libmanan,Bicol, ,4,123.058197,13.69723
+Laiya,Batangas, ,4,121.401802,13.67971
+Calolbon,Bicol, ,4,124.1054,13.60342
+Virac,Bicol, ,4,124.2342,13.59073
+Ocampo,Bicol, ,4,123.382004,13.55854
+Baao,Bicol, ,4,123.370697,13.45605
+San Isidro,Bicol, ,4,123.401299,13.4432
+Buhi,Bicol, ,4,123.517799,13.42735
+Iriga,Bicol, ,4,123.406403,13.41995
+San Juan,Bicol, ,4,123.4245,13.41965
+Nabua,Bicol, ,4,123.373001,13.40815
+Naujan,Southern Tagalog, ,4,121.3078,13.32431
+San Jose,Southern Tagalog, ,4,121.344498,13.28948
+Oas,Bicol, ,4,123.501801,13.26396
+Ligao,Bicol, ,4,123.540001,13.24034
+Guinobatan,Bicol, ,4,123.602798,13.19413
+Malama,Bicol, ,4,123.461403,13.15961
+Daraga,Bicol, ,4,123.712601,13.14953
+Legaspi,Bicol, ,4,123.7351,13.14093
+Pinamalayan,Southern Tagalog, ,4,121.486504,13.03957
+Panganiran,Bicol, ,4,123.447601,13.03838
+Sorsogon,Bicol, ,4,124.0075,12.97674
+Gubat,Bicol, ,4,124.125397,12.92457
+Donsol,Bicol, ,4,123.602699,12.91182
+Bulusan,Bicol, ,4,124.135902,12.75749
+Irosin,Bicol, ,4,124.039001,12.70889
+Romblon,Southern Tagalog,Cuyo Islands,4,122.277496,12.57949
+Bagacay,Southern Tagalog,Cuyo Islands,4,122.256599,12.56918
+San Jacinto,Bicol,Cuyo,4,123.731796,12.56803
+Pambujan,Northern Samar, ,4,124.933601,12.56287
+Togoron,Bicol,Cuyo,4,123.640999,12.54605
+San Jose,Northern Samar, ,4,124.491096,12.53408
+Lavezares,Eastern Visayas, ,4,124.333,12.53339
+Mansalay,Southern Tagalog, ,4,121.442299,12.52864
+Mondragon,Northern Samar, ,4,124.757599,12.52393
+Bobon,Northern Samar, ,4,124.565002,12.52382
+Catarman,Eastern Visayas, ,4,124.636703,12.50469
+Allen,Eastern Visayas, ,4,124.288803,12.50128
+Lahong Interior,Bicol,Lubic Island,4,123.456596,12.50067
+Central,Southern Tagalog, ,4,121.050598,12.45519
+Batuan,Bicol,Cuyo,4,123.777199,12.42783
+Masbate,Bicol,Lubic Island,4,123.6287,12.37568
+Mobo,Bicol,Lubic Island,4,123.659103,12.3377
+Looc,Southern Tagalog,Canipo Island,4,121.996696,12.26146
+Mandaon,Bicol,Lubic Island,4,123.284401,12.23964
+Malaga,Eastern Visayas, ,4,124.383003,12.23548
+Gapus,Bicol,Lubic Island,4,123.279999,12.20086
+Oquendo,Eastern Visayas, ,4,124.542099,12.1305
+Tinambacan,Eastern Visayas, ,4,124.505699,12.10103
+Malobago,Bicol,Lubic Island,4,123.988701,12.05294
+Cataiñgan,Bicol,Lubic Island,4,123.997002,12.00909
+Daraga,Bicol,Lubic Island,4,123.872398,11.90738
+Wright,Eastern Visayas, ,4,124.967003,11.7806
+Catbalogan,Samar, ,4,124.889702,11.75961
+Caibiran,Eastern Visayas, ,4,124.574799,11.57256
+Naval,Eastern Visayas, ,4,124.3993,11.56242
+San Isidro,Eastern Visayas, ,4,124.355003,11.40512
+Leyte,Eastern Visayas, ,4,124.489403,11.37315
+Tunga,Eastern Visayas, ,4,124.752502,11.24725
+Jaro,Eastern Visayas, ,4,124.787003,11.19234
+Dagami,Eastern Visayas, ,4,124.908302,11.06498
+Palompon,Leyte, ,4,124.3918,11.05242
+Cadiz,Western Visayas, ,4,123.308098,10.95603
+Janiuay,Western Visayas, ,4,122.5047,10.95363
+Sagay,Western Visayas, ,4,123.423401,10.94507
+Pototan,Western Visayas, ,4,122.638298,10.94395
+Merida,Eastern Visayas, ,4,124.539902,10.90645
+Victorias,Western Visayas, ,4,123.074501,10.90131
+Vito,Western Visayas, ,4,123.510498,10.89954
+Saravia,Western Visayas, ,4,122.978897,10.88166
+Lopez Jaen,Western Visayas, ,4,123.415703,10.85287
+Borbon,Central Visayas, ,4,124.028999,10.84064
+Escalante,Western Visayas, ,4,123.557701,10.83717
+Santa Barbara,Western Visayas, ,4,122.532898,10.83498
+Alimodian,Western Visayas, ,4,122.431999,10.82547
+Sibalom,Western Visayas, ,4,122.0233,10.79446
+Leon,Western Visayas, ,4,122.388702,10.78682
+Salamanca,Western Visayas, ,4,123.525002,10.75205
+Jaro,Western Visayas, ,4,122.648697,10.73381
+Tuburan,Central Visayas, ,4,123.829597,10.72856
+Toboso,Western Visayas, ,4,123.509804,10.72033
+Oton,Western Visayas, ,4,122.474197,10.6994
+Concepcion,Western Visayas, ,4,123.060204,10.69516
+Tigbauan,Western Visayas, ,4,122.379402,10.68316
+Miagao,Western Visayas, ,4,122.237198,10.6467
+Tigbon,Western Visayas, ,4,123.462097,10.61192
+Pulupandan,Negros Occidental, ,4,122.808998,10.52786
+San Carlos,Western Visayas, ,4,123.423103,10.48873
+Santo Niño,Western Visayas, ,4,123.3769,10.46174
+La Carlota,Western Visayas, ,4,122.922302,10.4249
+Tabon,Central Visayas, ,4,123.324898,10.33312
+Hinigaran,Negros Occidental, ,4,122.855904,10.27616
+Magallon Cadre,Western Visayas, ,4,123.0765,10.27545
+Basak,Central Visayas, ,4,123.303596,10.23219
+Mampahubug,Western Visayas, ,4,123.033699,10.21359
+Isabella,Western Visayas, ,4,122.9944,10.20274
+Binalbagan,Western Visayas, ,4,122.860901,10.1933
+Camangcamang,Western Visayas, ,4,122.945999,10.1753
+Aguisan,Western Visayas, ,4,122.864899,10.1633
+Guihulngan,Central Visayas, ,4,123.269699,10.12354
+Carcar,Central Visayas, ,4,123.642899,10.10929
+Himamaylan,Western Visayas, ,4,122.871002,10.10156
+Dumanjug,Central Visayas, ,4,123.439201,10.0538
+Binicuil,Western Visayas, ,4,122.8218,10.02127
+Laoang, ,Semirara Island,4,125.022797,12.57934
+Palapag,Eastern Visayas, ,4,125.118698,12.55118
+Catubig,Eastern Visayas, ,4,125.053902,12.41173
+Oras,Eastern Visayas, ,4,125.446899,12.15096
+Dolores,Eastern Visayas, ,4,125.485603,12.04562
+Borongan,Eastern Visayas, ,4,125.433197,11.61163
+Giporlos,Eastern Visayas, ,4,125.447304,11.12535
+Balangiga,Eastern Visayas, ,4,125.384201,11.11702
+Iba,Central Luzon, ,4,119.978798,15.33025
+Alaminos,Ilocos, ,4,119.980003,16.1581
+San Quintin,Ilocos, ,4,120.813904,15.98616
+Urdaneta,Ilocos, ,4,120.572701,15.98132
+Bugallon,Ilocos, ,4,120.2164,15.95624
+San Carlos,Ilocos, ,4,120.348701,15.93014
+Umingan,Ilocos, ,4,120.841499,15.9293
+Malasiqui,Ilocos, ,4,120.412399,15.92505
+Rosales,Ilocos, ,4,120.631302,15.89831
+Lupao,Central Luzon, ,4,120.900902,15.8775
+Bayambang,Ilocos, ,4,120.458702,15.81912
+Mangatarem,Ilocos, ,4,120.2929,15.79056
+San Jose,Central Luzon, ,4,120.987396,15.79006
+Cuyapo,Central Luzon, ,4,120.666496,15.78178
+Wawa,Ilocos, ,4,120.450996,15.76663
+Santo Thomas,Central Luzon, ,4,120.9505,15.75729
+Moncada,Central Luzon, ,4,120.572197,15.72986
+Muñoz,Central Luzon, ,4,120.903801,15.71337
+Camiling,Central Luzon, ,4,120.4142,15.68905
+Paniqui,Central Luzon, ,4,120.587997,15.66711
+Guimba,Central Luzon, ,4,120.768799,15.65843
+Bongabon,Central Luzon, ,4,121.140701,15.63209
+Calipahan,Central Luzon, ,4,120.922997,15.6081
+Laur,Central Luzon, ,4,121.186203,15.59083
+Santo Domingo,Central Luzon, ,4,120.8806,15.58766
+Mayapyap,Central Luzon, ,4,120.956497,15.52154
+San Miguel,Central Luzon, ,4,120.603104,15.43315
+San Leonardo,Central Luzon, ,4,120.9617,15.36291
+Peñaranda,Central Luzon, ,4,121.005898,15.3541
+Odonnell,Central Luzon, ,4,120.4608,15.35049
+Papaya,Central Luzon, ,4,121.045898,15.35026
+Capas,Central Luzon, ,4,120.591499,15.32679
+Concepcion,Central Luzon, ,4,120.656097,15.32143
+Gapan,Central Luzon, ,4,120.9496,15.31154
+San Antonio,Central Luzon, ,4,120.8573,15.3059
+San Nicolas,Central Luzon, ,4,120.928398,15.30254
+Entablado,Central Luzon, ,4,120.861504,15.29389
+Bamban,Central Luzon, ,4,120.566399,15.27408
+Cabiao,Central Luzon, ,4,120.869301,15.26352
+Tartaro,Central Luzon, ,4,121.042099,15.17122
+Candaba,Central Luzon, ,4,120.827301,15.10097
+San Felipe,Central Luzon, ,4,120.076897,15.0631
+San Narciso,Central Luzon, ,4,120.081299,15.01833
+Bangui,Ilocos, ,4,120.765503,18.53269
+Linao,Cagayan Valley, ,4,121.592201,18.372
+Pasuquin,Ilocos, ,4,120.614502,18.33297
+Lal-lo,Cagayan Valley, ,4,121.6595,18.20245
+Dingras,Ilocos, ,4,120.693604,18.09767
+Batac,Ilocos, ,4,120.562798,18.05842
+Paoay,Ilocos, ,4,120.518303,18.05563
+Cabugao,Ilocos Sur, ,4,120.449799,17.79183
+Solana,Cagayan Valley, ,4,121.677696,17.670481
+Bangued,Cordillera Administrative Region, ,4,120.613899,17.59996
+Vigan,Ilocos, ,4,120.373299,17.570869
+Candon,Ilocos, ,4,120.442497,17.19063
+Ilagan,Cagayan Valley, ,4,121.885498,17.14839
+Kalinga,Cagayan Valley, ,4,121.708801,17.12611
+Santa Cruz,Ilocos Sur, ,4,120.443703,17.0882
+Bontoc,Cordillera Administrative Region, ,4,120.974701,17.087601
+Naguilian,Cagayan Valley, ,4,121.829597,17.021799
+Tagudin,Ilocos, ,4,120.451103,16.941179
+Luna,Ilocos, ,4,120.376404,16.84441
+Tuboc,Cagayan Valley, ,4,121.763702,16.767139
+San Fernando,Ilocos, ,4,120.319,16.61701
+Bintawan,Cagayan Valley, ,4,121.188904,16.582569
+Solano,Cagayan Valley, ,4,121.18,16.526569
+Bauang,La Union, ,4,120.317299,16.50469
+Bayombong,Cagayan Valley, ,4,121.148499,16.48848
+Bambang,Cagayan Valley, ,4,121.112396,16.387541
+Rosario,Ilocos, ,4,120.481102,16.232071
+Pozorrubio,Ilocos, ,4,120.543198,16.10841
+Bateng,Ilocos, ,4,120.358597,16.07839
+San Nicolas,Ilocos, ,4,120.758003,16.068081
+San Manuel,Ilocos, ,4,120.667999,16.067341
+Binalonan,Ilocos, ,4,120.595299,16.042311
+Manaoag,Ilocos, ,4,120.484901,16.041189
+Lingayen,Ilocos, ,4,120.133904,16.03463
+Tayug,Ilocos, ,4,120.740799,16.028521
+Binmale,Ilocos, ,4,120.258797,16.015841
+Asingan,Ilocos, ,4,120.656097,16.00844
+Ozamiz,Northern Mindanao, ,4,123.841721,8.145755
+Abucay,Central Luzon, ,4,120.534112,14.728842
+Bien Unido,Central Visayas, ,4,124.380885,10.142033
+Pagasinan, ,Simunul Island,5,119.7976,4.915141
+Simunul, ,Simunul Island,5,119.843903,4.892039
+Sibutu,Western Mindanao,Sibutu Island,5,119.458298,4.864885
+Luuk Datan, ,Manuk Manka Island,5,119.843697,4.802008
+Sibalo,Western Mindanao,Sibutu Island,5,119.493103,4.737716
+Sitangkai, ,Tumindao Island,5,119.400002,4.678711
+Ligayan,Western Mindanao,Sibutu Island,5,119.468697,4.662637
+Balabac,Southern Tagalog,Balabac Island,5,117.063904,7.98299
+Pasig,Southern Tagalog,Balabac Island,5,116.984299,7.885706
+Gugupuan,Southern Tagalog,Balabac Island,5,117.007599,7.840456
+Dohol Bato,Southern Tagalog,Kagayan de Sulu Island,5,118.509903,7.03792
+Lupa Pula,Southern Tagalog,Kagayan de Sulu Island,5,118.507401,6.977116
+Tarawaken, , ,5,119.8825,5.155764
+Bongao, ,Bongao Island,5,119.770103,5.030098
+Tanabag,Southern Tagalog,Palawan,5,118.988503,9.999349
+Babuyan,Southern Tagalog,Palawan,5,118.911903,9.990757
+Maruyogon,Southern Tagalog,Palawan,5,118.862297,9.984131
+Tapul,Southern Tagalog,Palawan,5,118.778999,9.973511
+Nacidoc, ,Palawan,5,118.811897,9.952218
+Bacungan,Southern Tagalog,Palawan,5,118.701103,9.911647
+Tagburos, ,Palawan,5,118.727303,9.835156
+Irahuan,Southern Tagalog,Palawan,5,118.6931,9.807881
+San Jose, ,Palawan,5,118.746101,9.80057
+Malamig,Southern Tagalog,Palawan,5,118.677696,9.778612
+Iwahig,Southern Tagalog,Palawan,5,118.658897,9.748012
+Anepahan,Southern Tagalog,Palawan,5,118.491798,9.739929
+Totobach, ,Palawan,5,118.450302,9.726586
+Malinao,Southern Tagalog,Palawan,5,118.694397,9.697473
+Bobosawen,Southern Tagalog,Palawan,5,118.397301,9.663342
+Apurauan,Southern Tagalog,Palawan,5,118.347099,9.593443
+Inagauan,Southern Tagalog,Palawan,5,118.630096,9.554466
+Sapangan,Southern Tagalog,Palawan,5,118.546303,9.525158
+Isaub,Southern Tagalog,Palawan,5,118.593201,9.510557
+Berong, ,Palawan,5,118.212601,9.476839
+Baraki,Southern Tagalog,Palawan,5,118.476601,9.475224
+Iraan,Southern Tagalog,Palawan,5,118.550301,9.4693
+Apis,Southern Tagalog,Palawan,5,118.446503,9.446599
+Aborlan,Southern Tagalog,Palawan,5,118.544998,9.438707
+Ramon Magsaysay,Southern Tagalog,Palawan,5,118.514198,9.385487
+Birong,Southern Tagalog,Palawan,5,118.121101,9.340997
+Iwahig,Southern Tagalog,Palawan,5,118.084297,9.31099
+Panacan,Southern Tagalog,Palawan,5,118.407204,9.253724
+Quezon,Southern Tagalog,Palawan,5,118.026199,9.247016
+Alfonso XIII,Southern Tagalog,Palawan,5,117.991402,9.23828
+Tagusao,Southern Tagalog,Palawan,5,117.810799,9.19385
+Batonbaton,Southern Tagalog,Palawan,5,118.345596,9.191145
+Burirao,Southern Tagalog,Palawan,5,118.079903,9.189971
+Lamakan,Southern Tagalog,Palawan,5,117.885803,9.183455
+Calategas,Southern Tagalog,Palawan,5,118.184998,9.176906
+Calabugas,Southern Tagalog,Palawan,5,118.225197,9.170336
+Aboabo,Southern Tagalog,Palawan,5,118.114799,9.158805
+Panitan,Southern Tagalog,Palawan,5,118.085403,9.098904
+Eran,Southern Tagalog,Palawan,5,117.695396,9.065127
+Malabangan,Southern Tagalog,Palawan,5,117.646004,9.048316
+Labog,Southern Tagalog,Palawan,5,118.058197,9.02704
+Karasanan,Southern Tagalog,Palawan,5,118.030899,8.953185
+Summerumsum,Southern Tagalog,Palawan,5,117.563599,8.91237
+Conduaga,Southern Tagalog,Palawan,5,117.488197,8.862852
+Barongbarong,Southern Tagalog,Palawan,5,117.8927,8.854421
+Banua,Southern Tagalog,Palawan,5,117.481598,8.839559
+Lara, ,Palawan,5,117.858101,8.798482
+Brookes Point, ,Palawan,5,117.835503,8.775811
+Buligay,Southern Tagalog,Palawan,5,117.797501,8.75508
+Bulaloe,Southern Tagalog,Palawan,5,117.365196,8.720036
+Tacbolubu,Southern Tagalog,Palawan,5,117.774902,8.717121
+Males,Southern Tagalog,Palawan,5,117.688797,8.690887
+Malihud,Southern Tagalog,Palawan,5,117.590599,8.677869
+Bonobono,Southern Tagalog,Palawan,5,117.557899,8.67175
+Sarimog,Southern Tagalog,Palawan,5,117.306,8.658594
+Tarusan,Southern Tagalog,Palawan,5,117.510498,8.656259
+Iwahig,Southern Tagalog,Palawan,5,117.513,8.600734
+Canipaan,Southern Tagalog,Palawan,5,117.265701,8.577974
+Sarap, ,Palawan,5,117.512299,8.547286
+Sumbiling,Southern Tagalog,Palawan,5,117.368698,8.54063
+Sarong, ,Palawan,5,117.487701,8.513953
+Rio Tuba,Southern Tagalog,Palawan,5,117.394203,8.51019
+Coral,Southern Tagalog,Palawan,5,117.336304,8.481996
+Wangle,Southern Tagalog,Palawan,5,117.2201,8.476728
+Malatub,Southern Tagalog,Palawan,5,117.2864,8.447186
+Valdez,Southern Tagalog,Palawan,5,117.241898,8.39579
+Buliluyan,Southern Tagalog,Palawan,5,117.183701,8.341032
+Capandang, ,Dalahican Island,5,117.209702,8.303269
+Bacabaca, ,Dalahican Island,5,117.2285,8.288758
+Pandanan, ,Dalahican Island,5,117.179199,8.280512
+Loudan, ,Bancalan Island,5,117.087402,8.224178
+Sebaring,Southern Tagalog,Bugsuk Island,5,117.283699,8.200043
+Ramos, ,Ramos Island,5,117.043404,8.107009
+Bogbog, ,Ramos Island,5,117.025497,8.086973
+Silomsilom,Southern Tagalog,Balabac Island,5,117.0298,8.044495
+Ronda,Central Visayas, ,5,123.418701,9.998664
+Dancalan,Western Visayas, ,5,122.741203,9.9837
+Caban,Central Visayas, ,5,124.217697,9.983641
+Jimalalud,Central Visayas, ,5,123.197098,9.980289
+Biabas,Central Visayas, ,5,124.530296,9.97966
+Caliling,Western Visayas, ,5,122.482201,9.978395
+Cauayan,Negros Occidental, ,5,122.625999,9.972398
+Lupni,Western Visayas, ,5,122.833298,9.970463
+San Pascual,Central Visayas, ,5,124.429901,9.949559
+Tubigon,Central Visayas, ,5,123.966103,9.947617
+Moalboal,Central Visayas, ,5,123.3965,9.944441
+Tayasan,Negros Oriental, ,5,123.172501,9.92718
+Sagbayan,Central Visayas, ,5,124.096497,9.912212
+Inayauan,Western Visayas, ,5,122.440399,9.900638
+Lomboy,Bohol, ,5,123.828201,9.89681
+Alicia,Central Visayas, ,5,124.443199,9.893395
+Dagohoy,Central Visayas, ,5,124.276497,9.89109
+Looc,Bohol, ,5,123.769302,9.881992
+Talisay,Central Visayas, ,5,123.865997,9.880723
+Badian,Central Visayas, ,5,123.402802,9.867409
+Mabini,Central Visayas, ,5,124.524498,9.863337
+Ayungon,Negros Oriental, ,5,123.144897,9.85668
+Pagahat,Central Visayas, ,5,124.468697,9.849735
+Nanas,Western Visayas, ,5,122.892403,9.847872
+Caningay,Western Visayas, ,5,122.644203,9.832734
+Cogtong,Central Visayas, ,5,124.531799,9.832533
+Carmen,Central Visayas, ,5,124.198997,9.823379
+Cambuyao,Central Visayas, ,5,124.569099,9.80905
+Sierra-Bullones,Central Visayas, ,5,124.292603,9.807336
+Loon,Central Visayas, ,5,123.796402,9.801065
+Nagtuang,Central Visayas, ,5,123.8489,9.799111
+Canolin,Central Visayas, ,5,124.492104,9.795897
+Bayahayan,Central Visayas, ,5,124.052803,9.788627
+Saguisi,Central Visayas, ,5,124.472397,9.781549
+Antequera,Central Visayas, ,5,123.901604,9.779269
+Tangohay,Central Visayas, ,5,124.487999,9.764198
+Dalaguete,Cebu, ,5,123.528999,9.763712
+Balilihan,Central Visayas, ,5,123.977798,9.75699
+Sipalay,Western Visayas, ,5,122.4105,9.752419
+Song-on,Central Visayas, ,5,123.795403,9.750936
+Guindulman,Central Visayas, ,5,124.461899,9.748279
+Bacong,Central Visayas, ,5,124.568199,9.739258
+Alegria,Central Visayas, ,5,123.353699,9.729344
+Cortes,Central Visayas, ,5,123.8825,9.722031
+Duero,Central Visayas, ,5,124.401703,9.714891
+Bilar,Central Visayas, ,5,124.108498,9.707091
+Sevilla,Central Visayas, ,5,124.048897,9.704264
+Manjuyod,Central Visayas, ,5,123.148003,9.677432
+Taloto,Central Visayas, ,5,123.855103,9.67686
+Balwang,Central Visayas, ,5,123.391899,9.67495
+Kadagul,Central Visayas, ,5,124.292603,9.668287
+Jagna,Central Visayas, ,5,124.367302,9.65827
+Taytay,Central Visayas, ,5,124.038498,9.638064
+Boljoon,Central Visayas, ,5,123.473999,9.631752
+Baclayon,Central Visayas, ,5,123.9133,9.627626
+Dauis, ,Secubun Island,5,123.864502,9.624459
+Garcia Hernandez,Central Visayas, ,5,124.294502,9.621145
+Simang,Central Visayas, ,5,124.207397,9.614362
+Tagbuane,Central Visayas, ,5,123.961601,9.61431
+Dimiao,Central Visayas, ,5,124.162201,9.614113
+Loay,Central Visayas, ,5,124.014999,9.606165
+Hinoba-an,Western Visayas, ,5,122.474899,9.606026
+Panglao,Central Visayas,Secubun Island,5,123.7528,9.585391
+Malatapay,Central Visayas, ,5,123.149597,9.540784
+Da-og,Western Visayas, ,5,122.549797,9.493185
+Guisokan,Central Visayas, ,5,122.828003,9.424768
+Santander,Central Visayas, ,5,123.3349,9.420575
+Basay,Central Visayas, ,5,122.644402,9.415284
+San Jose,Central Visayas, ,5,123.241501,9.413893
+Bayawan,Central Visayas, ,5,122.806099,9.369852
+Sibulan,Central Visayas, ,5,123.285004,9.357946
+Enrique Villanueva,Central Visayas, ,5,123.644798,9.278415
+Larena,Central Visayas, ,5,123.594597,9.248267
+Bacong,Central Visayas, ,5,123.294296,9.245082
+Naasag,Northern Mindanao,Mantabuan Island,5,124.656303,9.229377
+Cang-alwang,Central Visayas, ,5,123.472397,9.218226
+Maria,Central Visayas, ,5,123.651497,9.208012
+Mahinog,Northern Mindanao,Mantabuan Island,5,124.786797,9.154737
+Lazi,Central Visayas, ,5,123.635696,9.129785
+Bacnit,Northern Mindanao,Mantabuan Island,5,124.679802,9.124853
+Campalanas,Central Visayas, ,5,123.579498,9.122546
+Guinsiliban,Northern Mindanao,Mantabuan Island,5,124.785599,9.096976
+Bonbonon,Central Visayas, ,5,123.114799,9.064373
+Kabulakan,Northern Mindanao, ,5,124.844597,8.990019
+Santa Ines,Northern Mindanao, ,5,124.9412,8.961462
+Suqbongcogon,Northern Mindanao, ,5,124.787399,8.956605
+Portulin,Northern Mindanao, ,5,124.984497,8.929949
+Kataringan,Northern Mindanao, ,5,124.862396,8.893879
+Taboc,Northern Mindanao, ,5,124.7967,8.88707
+Salay,Northern Mindanao, ,5,124.795097,8.85409
+Lagonglong,Northern Mindanao, ,5,124.797302,8.803696
+Balingasag,Northern Mindanao, ,5,124.7845,8.745789
+Balagnan,Northern Mindanao, ,5,124.850998,8.735343
+Madaging,Northern Mindanao, ,5,124.864197,8.703944
+Baliangao,Misamis Occidental, ,5,123.612099,8.660448
+Jasaan,Northern Mindanao, ,5,124.756104,8.656545
+Tamboboan,Northern Mindanao, ,5,124.8881,8.654338
+Hinaplanan,Northern Mindanao, ,5,124.842697,8.644282
+Green Village,Northern Mindanao, ,5,124.929497,8.642355
+Usokan,Northern Mindanao, ,5,123.691902,8.627849
+Bato,Northern Mindanao, ,5,123.661499,8.6116
+Claveria,Northern Mindanao, ,5,124.894798,8.611335
+Plaridel,Northern Mindanao, ,5,123.722,8.60532
+Gitagum,Northern Mindanao, ,5,124.415703,8.593923
+Lagindingan,Northern Mindanao, ,5,124.455101,8.58689
+Casul,Northern Mindanao, ,5,123.5644,8.580135
+San Martin,Northern Mindanao, ,5,124.769997,8.562243
+Dolong,Northern Mindanao, ,5,124.361397,8.558398
+El Salvador,Northern Mindanao, ,5,124.524002,8.557124
+Lopez Jaena,Northern Mindanao, ,5,123.764397,8.550186
+Polanco,Western Mindanao, ,5,123.363503,8.540297
+Opol Tagoloan, , ,5,124.754898,8.539762
+Dampalan,Northern Mindanao, ,5,123.738899,8.539055
+San Luis,Northern Mindanao, ,5,124.9375,8.537117
+Kalabaylabay,Northern Mindanao, ,5,124.4832,8.535856
+Malitbog,Northern Mindanao, ,5,124.878502,8.535668
+Santa Ana,Northern Mindanao, ,5,124.802696,8.535264
+Tubigan,Northern Mindanao, ,5,124.318398,8.525405
+Barcelona,Western Mindanao, ,5,123.461403,8.524472
+Lourdes,Northern Mindanao, ,5,124.437798,8.521591
+Dampalan,Western Mindanao, ,5,123.547699,8.520054
+Roxas,Western Mindanao, ,5,123.240898,8.51621
+Igpit,Northern Mindanao, ,5,124.575203,8.515274
+Linay,Western Mindanao, ,5,123.130699,8.514996
+Bugo,Northern Mindanao, ,5,124.761902,8.511274
+Manukan,Western Mindanao, ,5,123.094597,8.511089
+Ipanon,Cagayan de Oro, ,5,124.615303,8.506824
+Katipunan,Western Mindanao, ,5,123.290199,8.506453
+Dansullan,Western Mindanao, ,5,123.4048,8.500816
+Initao,Northern Mindanao, ,5,124.313698,8.499928
+Disakan,Western Mindanao, ,5,123.061203,8.486998
+New Pinan,Western Mindanao, ,5,123.446404,8.480719
+Gusa,Cagayan de Oro, ,5,124.682701,8.47774
+Pagatpat,Northern Mindanao, ,5,124.589401,8.465591
+Matam,Western Mindanao, ,5,123.260201,8.461445
+San Vicente,Northern Mindanao, ,5,123.808998,8.460681
+Lingasad,Western Mindanao, ,5,123.359901,8.460546
+Tabon,Western Mindanao, ,5,123.033699,8.454607
+Sangkol,Western Mindanao, ,5,123.302002,8.451063
+Suoy,Northern Mindanao, ,5,123.616501,8.449639
+Santiago,Northern Mindanao, ,5,124.9963,8.433512
+Naawan,Northern Mindanao, ,5,124.301697,8.432371
+Alae,Northern Mindanao, ,5,124.8134,8.421
+Caputol,Northern Mindanao, ,5,123.824203,8.417628
+Manticao,Northern Mindanao, ,5,124.2967,8.404196
+Diolin,Western Mindanao, ,5,123.542,8.376895
+Ticala,Northern Mindanao, ,5,124.904297,8.376857
+Dalirig,Northern Mindanao, ,5,124.9552,8.374871
+Manolo Fortich,Northern Mindanao, ,5,124.868401,8.36782
+Motibot,Western Mindanao, ,5,122.9963,8.362703
+Mohon,Northern Mindanao, ,5,123.8405,8.354259
+Damilag,Northern Mindanao, ,5,124.814301,8.353169
+Tuod,Central Mindanao, ,5,124.359596,8.345654
+Lugait,Northern Mindanao, ,5,124.269997,8.343111
+Libona,Northern Mindanao, ,5,124.737701,8.340089
+Jimenez,Northern Mindanao, ,5,123.843903,8.337524
+Camp Philips,Northern Mindanao, ,5,124.8153,8.322555
+Dalipuga,Central Mindanao, ,5,124.263603,8.31859
+Tuminabo,Central Mindanao, ,5,124.325401,8.313725
+Sumilao,Northern Mindanao, ,5,124.947304,8.290123
+Dogui-ongan,Central Mindanao, ,5,124.307503,8.288716
+Nanaka,Northern Mindanao, ,5,124.751701,8.276962
+Mandulog,Central Mindanao, ,5,124.269203,8.270636
+Balintad,Northern Mindanao, ,5,124.701698,8.249638
+Ocasion,Northern Mindanao, ,5,124.901299,8.245264
+Cigaluga,Central Mindanao, ,5,124.302803,8.240968
+Talakag,Northern Mindanao, ,5,124.604301,8.234786
+Liyañgon,Northern Mindanao, ,5,124.740799,8.232405
+Sindañgan,Western Mindanao, ,5,123.007698,8.231359
+Pugaan,Central Mindanao, ,5,124.286499,8.2239
+Dahilayan,Northern Mindanao, ,5,124.825699,8.22345
+Pantalan,Northern Mindanao, ,5,124.851303,8.217422
+Lico-an,Northern Mindanao, ,5,124.912102,8.213341
+Nato,Western Mindanao, ,5,123.070297,8.208683
+Camp Overton,Central Mindanao, ,5,124.214699,8.203584
+Wanguilan,Northern Mindanao, ,5,124.612801,8.201941
+Clarin,Northern Mindanao, ,5,123.860901,8.200936
+Lingawan,Western Mindanao, ,5,123.019096,8.190093
+Kauswagan,Central Mindanao, ,5,124.088402,8.184311
+Lapayan,Central Mindanao, ,5,124.122597,8.182199
+Buru-un,Central Mindanao, ,5,124.167702,8.182041
+Bagong Tudela,Western Mindanao, ,5,123.485001,8.181547
+Datto Malan,Central Mindanao, ,5,124.4282,8.176808
+Balugohay,Central Mindanao, ,5,123.961998,8.157735
+Matungao,Central Mindanao, ,5,124.162102,8.153886
+Bongbong,Northern Mindanao, ,5,123.810402,8.143913
+Bacangan,Western Mindanao, ,5,122.925499,8.141296
+Tumapic,Western Mindanao, ,5,123.428299,8.141204
+Dagundalahon,Northern Mindanao, ,5,124.667503,8.13949
+Tampolong,Northern Mindanao, ,5,124.603203,8.128215
+Kolasihan,Central Mindanao, ,5,123.926498,8.127238
+Palandoc,Western Mindanao, ,5,122.856201,8.127117
+Maigpait,Northern Mindanao, ,5,124.579903,8.122782
+Lipakan,Western Mindanao, ,5,122.818199,8.11681
+Balut,Central Mindanao, ,5,124.225304,8.114226
+Salug,Western Mindanao, ,5,122.7883,8.110727
+Kolambugan,Central Mindanao, ,5,123.900597,8.106705
+Kalaugan,Northern Mindanao, ,5,124.602798,8.106482
+Parasan,Western Mindanao, ,5,123.460403,8.105146
+Labinay,Northern Mindanao, ,5,123.757103,8.09775
+Kayok,Western Mindanao, ,5,122.7146,8.097302
+Dukanunday,Zamboanga del Norte, ,5,122.606903,8.095929
+Kibuya,Northern Mindanao, ,5,124.643204,8.092576
+Indulang,Central Mindanao, ,5,124.586502,8.092332
+Lumidong,Central Mindanao, ,5,124.186699,8.073681
+Bahugan,Northern Mindanao, ,5,124.6595,8.073575
+Benantalon,Northern Mindanao, ,5,124.719803,8.072824
+Pantao-A-Ragat,Central Mindanao, ,5,124.127602,8.066866
+Labason,Western Mindanao, ,5,122.5243,8.066637
+Villaba,Northern Mindanao, ,5,123.723099,8.065029
+Sangaya,Northern Mindanao, ,5,124.785797,8.059372
+La Libertad,Western Mindanao, ,5,122.4645,8.058028
+Pangabuan,Northern Mindanao, ,5,123.696701,8.05246
+Tiaman,Northern Mindanao, ,5,123.618797,8.050946
+Cawayan,Northern Mindanao, ,5,124.896301,8.04765
+Mongamol,Western Mindanao, ,5,122.401802,8.046547
+Binuni,Western Mindanao, ,5,122.811302,8.044446
+Canipay,Western Mindanao, ,5,123.215698,8.043995
+Sungka,Northern Mindanao, ,5,124.9412,8.043917
+Tikala-an,Northern Mindanao, ,5,124.626297,8.035507
+Pananuran,Western Mindanao, ,5,122.343399,8.028474
+Pingping,Central Mindanao, ,5,123.832901,8.027519
+Baroy,Central Mindanao, ,5,123.785599,8.025488
+Imbatug,Northern Mindanao, ,5,124.785004,8.023345
+Sugan,Western Mindanao, ,5,123.586899,8.018172
+Bakung,Central Mindanao, ,5,124.2845,8.018109
+Balas,Western Mindanao, ,5,122.498001,8.008302
+Kiloya,Northern Mindanao, ,5,124.914001,8.007933
+Ramon Magsaysay,Western Mindanao, ,5,123.523903,7.992334
+Bonifacio,Western Mindanao, ,5,123.646301,7.985399
+Tamilison,Western Mindanao, ,5,122.703697,7.982793
+Bubong,Central Mindanao, ,5,124.365501,7.982722
+Kanapun,Western Mindanao, ,5,122.313103,7.98246
+Manay,Central Mindanao, ,5,124.063904,7.979422
+Lala,Central Mindanao, ,5,123.7481,7.975996
+Banasilon,Central Mindanao, ,5,123.776802,7.964841
+Commonwealth,Western Mindanao, ,5,123.518402,7.962666
+Ma-ol,Central Mindanao, ,5,124.241096,7.959476
+Makabayao,Central Mindanao, ,5,124.037804,7.955947
+Upper Daromawang,Central Mindanao, ,5,123.719704,7.954114
+Aurora,Western Mindanao, ,5,123.583603,7.95297
+Balintad,Central Mindanao, ,5,123.871803,7.947392
+Gata,Central Mindanao, ,5,124.378403,7.946949
+Mocubol,Western Mindanao, ,5,122.236504,7.929988
+Dacomaoang,Western Mindanao, ,5,123.687897,7.925366
+Maranding,Central Mindanao, ,5,123.7771,7.924969
+Bontong,Central Mindanao, ,5,124.357201,7.921581
+Malaig,Central Mindanao, ,5,124.206398,7.919459
+Binayan,Western Mindanao, ,5,123.444504,7.911901
+Balimbing,Central Mindanao, ,5,123.8424,7.906137
+Kapatagan,Central Mindanao, ,5,123.771599,7.903276
+Bukon,Western Mindanao, ,5,123.534897,7.89445
+Palpalan,Western Mindanao, ,5,123.371498,7.890757
+Mapait,Northern Mindanao, ,5,124.785599,7.883986
+Talub,Central Mindanao, ,5,124.327301,7.879665
+Balagunan,Central Mindanao, ,5,124.416901,7.876462
+Pantaro,Central Mindanao, ,5,124.088997,7.872972
+Tucuran,Western Mindanao, ,5,123.582001,7.866367
+La Roxas,Northern Mindanao, ,5,124.889801,7.866291
+Kebaritan,Northern Mindanao, ,5,124.663101,7.865663
+Bacolod Grande,Central Mindanao, ,5,124.135803,7.864614
+Dagumbaan,Northern Mindanao, ,5,124.926804,7.861697
+Mahayahay,Central Mindanao, ,5,123.768402,7.861094
+Galawan,Central Mindanao, ,5,124.383904,7.860701
+Titay,Western Mindanao, ,5,122.5457,7.856908
+Upper Tanagun,Western Mindanao, ,5,123.498703,7.85654
+Norte,Western Mindanao, ,5,123.458603,7.856194
+Lakewood,Western Mindanao, ,5,123.160202,7.855838
+Mamad,Western Mindanao, ,5,122.162201,7.855173
+Buriasan,Central Mindanao, ,5,123.834801,7.850246
+Pangantukan,Northern Mindanao, ,5,124.810097,7.850223
+Taiu-an,Central Mindanao, ,5,124.373299,7.845107
+Bigong,Western Mindanao, ,5,123.315903,7.831019
+Barandias,Northern Mindanao, ,5,124.780098,7.82965
+Tabo-an,Central Mindanao, ,5,124.101997,7.829443
+Balubuan,Western Mindanao, ,5,123.368599,7.822367
+Pikani,Central Mindanao, ,5,123.685303,7.820522
+Adtoyon,Northern Mindanao, ,5,124.856003,7.819515
+Tambanan,Western Mindanao, ,5,122.673599,7.818319
+Dapulak,Central Mindanao, ,5,123.944199,7.818131
+Baligian,Western Mindanao, ,5,122.1437,7.809566
+Gui,Central Mindanao, ,5,124.083702,7.801179
+Pikalawig,Central Mindanao, ,5,123.715202,7.799122
+Titanmanobog,Western Mindanao, ,5,122.698402,7.7941
+Boribud,Northern Mindanao, ,5,124.757004,7.790701
+Sawer,Central Mindanao, ,5,124.328003,7.786585
+Lumbaton,Central Mindanao, ,5,124.257896,7.784111
+Linuk,Central Mindanao, ,5,124.202499,7.782714
+Ipil,Western Mindanao, ,5,122.5905,7.78188
+Dumaguk,Western Mindanao, ,5,123.118599,7.780258
+Tubaran,Central Mindanao, ,5,124.1539,7.76973
+Pantad,Western Mindanao, ,5,123.419403,7.760139
+Puerto Santa Maria,Western Mindanao, ,5,122.125298,7.757668
+Lubing,Western Mindanao, ,5,123.034203,7.756698
+Caparan,Western Mindanao, ,5,122.550201,7.750741
+Kumalarang,Western Mindanao, ,5,123.150803,7.748642
+Siay,Western Mindanao, ,5,122.175201,7.7456
+Napulan,Western Mindanao, ,5,123.462997,7.738866
+Sigayan,Central Mindanao, ,5,123.765999,7.738009
+Panta-un,Central Mindanao, ,5,124.263199,7.731787
+Lindang,Western Mindanao, ,5,122.967003,7.729869
+Gauan,Central Mindanao, ,5,124.301102,7.728199
+Timbang,Western Mindanao, ,5,123.144302,7.707559
+Kalibao,Central Mindanao, ,5,123.811897,7.706481
+Gusem,Western Mindanao, ,5,123.086098,7.703611
+Mati,Western Mindanao, ,5,123.295403,7.689536
+Culacion,Western Mindanao, ,5,123.470299,7.687646
+Lalat,Western Mindanao, ,5,122.910202,7.681478
+Capamanok,Western Mindanao, ,5,123.410896,7.681433
+Don Carlos,Northern Mindanao, ,5,124.990799,7.679893
+Robucon,Central Mindanao, ,5,124.081596,7.678006
+Sultan Gumander,Central Mindanao, ,5,123.958702,7.676651
+Surabay,Western Mindanao, ,5,122.473099,7.671018
+Sagua,Western Mindanao, ,5,123.287697,7.652998
+Upper Tupilac,Western Mindanao, ,5,122.419998,7.650227
+Daplayan,Western Mindanao, ,5,123.380302,7.646976
+Dumanquilas B, , ,5,123.156303,7.646125
+Camp Kibaltan,Northern Mindanao, ,5,124.823799,7.646121
+Baras,Central Mindanao, ,5,124.0177,7.644525
+Santa Fe,Western Mindanao, ,5,122.931099,7.641784
+San Pablo,Western Mindanao, ,5,123.457001,7.638525
+Dumpoc,Western Mindanao, ,5,122.873802,7.622488
+Datutumansan,Western Mindanao, ,5,122.3312,7.622084
+Taraka,Western Mindanao, ,5,123.414803,7.619924
+Lataban, , ,5,122.126602,7.619309
+Magampao,Central Mindanao, ,5,124.601303,7.617291
+Dinas,Western Mindanao, ,5,123.337196,7.612406
+Calabihon,Northern Mindanao, ,5,124.911102,7.600311
+Sampatan,Western Mindanao, ,5,123.296097,7.599507
+Ligian,Western Mindanao, ,5,122.4198,7.597107
+Malabang,Central Mindanao, ,5,124.0672,7.594066
+Matinao,Central Mindanao, ,5,124.689499,7.590683
+Tandu Patan,Western Mindanao, ,5,122.801804,7.588227
+Kibawe,Northern Mindanao, ,5,124.991096,7.578659
+Kiulayo,Northern Mindanao, ,5,124.836304,7.576584
+Buhangin Mahaha, , ,5,122.4776,7.56413
+Pisan,Zamboanga del Sur, ,5,123.386703,7.560411
+Batu,Western Mindanao, ,5,122.841499,7.555099
+Maculay,Western Mindanao, ,5,123.197098,7.553915
+Kisaw,Northern Mindanao, ,5,124.846603,7.553447
+Lukuban,Western Mindanao, ,5,123.301102,7.55054
+Lalabuan,Central Mindanao, ,5,124.100899,7.546905
+Gapol,Western Mindanao, ,5,122.8908,7.545668
+Maligay B,Western Mindanao, ,5,123.267998,7.538849
+Ig-Abay,Central Mindanao, ,5,124.162697,7.538307
+Karogmohon,Central Mindanao, ,5,124.560402,7.534247
+Dianaton,Central Mindanao, ,5,124.235603,7.527772
+Dimataling,Zamboanga del Sur, ,5,123.373299,7.527239
+Barabuan,Maguindanao, ,5,123.301399,7.511788
+Balabagan,Central Mindanao, ,5,124.124496,7.511769
+Pantawanan,Central Mindanao, ,5,124.368301,7.511628
+Limousan,Western Mindanao, ,5,123.174698,7.498118
+Bañgaan,Western Mindanao, ,5,122.3843,7.496104
+Kauit Kauit,Western Mindanao, ,5,122.094902,7.494569
+Sapi,Central Mindanao, ,5,124.2976,7.489899
+Limbungahan,Western Mindanao, ,5,122.825203,7.487097
+Misinsiman,Northern Mindanao, ,5,124.913902,7.470153
+Licumu,Western Mindanao, ,5,122.327797,7.465483
+Makabasa,Central Mindanao, ,5,124.535599,7.45636
+Pitogo,Western Mindanao, ,5,123.313301,7.454898
+Liong,Central Mindanao, ,5,124.338402,7.452869
+Liong,Central Mindanao, ,5,124.653,7.452168
+Rosario,Central Mindanao, ,5,124.2565,7.441142
+Edcor,Central Mindanao, ,5,124.395103,7.440177
+Salip,Western Mindanao, ,5,123.439102,7.440041
+Lipawan,Central Mindanao, ,5,124.302101,7.432408
+Matimus,Central Mindanao, ,5,124.170601,7.431394
+Candiiz,Central Mindanao, ,5,124.8535,7.426339
+Tarlago,Western Mindanao, ,5,122.322601,7.419993
+Cabatoan,Western Mindanao, ,5,122.844002,7.408441
+Becial,Western Mindanao, ,5,122.282799,7.40631
+Ratabur,Central Mindanao, ,5,124.652298,7.404729
+Panganuran,Western Mindanao, ,5,122.057999,7.397719
+Casipitan,Western Mindanao, ,5,122.329903,7.392802
+Nicaan,Central Mindanao, ,5,124.565399,7.389968
+Talawaban,Central Mindanao, ,5,124.3368,7.379181
+Parang,Central Mindanao, ,5,124.269096,7.375636
+Manguldan,Maguindanao, ,5,124.066803,7.371032
+Liliongan,Central Mindanao, ,5,124.7911,7.365345
+Limaong,Western Mindanao, ,5,122.3638,7.360285
+Polloc Harb, , ,5,124.215599,7.35302
+Nituan,Central Mindanao, ,5,124.2855,7.34851
+Gandaan,Western Mindanao, ,5,122.822197,7.347258
+Datu Santilla,Central Mindanao, ,5,124.910599,7.345992
+Tagpangi,Western Mindanao, ,5,122.269402,7.341858
+Tunglugun,Western Mindanao, ,5,122.333397,7.321527
+Dinginin,Central Mindanao, ,5,124.432404,7.315303
+Olamian,Central Mindanao, ,5,124.481903,7.314663
+Pingping,Central Mindanao, ,5,124.359596,7.313746
+Kibudtungan,Central Mindanao, ,5,124.781403,7.311782
+Rantindatan, , ,5,124.024803,7.303072
+Balut,Central Mindanao, ,5,124.295898,7.296104
+Sibuco,Western Mindanao, ,5,122.0653,7.293626
+Buhangin Mahabo,Western Mindanao, ,5,122.818802,7.286215
+Balogo,Central Mindanao, ,5,124.463898,7.285257
+Palupalo,Western Mindanao, ,5,122.280502,7.28407
+Darapanan,Central Mindanao, ,5,124.306198,7.28104
+Lunday,Western Mindanao, ,5,122.146004,7.272688
+Simoney,Central Mindanao, ,5,124.856499,7.268905
+Barongis,Central Mindanao, ,5,124.565201,7.263797
+Espasto,Western Mindanao, ,5,122.2155,7.258379
+Manarapan,Central Mindanao, ,5,124.790802,7.255322
+Baguer,Central Mindanao, ,5,124.520897,7.241264
+Picketegon,Central Mindanao, ,5,124.324699,7.233738
+Tubac,Central Mindanao, ,5,124.688904,7.228353
+Malagak,Central Mindanao, ,5,124.382401,7.224081
+Budta,Central Mindanao, ,5,124.439201,7.206336
+Carman,Central Mindanao, ,5,124.792198,7.205869
+Curuan,Western Mindanao, ,5,122.234398,7.202661
+Malayal,Western Mindanao, ,5,121.938499,7.197099
+Tumbao,Central Mindanao, ,5,124.356499,7.17442
+Linao,Central Mindanao, ,5,124.9673,7.171751
+Kinudal,Central Mindanao, ,5,124.865303,7.159943
+Lamiaon,Central Mindanao, ,5,124.689301,7.158701
+Gapet,Central Mindanao, ,5,124.2201,7.155205
+San Mateo,Central Mindanao, ,5,124.5821,7.152878
+Tapian,Central Mindanao, ,5,124.066399,7.141888
+Basak,Central Mindanao, ,5,124.474098,7.124825
+Tariran,Central Mindanao, ,5,124.314301,7.123623
+Falacoco Sultania,Central Mindanao, ,5,124.3629,7.116925
+Kayaga,Central Mindanao, ,5,124.808899,7.11412
+Imbuc Rancheria,Central Mindanao, ,5,124.717903,7.109438
+Sibuto,Central Mindanao, ,5,124.236603,7.106874
+Bolong,Western Mindanao, ,5,122.2295,7.100795
+Lauingan,Western Mindanao, ,5,121.903503,7.100757
+Badao,Central Mindanao, ,5,124.434898,7.097275
+Mlang,Central Mindanao, ,5,124.903099,7.090691
+Renede,Central Mindanao, ,5,124.083,7.087502
+Sapalan,Central Mindanao, ,5,124.3349,7.081376
+Tanidtiba,Central Mindanao, ,5,124.669601,7.078804
+Wangay,Central Mindanao, ,5,124.857803,7.063982
+Caraquit,Central Mindanao, ,5,124.698997,7.060842
+Amas,Central Mindanao, ,5,124.982201,7.05979
+Landong,Central Mindanao, ,5,124.737503,7.059096
+Tabuan,Central Mindanao, ,5,124.015503,7.055666
+Dalican,Central Mindanao, ,5,124.317001,7.035807
+Tibao,Central Mindanao, ,5,124.894402,7.025869
+Tinuba,Western Mindanao, ,5,121.921799,7.025833
+Paidu-Pulangi,Central Mindanao, ,5,124.562798,7.025527
+Manicahan,Western Mindanao, ,5,122.193497,7.024477
+Guiliguili,Central Mindanao, ,5,124.669998,7.023277
+Lika,Central Mindanao, ,5,124.892601,6.989509
+Pagatin,Central Mindanao, ,5,124.479103,6.986543
+Talayan,Central Mindanao, ,5,124.384102,6.983813
+Culianan,Western Mindanao, ,5,122.142097,6.982217
+Kaka,Central Mindanao, ,5,124.678398,6.976892
+Kataman,Central Mindanao, ,5,124.3498,6.962349
+Recodo,Western Mindanao, ,5,121.957603,6.954427
+Boalan,Western Mindanao, ,5,122.115601,6.950227
+Mlang,Central Mindanao, ,5,124.882797,6.947032
+Pulang Lupa,Central Mindanao, ,5,124.9515,6.945487
+Salbu,Central Mindanao, ,5,124.425797,6.936669
+Upi,Central Mindanao, ,5,124.197304,6.934927
+Santa Maria,Western Mindanao, ,5,122.065598,6.933015
+Kinimi,Central Mindanao, ,5,123.972,6.925066
+Masinloc,Western Mindanao, ,5,122.146797,6.917993
+Mangapong,Central Mindanao, ,5,124.455399,6.900539
+Malasila,Central Mindanao, ,5,124.851799,6.895319
+Tabtabon,Zamboanga City, ,5,122.158798,6.893908
+Sampao,Central Mindanao, ,5,124.597099,6.880377
+Resa,Central Mindanao, ,5,123.973297,6.878627
+Romogaob,Central Mindanao, ,5,124.137199,6.869831
+Seneben,Central Mindanao, ,5,124.665901,6.867748
+Lapaken,Central Mindanao, ,5,123.963501,6.834116
+Timbangan,Central Mindanao, ,5,124.413498,6.813381
+Kalandangan,Central Mindanao, ,5,124.538002,6.800168
+Lambayang,Central Mindanao, ,5,124.632004,6.795805
+Meti,Central Mindanao, ,5,124.025497,6.795228
+Talisawa,Central Mindanao, ,5,124.471298,6.787556
+Sedem,Central Mindanao, ,5,123.982101,6.781753
+Kipolot,Central Mindanao, ,5,124.700897,6.779132
+Dullidin,Central Mindanao, ,5,124.883904,6.776381
+Pandag,Central Mindanao, ,5,124.797897,6.774772
+Capincong,Central Mindanao, ,5,124.601898,6.770339
+Catico,Central Mindanao, ,5,124.7313,6.764201
+Daguma,Central Mindanao, ,5,124.424004,6.763975
+Una-Malala,Central Mindanao, ,5,124.868896,6.750021
+Bialong,Central Mindanao, ,5,124.916397,6.740251
+Linao B,Central Mindanao, ,5,124.055199,6.73689
+Pangasang,Western Mindanao,Sacol Island,5,122.008003,6.731851
+Basak,Central Mindanao, ,5,124.152298,6.727557
+Buluan,Central Mindanao, ,5,124.797302,6.721241
+Daladagan,Central Mindanao, ,5,124.839798,6.70538
+Tucurong,Central Mindanao, ,5,124.6772,6.692109
+Marcela,Central Mindanao, ,5,124.800499,6.682886
+Santa Clara,Western Mindanao,Sacol Island,5,122.0616,6.673667
+Puricay,Central Mindanao, ,5,124.062798,6.672313
+Lower Mangilala,Central Mindanao, ,5,124.7612,6.669479
+Manges, ,Sacol Island,5,121.914803,6.663971
+Paitan,Central Mindanao, ,5,124.871399,6.661162
+Katipunan,Central Mindanao, ,5,124.555099,6.655872
+Isulon,Central Mindanao, ,5,124.648102,6.65554
+Masilang,Central Mindanao, ,5,124.798698,6.652573
+Tairan Camp,Western Mindanao,Sacol Island,5,121.838303,6.637052
+Ballia,Central Mindanao, ,5,124.063004,6.633935
+Calawag,Central Mindanao, ,5,124.601799,6.631973
+Tantangan,Southern Mindanao, ,5,124.753502,6.614884
+Lutayan,Central Mindanao, ,5,124.871696,6.613694
+Mohebal,Western Mindanao,Sacol Island,5,122.1716,6.612792
+Lanao,Central Mindanao, ,5,124.533203,6.609251
+Maindeng,Central Mindanao, ,5,124.805099,6.608178
+Dumagutay,Southern Mindanao, ,5,124.673698,6.600173
+Kandiis, ,Sacol Island,5,122.268097,6.599087
+Tipudus,Central Mindanao, ,5,124.057297,6.591468
+Kangkong,Central Mindanao, ,5,124.404999,6.588095
+Kudanding,Southern Mindanao, ,5,124.625298,6.583663
+Buliñgan,Western Mindanao,Sacol Island,5,122.115601,6.577131
+San Jose,Southern Mindanao, ,5,124.902397,6.555324
+Pitas Pt, , ,5,124.048401,6.555035
+New Iloilo,Southern Mindanao, ,5,124.794296,6.547498
+Kamanga,Central Mindanao, ,5,124.268898,6.542617
+Maluso,Western Mindanao,Sacol Island,5,121.871902,6.540312
+Bojelebung,Western Mindanao,Sacol Island,5,122.188004,6.527283
+Norala,Southern Mindanao, ,5,124.660103,6.526339
+Kulambog,Southern Mindanao, ,5,124.608498,6.522935
+Marbel,Southern Mindanao, ,5,124.846199,6.501398
+Santo Niño,Southern Mindanao, ,5,124.886597,6.496628
+Basiauang,Central Mindanao, ,5,124.0429,6.485292
+Taplan,Southern Mindanao, ,5,124.933197,6.482807
+Katipuan,Southern Mindanao, ,5,124.690697,6.478074
+Visaya, ,Sacol Island,5,122.174698,6.460236
+Canas,Western Mindanao,Sacol Island,5,121.919197,6.458396
+Liberty,Southern Mindanao, ,5,124.980598,6.454733
+El Nonak,Southern Mindanao, ,5,124.7966,6.453457
+Manuel Roxas,Southern Mindanao, ,5,124.6408,6.452345
+Sañgay,Central Mindanao, ,5,124.047897,6.441649
+Bual,Central Mindanao, ,5,124.339996,6.435959
+Kobingbing,Western Mindanao,Sacol Island,5,122.078697,6.433133
+Banga,Southern Mindanao, ,5,124.778198,6.424132
+Tampakan,Southern Mindanao, ,5,124.934799,6.420801
+Sugko,Sultan Kudarat, ,5,124.045502,6.418627
+Mangal,Western Mindanao,Sacol Island,5,121.9711,6.417323
+Rang-ay,Southern Mindanao, ,5,124.806602,6.405753
+Surallah,Southern Mindanao, ,5,124.746597,6.380556
+Mamant Maslo,Central Mindanao, ,5,124.084702,6.378239
+Crossing Rubber,Southern Mindanao, ,5,124.905899,6.371055
+Centrala,Southern Mindanao, ,5,124.7556,6.355846
+Kalibo,Southern Mindanao, ,5,124.817596,6.350091
+Semanohang, ,Balukaluk,5,121.957603,6.344604
+Tupi,Southern Mindanao, ,5,124.945999,6.332401
+Malotunol,Central Mindanao, ,5,124.109001,6.324459
+Lamian,Southern Mindanao, ,5,124.842598,6.305141
+Pangutaran,Western Mindanao,Pangutaran Island,5,120.5784,6.300691
+Taongomos, ,Kauluan Island,5,121.972504,6.297095
+Polongding,Southern Mindanao, ,5,124.966599,6.289187
+Kolonpanoon,Southern Mindanao, ,5,124.7127,6.280333
+Sinolon,Southern Mindanao, ,5,124.800301,6.279185
+Akot,Central Mindanao, ,5,124.171303,6.264781
+Alah,Southern Mindanao, ,5,124.814697,6.243893
+Tubig Maasin,Western Mindanao,Pangutaran Island,5,120.536499,6.243458
+Supu,Southern Mindanao, ,5,124.552902,6.226084
+Lamlusok,Southern Mindanao, ,5,124.690102,6.223541
+Tiburos,Central Mindanao, ,5,124.186699,6.214464
+Bayabas,Southern Mindanao, ,5,124.813301,6.189021
+Wal,Central Mindanao, ,5,124.2463,6.175991
+Bucutua, ,Teomabal Island,5,121.804398,6.166945
+Tibulos,Central Mindanao, ,5,124.295097,6.154243
+Kraan,Central Mindanao, ,5,124.336899,6.126245
+Maguling,Southern Mindanao, ,5,124.405998,6.10376
+Kaunayan,Sulu, ,5,121.080803,6.084991
+Taung,Western Mindanao, ,5,121.1511,6.070873
+Kalaong,Southern Mindanao, ,5,124.4673,6.064397
+Maligay,Western Mindanao, ,5,121.072998,6.050564
+Copalcada,Southern Mindanao, ,5,124.499298,6.046051
+Linao,Southern Mindanao, ,5,124.524101,6.032075
+Tandu Batu,Western Mindanao, ,5,121.255402,6.011604
+Buadtasan,Southern Mindanao, ,5,124.611801,6.011478
+Su,Western Mindanao, ,5,121.189003,6.008608
+Patotol,Western Mindanao, ,5,121.385002,6.00748
+Bounu Timbagan,Western Mindanao, ,5,120.9944,6.004117
+Limawa,Western Mindanao, ,5,121.304703,6.003207
+Kiamba,Southern Mindanao, ,5,124.621696,5.997389
+Palan,Western Mindanao, ,5,121.038597,5.986717
+Talipaw,Western Mindanao, ,5,121.105003,5.981515
+Kansan,Southern Mindanao, ,5,124.657204,5.980832
+Silangkan,Western Mindanao, ,5,120.888802,5.975255
+Kuppong,Western Mindanao, ,5,120.964897,5.973912
+Lumit,Southern Mindanao, ,5,124.777496,5.965762
+Luuk,Western Mindanao, ,5,121.3134,5.962995
+Kling,Southern Mindanao, ,5,124.7033,5.950189
+Ganon,Western Mindanao, ,5,121.409698,5.948949
+Kulay Kulay,Western Mindanao, ,5,121.236702,5.945703
+Niog Niog,Western Mindanao, ,5,121.302399,5.941969
+Kabungkul,Western Mindanao, ,5,121.150299,5.937248
+Dandulit,Western Mindanao, ,5,121.023499,5.929063
+Bato-Ugis,Western Mindanao, ,5,120.990799,5.922709
+Lomoyon,Southern Mindanao, ,5,124.785797,5.918028
+Sukuban,Western Mindanao, ,5,121.341797,5.917912
+Buhanguin Puti,Western Mindanao, ,5,121.076797,5.907286
+Katabau,Southern Mindanao, ,5,124.832802,5.892694
+Kalingalan Caluang,Sulu, ,5,121.266403,5.885574
+Oalao,Southern Mindanao, ,5,124.903702,5.877256
+Solome,Southern Mindanao, ,5,124.992996,5.869019
+Saimbangon,Western Mindanao,Pantocunon Island,5,121.157303,5.841029
+Tapul, ,North Ubian Island,5,120.883499,5.707188
+Bas Mangkalay, ,Cabucan Island,5,120.807404,5.695771
+Siasi,Western Mindanao,Mount Busa,5,120.858498,5.575788
+Pahahpatan,Western Mindanao, ,5,120.169701,5.237622
+Beilon,Northern Mindanao,Tona Island,5,126.055801,9.985744
+Esperanza,Eastern Visayas,Panaon Island,5,125.272499,9.98126
+San Benito,Northern Mindanao,Tona Island,5,126.011299,9.955543
+Pintuyan,Eastern Visayas,Panaon Island,5,125.259003,9.948615
+Matas,Northern Mindanao,Dinagat,5,125.642998,9.945543
+San Isidro,Northern Mindanao,Tona Island,5,126.088402,9.937081
+Triana, ,Sarangani Island,5,125.080299,9.926066
+Cadgianao,Northern Mindanao,Dinagat,5,125.670197,9.923446
+San Ricardo,Eastern Visayas,Panaon Island,5,125.283699,9.921352
+Kangcohoy,Northern Mindanao,Tona Island,5,126.0401,9.904746
+Caridad,Northern Mindanao,Tona Island,5,126.111397,9.895393
+Numancia,Northern Mindanao,Tona Island,5,125.975098,9.870595
+Libertad,Northern Mindanao,Tona Island,5,126.141899,9.826616
+Cabugao,Northern Mindanao,Tona Island,5,126.014503,9.792642
+General Luna,Northern Mindanao,Tona Island,5,126.155899,9.787407
+Balite,Northern Mindanao, ,5,125.4123,9.76114
+Dapa,Northern Mindanao,Tona Island,5,126.057297,9.760897
+Tagana-an,Northern Mindanao, ,5,125.583099,9.702065
+Taog,Northern Mindanao, ,5,125.532501,9.693421
+Sison,Northern Mindanao, ,5,125.5289,9.662205
+Placer,Northern Mindanao, ,5,125.6007,9.652753
+Pamosaingan,Northern Mindanao,Masapalid Island,5,125.924103,9.651608
+Socorro,Northern Mindanao,Masapalid Island,5,125.965599,9.625143
+Malimono,Northern Mindanao, ,5,125.4095,9.62446
+Kinabutan,Northern Mindanao, ,5,125.636101,9.60849
+Timamana,Northern Mindanao, ,5,125.571098,9.599663
+Claver,Surigao del Norte, ,5,125.728897,9.578163
+Masgad,Northern Mindanao, ,5,125.425499,9.574653
+Urbistondo,Surigao del Norte, ,5,125.783699,9.55591
+Payanasa,Northern Mindanao, ,5,125.480797,9.552447
+Taganito,Surigao del Norte, ,5,125.819901,9.545652
+Marga,Northern Mindanao, ,5,125.582497,9.545567
+Mainit,Northern Mindanao, ,5,125.524902,9.543137
+Alegria,Northern Mindanao, ,5,125.577301,9.470465
+Kitcharao,Northern Mindanao, ,5,125.572403,9.45411
+San Roque,Northern Mindanao, ,5,125.562798,9.423049
+Adlay,Southern Mindanao, ,5,125.898201,9.411094
+Magdago-oc,Agusan del Norte, ,5,125.480797,9.371793
+Carrascal,Surigao del Sur, ,5,125.948997,9.368714
+Bañgonay,Northern Mindanao, ,5,125.556297,9.316689
+Madrelino,Surigao del Sur, ,5,126.181801,9.302837
+Sapa,Southern Mindanao, ,5,125.9468,9.286646
+Tuburan,Surigao del Sur, ,5,126.155701,9.28114
+Madrid,Southern Mindanao, ,5,125.967201,9.262971
+Burgos,Surigao del Sur, ,5,126.175797,9.249244
+Sibahay,Southern Mindanao, ,5,126.106598,9.245866
+Jagupit,Northern Mindanao, ,5,125.561096,9.244648
+Carmen,Southern Mindanao, ,5,126.021202,9.230204
+Lanuza,Southern Mindanao, ,5,126.060997,9.229901
+Tigao,Surigao del Sur, ,5,126.177902,9.2141
+Tubay,Northern Mindanao, ,5,125.533699,9.165715
+Cabadbaran,Northern Mindanao, ,5,125.539299,9.126599
+Buenavista,Southern Mindanao, ,5,126.156502,9.118373
+Tandag,Surigao del Sur, ,5,126.199699,9.076904
+Antonio Luna,Northern Mindanao, ,5,125.587303,9.056799
+Kayogyog,Southern Mindanao, ,5,126.133598,9.048818
+Cahayagan,Agusan del Norte, ,5,125.233498,9.029885
+Magallanes,Agusan del Norte, ,5,125.5224,9.02491
+Los Angeles,Northern Mindanao, ,5,125.606201,9.015712
+Carmen,Northern Mindanao, ,5,125.298103,8.984614
+La Paz,Southern Mindanao, ,5,126.264702,8.981843
+Ata-atahon,Northern Mindanao, ,5,125.347,8.980151
+Somosomo,Southern Mindanao, ,5,126.238998,8.97806
+Abaga,Southern Mindanao, ,5,125.990799,8.965259
+Ampayon,Northern Mindanao, ,5,125.610298,8.962364
+Bahao,Southern Mindanao, ,5,126.173203,8.960426
+La Trinidad,Northern Mindanao, ,5,125.507103,8.941852
+Cagwait,Southern Mindanao, ,5,126.302597,8.914381
+Medina,Misamis Oriental, ,5,125.028,8.909155
+San Vicente,Northern Mindanao, ,5,125.551498,8.90838
+Odiongan,Northern Mindanao, ,5,125.175201,8.847173
+Bilay,Northern Mindanao, ,5,125.585899,8.846062
+San Jose,Misamis Oriental, ,5,125.063904,8.845609
+Gingoog,Northern Mindanao, ,5,125.102402,8.823268
+Marihatag,Southern Mindanao, ,5,126.297997,8.803303
+Mimbunga,Northern Mindanao, ,5,125.144897,8.796702
+Tungao,Northern Mindanao, ,5,125.597,8.783404
+Antipolo,Southern Mindanao, ,5,126.279297,8.779184
+Las Nieves,Northern Mindanao, ,5,125.568604,8.775689
+Santo Niño,Southern Mindanao, ,5,126.238403,8.766115
+Oteiza,Southern Mindanao, ,5,126.221397,8.745682
+Ambacon,Northern Mindanao, ,5,125.608398,8.734095
+Kubo,Northern Mindanao, ,5,125.632698,8.713186
+Salvacion,Southern Mindanao, ,5,126.208397,8.710214
+Verdo,Northern Mindanao, ,5,125.713402,8.693839
+Corinto,Northern Mindanao, ,5,125.482498,8.691655
+Esperanza,Northern Mindanao, ,5,125.650803,8.676933
+Santa Rosa,Northern Mindanao, ,5,125.4105,8.616672
+Guadalupe,Northern Mindanao, ,5,125.715302,8.586528
+Prosperidad,Northern Mindanao, ,5,125.899696,8.583312
+Santa Ana,Northern Mindanao, ,5,125.980202,8.510339
+Nuevo Trabajo,Northern Mindanao, ,5,125.554497,8.504717
+Bayogan,Northern Mindanao, ,5,125.973602,8.456798
+Tinago,Southern Mindanao, ,5,126.319801,8.453499
+San Juan,Southern Mindanao, ,5,126.353302,8.419753
+Carpenito,Southern Mindanao, ,5,126.309601,8.409018
+Impasugong,Northern Mindanao, ,5,125.009201,8.307849
+Otiela,Surigao del Sur, ,5,126.376602,8.302438
+La Paz,Northern Mindanao, ,5,125.817398,8.281252
+Langasian,Northern Mindanao, ,5,125.716202,8.251043
+Lawigan,Southern Mindanao, ,5,126.418701,8.219865
+Mapulo,Northern Mindanao, ,5,125.310303,8.188328
+Kewayan,Northern Mindanao, ,5,125.177002,8.187638
+Santo Tomas,Northern Mindanao, ,5,125.805099,8.187602
+Mangagoy,Southern Mindanao, ,5,126.360199,8.185975
+Bunawan,Northern Mindanao, ,5,125.998497,8.17877
+Gracia,Northern Mindanao, ,5,125.868797,8.171762
+Barcelona,Southern Mindanao, ,5,126.436401,8.166382
+Mandaing,Northern Mindanao, ,5,125.327904,8.123453
+Libertad,Northern Mindanao, ,5,126.033401,8.111207
+San Gabriel,Northern Mindanao, ,5,125.925003,8.096566
+Santa Tereza,Northern Mindanao, ,5,125.811401,8.094032
+Kapinunan,Northern Mindanao, ,5,125.323898,8.091324
+San Isidro,Northern Mindanao, ,5,126.149399,8.061693
+Caigangan,Northern Mindanao, ,5,125.862099,8.060505
+Caatu-an,Northern Mindanao, ,5,125.006104,8.056651
+Linabo,Northern Mindanao, ,5,125.157997,8.054808
+Aglayan,Northern Mindanao, ,5,125.115501,8.045959
+Langasihan,Northern Mindanao, ,5,125.215599,8.036531
+Lingig,Surigao del Sur, ,5,126.413597,8.036462
+Limot,Northern Mindanao, ,5,125.914902,8.024731
+Victory,Northern Mindanao, ,5,125.318298,8.021
+Cuevas,Northern Mindanao, ,5,126.096703,8.018858
+Bancud,Northern Mindanao, ,5,125.131599,7.995368
+Santa Josefa,Southern Mindanao, ,5,126.032402,7.993417
+Salvacion,Southern Mindanao, ,5,126.255501,7.979511
+Lurugan,Northern Mindanao, ,5,125.041901,7.975913
+Bagunta-as,Northern Mindanao, ,5,125.102097,7.951734
+Pagtilaan,Southern Mindanao, ,5,126.365997,7.94786
+Jagamitan,Southern Mindanao, ,5,126.063698,7.897173
+Boston,Davao Oriental, ,5,126.375504,7.868043
+Malambago,Northern Mindanao, ,5,125.366402,7.854909
+Moncayo,Southern Mindanao, ,5,126.031097,7.830238
+Hulip,Southern Mindanao, ,5,126.115097,7.828579
+Sukod,Southern Mindanao, ,5,126.077904,7.807183
+Cateel,Southern Mindanao, ,5,126.405998,7.806543
+Bankerohan,Southern Mindanao, ,5,126.028,7.798431
+Abon-abon,Southern Mindanao, ,5,125.8069,7.786582
+Maramag,Northern Mindanao, ,5,125.004204,7.766231
+San Rafael,Southern Mindanao, ,5,126.454697,7.766149
+Babag,Southern Mindanao, ,5,126.073997,7.752055
+Callawan,Southern Mindanao, ,5,125.788101,7.736664
+San Antonio,Southern Mindanao, ,5,126.503304,7.734159
+Kiokong,Northern Mindanao, ,5,125.112099,7.707016
+Ngan,Southern Mindanao, ,5,126.088097,7.679006
+Manganon,Southern Mindanao, ,5,126.119003,7.678114
+Compostela,Southern Mindanao, ,5,126.0765,7.663045
+Lagab,Southern Mindanao, ,5,126.102097,7.654705
+Kitaotao,Northern Mindanao, ,5,125.004898,7.647367
+Mabantao,Southern Mindanao, ,5,125.674797,7.646971
+Dapnan,Southern Mindanao, ,5,126.5522,7.632789
+Masa,Southern Mindanao, ,5,126.494598,7.626198
+Kitaihon,Northern Mindanao, ,5,125.039101,7.623909
+New Bataan,Southern Mindanao, ,5,126.124901,7.61489
+Dancangan,Northern Mindanao, ,5,125.001503,7.612275
+Panalsalan,Southern Mindanao, ,5,126.297897,7.602772
+Kanigawan,Southern Mindanao, ,5,125.776802,7.601562
+Panganan,Southern Mindanao, ,5,125.340103,7.597148
+New Corella,Southern Mindanao, ,5,125.820702,7.586949
+Luna,Southern Mindanao, ,5,125.665497,7.579915
+Kugan,Northern Mindanao, ,5,125.045197,7.578365
+Mauav,Southern Mindanao, ,5,125.9953,7.577445
+Baganga,Southern Mindanao, ,5,126.563103,7.572814
+Miaray,Northern Mindanao, ,5,125.025902,7.560776
+Maganding,Southern Mindanao, ,5,126.024399,7.547869
+Boadon,Southern Mindanao, ,5,126.150703,7.536314
+Tibal-og,Southern Mindanao, ,5,125.621101,7.534167
+Natulongan,Northern Mindanao, ,5,125.023804,7.532462
+New Bohol,Southern Mindanao, ,5,125.832497,7.526667
+Abaca,Southern Mindanao, ,5,125.732498,7.519087
+Kadahanan,Southern Mindanao, ,5,126.442703,7.514
+Mawab,Southern Mindanao, ,5,125.921997,7.506187
+Kinamayap,Southern Mindanao, ,5,125.667702,7.502084
+Katagbakah,Southern Mindanao, ,5,126.301903,7.494859
+Esperanza,Southern Mindanao, ,5,125.751999,7.475468
+Baculin,Southern Mindanao, ,5,126.5923,7.464776
+Baculin B,Southern Mindanao, ,5,126.548798,7.440031
+Panaga,Southern Mindanao, ,5,125.543602,7.429606
+Davao Penal Colony,Southern Mindanao, ,5,125.631401,7.400398
+Manurigao,Southern Mindanao, ,5,126.551102,7.398685
+Alejal,Southern Mindanao, ,5,125.656898,7.385679
+Hiju,Southern Mindanao, ,5,125.828796,7.38494
+Maco,Southern Mindanao, ,5,125.853401,7.364962
+San Pedro,Southern Mindanao, ,5,126.516899,7.343137
+Central,Southern Mindanao, ,5,126.552101,7.320878
+Panabo,Southern Mindanao, ,5,125.685303,7.316737
+San Jose,Southern Mindanao, ,5,126.519203,7.309498
+Santiago,Davao Oriental, ,5,126.573402,7.286629
+Pandasan,Southern Mindanao, ,5,125.852097,7.278343
+Rizal,Southern Mindanao, ,5,126.376701,7.277936
+Sebio,Southern Mindanao, ,5,126.335297,7.272115
+Lasang,Southern Mindanao, ,5,125.668098,7.268515
+Manreza,Southern Mindanao, ,5,126.482201,7.242713
+Tauantauan,Southern Mindanao, ,5,126.372002,7.234445
+Unapan,Southern Mindanao, ,5,125.376297,7.233473
+Tibagon,Southern Mindanao, ,5,125.873398,7.225095
+Miuban,Central Mindanao, ,5,125.013603,7.222539
+Baguio,Southern Mindanao, ,5,125.464897,7.219156
+Manay,Southern Mindanao, ,5,126.541298,7.216363
+Talomo River,Southern Mindanao, ,5,125.477898,7.188573
+Calinan,Southern Mindanao, ,5,125.4217,7.188222
+Zaragosa,Southern Mindanao, ,5,126.521797,7.179108
+Pantukan,Southern Mindanao, ,5,125.896004,7.173951
+Basao,Southern Mindanao,Mawes Island,5,125.708504,7.162404
+President Roxas,Central Mindanao, ,5,125.056198,7.156379
+Serib,Southern Mindanao, ,5,125.419098,7.144477
+Santa Cruz,Southern Mindanao, ,5,126.5121,7.144001
+Ayon,Southern Mindanao, ,5,125.923798,7.140509
+Upper Matina,Southern Mindanao, ,5,125.491501,7.139225
+Magpet,Central Mindanao, ,5,125.099197,7.122444
+Inac,Central Mindanao, ,5,125.059196,7.119325
+Carmen,Southern Mindanao, ,5,125.342102,7.118323
+Tagakpad,Southern Mindanao, ,5,125.427803,7.116013
+Matiao,Southern Mindanao, ,5,125.910599,7.111292
+Guianga,Southern Mindanao, ,5,125.413597,7.107368
+Aumbay,Southern Mindanao,Mawes Island,5,125.779297,7.101028
+Tambungon,Southern Mindanao, ,5,125.934601,7.094193
+Pangi,Southern Mindanao, ,5,125.558403,7.093054
+Pintatagan,Southern Mindanao, ,5,125.950401,7.086407
+Limao,Southern Mindanao,Mawes Island,5,125.674599,7.085199
+Samal,Southern Mindanao,Mawes Island,5,125.726997,7.079806
+Alambre,Southern Mindanao, ,5,125.471901,7.069704
+Jovellar,Southern Mindanao, ,5,126.457703,7.065197
+Pequeno,Southern Mindanao, ,5,125.567101,7.063635
+Bago,Southern Mindanao, ,5,125.511902,7.057593
+Tagbitanag,Southern Mindanao,Mawes Island,5,125.740501,7.056118
+Lobogan,Southern Mindanao, ,5,125.491096,7.042253
+Del Monte,Southern Mindanao,Mawes Island,5,125.765297,7.030595
+Linao,Southern Mindanao, ,5,125.993599,7.028018
+Old Kidapawan,Central Mindanao, ,5,125.137901,7.025729
+Toril,Southern Mindanao, ,5,125.498802,7.018532
+Kidapawan,Central Mindanao, ,5,125.086502,7.011126
+Buso,Southern Mindanao, ,5,126.236504,7.01096
+Panikian,Southern Mindanao, ,5,126.030502,7.009845
+Tagabaquid,Southern Mindanao, ,5,126.345596,7.008527
+Piso,Southern Mindanao, ,5,125.991096,7.002625
+Sirawan,Southern Mindanao, ,5,125.486603,6.988982
+Saguing,Central Mindanao, ,5,125.084801,6.98164
+Ligtong,Southern Mindanao,Mawes Island,5,125.781799,6.975546
+Baracatan,Southern Mindanao, ,5,125.429604,6.971513
+Kaputian,Southern Mindanao,Mawes Island,5,125.7285,6.97048
+Banay-Banay,Southern Mindanao, ,5,126.018501,6.966021
+Dadaotan, ,Talikud,5,125.689499,6.95979
+Daliao,Southern Mindanao, ,5,125.476303,6.958494
+Malaang,Central Mindanao, ,5,125.052597,6.955753
+Langca,Southern Mindanao, ,5,126.043999,6.949533
+Malasila,Central Mindanao, ,5,125.133598,6.94013
+Santa Cruz, ,Talikud,5,125.711502,6.939954
+Sibulan,Southern Mindanao, ,5,125.470703,6.931836
+Pangubatan,Southern Mindanao,Mawes Island,5,125.7687,6.928881
+Bulacanon,Central Mindanao, ,5,125.049896,6.928161
+Balatukan,Central Mindanao, ,5,125.167198,6.896613
+Bajucan,Southern Mindanao, ,5,126.152702,6.895073
+Lupon,Southern Mindanao, ,5,126.010002,6.894197
+Asterga,Southern Mindanao, ,5,125.449097,6.881306
+Manikling,Southern Mindanao, ,5,126.063103,6.879669
+Bobon,Davao Oriental, ,5,126.329002,6.869153
+Tamisan,Southern Mindanao, ,5,126.2994,6.844354
+Wason,Southern Mindanao, ,5,126.084198,6.843979
+Central,Southern Mindanao, ,5,125.416,6.837358
+Abaka,Southern Mindanao, ,5,125.176201,6.832011
+Tuban,Southern Mindanao, ,5,125.385597,6.821951
+Miral,Southern Mindanao, ,5,125.2258,6.810464
+Baon,Southern Mindanao, ,5,126.085899,6.796248
+Bansalan,Southern Mindanao, ,5,125.2174,6.774274
+Kidbuaya,Southern Mindanao, ,5,125.287003,6.755706
+Cambalion,Davao Oriental, ,5,126.091698,6.747347
+New Visayas,Southern Mindanao, ,5,125.220497,6.736255
+Haley,Southern Mindanao, ,5,125.351097,6.710468
+Sinayawan,Southern Mindanao, ,5,125.313904,6.708329
+La Union,Southern Mindanao, ,5,126.087997,6.702659
+Guihing,Southern Mindanao, ,5,125.347397,6.683816
+Governor Generoso,Southern Mindanao, ,5,126.076302,6.651479
+Kotipinan,Southern Mindanao, ,5,125.295799,6.643091
+Tibanban,Southern Mindanao, ,5,126.098099,6.634006
+Dapoc,Southern Mindanao, ,5,125.286301,6.624
+Kulagsing, , ,5,125.431198,6.619519
+Kiblagon,Southern Mindanao, ,5,125.239799,6.61128
+Monserat,Southern Mindanao, ,5,126.094002,6.602158
+Batalbolol,Central Mindanao, ,5,125.069,6.594629
+Malang,Southern Mindanao, ,5,125.402901,6.590835
+Bulacan,Southern Mindanao, ,5,125.409897,6.56373
+Kolodatal,Southern Mindanao, ,5,125.015297,6.558131
+Santa Moria,Southern Mindanao, ,5,125.475601,6.551382
+Kabuaya,Davao Oriental, ,5,126.221298,6.551013
+Kumasi,Southern Mindanao, ,5,125.513603,6.534364
+Luzon,Southern Mindanao, ,5,126.093399,6.517152
+Tubalan,Southern Mindanao, ,5,125.570503,6.494135
+Nangan,Southern Mindanao, ,5,126.122704,6.468555
+Lacaron,Southern Mindanao, ,5,125.5783,6.445755
+Lampitak,Southern Mindanao, ,5,125.057602,6.433102
+Malita,Southern Mindanao, ,5,125.613297,6.402352
+Surup,Davao Oriental, ,5,126.1464,6.38889
+Kibalatong,Southern Mindanao, ,5,125.581802,6.366079
+Bolila,Southern Mindanao, ,5,125.536301,6.364765
+Tagabibi,Southern Mindanao, ,5,126.174004,6.361191
+Malandag,Southern Mindanao, ,5,125.257103,6.308143
+Nidam,Southern Mindanao, ,5,125.077003,6.306955
+Tukulan,Southern Mindanao, ,5,125.6008,6.298914
+Palkan,Southern Mindanao, ,5,125.030502,6.295256
+Malungon,Southern Mindanao, ,5,125.284203,6.272089
+Talagutang,Southern Mindanao, ,5,125.663696,6.26417
+Cagamcam,Southern Mindanao, ,5,125.634201,6.24736
+Sulit,Southern Mindanao, ,5,125.021797,6.238243
+Batutitik,Southern Mindanao, ,5,125.246902,6.225721
+Upper Klinan,Southern Mindanao, ,5,125.118896,6.224424
+Conel,Southern Mindanao, ,5,125.188301,6.203145
+Silway,Southern Mindanao, ,5,125.082802,6.198304
+Inoburen,Southern Mindanao, ,5,125.446098,6.196517
+Labu,Southern Mindanao, ,5,125.2257,6.192002
+Nutol,Southern Mindanao, ,5,125.136299,6.190778
+Biton,Southern Mindanao, ,5,125.700798,6.188708
+Calian,Southern Mindanao, ,5,125.700996,6.145576
+Lagao III,Southern Mindanao, ,5,125.194801,6.128607
+Bula,Southern Mindanao, ,5,125.191498,6.113057
+Lamitan,Southern Mindanao, ,5,125.6987,6.088625
+Tamblel,South Cotabato, ,5,125.145302,6.055812
+Little Lun,Southern Mindanao, ,5,125.301498,6.036127
+Seguil,Southern Mindanao, ,5,125.110298,5.982245
+Bugis,Southern Mindanao, ,5,125.682899,5.978099
+Malapatan,Southern Mindanao, ,5,125.290604,5.972211
+Bailat,Southern Mindanao, ,5,125.098396,5.958007
+Sapu Grande,Southern Mindanao, ,5,125.272797,5.919466
+Cabuloyan,Southern Mindanao, ,5,125.632401,5.902733
+Tinto,Southern Mindanao, ,5,125.048103,5.861897
+Sinabulad,Southern Mindanao, ,5,125.223198,5.856157
+Maybio,Southern Mindanao, ,5,125.5905,5.847257
+Glan,Southern Mindanao, ,5,125.204399,5.824971
+Cayaponga,Southern Mindanao, ,5,125.544197,5.791751
+Cablallan,Southern Mindanao, ,5,125.198601,5.782652
+Malabog,Southern Mindanao, ,5,125.422699,5.780642
+Malalan,Southern Mindanao, ,5,125.519402,5.758808
+Lago,Southern Mindanao, ,5,125.241096,5.742374
+Kalbay,Southern Mindanao, ,5,125.4972,5.729332
+Burias,South Cotabato, ,5,125.244598,5.725139
+Pañgyan,Southern Mindanao, ,5,125.286102,5.701247
+Kibayo,Southern Mindanao, ,5,125.457901,5.657465
+Margus-Pequeño,Southern Mindanao, ,5,125.337303,5.654114
+Kipagah,Southern Mindanao, ,5,125.414001,5.646834
+Fort Holland,Southern Mindanao, ,5,125.431396,5.618467
+Kamalian,Southern Mindanao, ,5,125.410896,5.585545
+Batulaki,Southern Mindanao, ,5,125.3265,5.574652
+Tumanao,Southern Mindanao,Paulau Miangas,5,125.477097,5.454783
+Sabang,Davao del Sur, ,5,125.373901,5.42738
+Ibran,Southern Mindanao,Paulau Miangas,5,125.467102,5.404665
+Katingan,Southern Mindanao, ,5,125.422302,5.396616
+Tubay,Southern Mindanao, ,5,125.383598,5.379111
+Calauit,Southern Tagalog, ,5,119.925003,12.28277
+Quezon,Southern Tagalog, ,5,119.881699,12.28029
+Busuanga,Southern Tagalog, ,5,119.923798,12.16897
+Salvacion,Southern Tagalog, ,5,119.9338,12.13698
+Bogtong,Southern Tagalog, ,5,119.939697,12.09303
+Kiwit,Southern Tagalog, ,5,119.991096,12.07684
+Concepcion,Southern Tagalog, ,5,119.976799,12.0556
+Batang,Southern Tagalog,Culion Island,5,119.884399,11.9748
+Ugnisan,Southern Tagalog,Culion Island,5,119.901802,11.93147
+Carigmalan,Southern Tagalog,Culion Island,5,119.974701,11.89855
+Damipac,Southern Tagalog,Culion Island,5,119.891502,11.88892
+Bonongan,Southern Tagalog,Culion Island,5,119.917702,11.85287
+Linapacan,Southern Tagalog,Linapacan Island,5,119.866096,11.50035
+Maroyogroyog,Southern Tagalog,Linapacan Island,5,119.772903,11.47742
+San Pedro,Southern Tagalog,Linapacan Island,5,119.721497,11.47161
+Guadalupe,Southern Tagalog,Linapacan Island,5,119.825996,11.44394
+Pandan,Southern Tagalog,Palawan,5,119.483101,11.4191
+Calibangbangan, ,Calibang Island,5,119.655197,11.40861
+San Nicolas,Southern Tagalog,Linapacan Island,5,119.817703,11.38873
+Dipnay,Southern Tagalog,Palawan,5,119.542198,11.3231
+Pinamalayan, ,Iloc Island,5,119.672302,11.28743
+Sibaltan,Southern Tagalog,Palawan,5,119.560204,11.27048
+El Nido, ,Palawan,5,119.395401,11.1804
+Batas, ,Batas Island,5,119.6091,11.16119
+Oton,Southern Tagalog,Palawan,5,119.497704,11.12557
+Manlalec,Southern Tagalog,Palawan,5,119.433601,11.10511
+Pagauanen, ,Palawan,5,119.331802,11.10002
+Maytiguid, ,Maytiguid Island,5,119.593201,11.05609
+Casian,Palawan, ,5,119.713799,11.03906
+Bebeladan, ,Palawan,5,119.385597,11.03868
+Palalong,Southern Tagalog,Palawan,5,119.500198,11.03573
+Camago,Southern Tagalog,Palawan,5,119.43,11.01861
+Liminancong,Southern Tagalog,Palawan,5,119.3619,10.99481
+Palarican,Southern Tagalog,Palawan,5,119.482399,10.96657
+Binaluan,Southern Tagalog,Palawan,5,119.359703,10.92627
+Pancol,Southern Tagalog,Palawan,5,119.420898,10.88021
+Igan Barrio,Southern Tagalog,Palawan,5,119.461899,10.85748
+Gulang-gulang,Southern Tagalog,Palawan,5,119.315697,10.82655
+San Jose, ,Palawan,5,119.521797,10.82405
+Taytay,Southern Tagalog,Palawan,5,119.441597,10.8063
+Bantulan,Southern Tagalog,Palawan,5,119.586304,10.79525
+San Miguel,Southern Tagalog,Palawan,5,119.336403,10.75198
+Calauag,Southern Tagalog,Palawan,5,119.570503,10.67951
+Culasian,Southern Tagalog,Palawan,5,119.611397,10.63015
+Taloto, ,Dumaran Island,5,119.870903,10.62973
+Madoldolon, ,Dumaran Island,5,119.840797,10.62934
+Alimanguan,Southern Tagalog,Palawan,5,119.330002,10.62024
+Dalayauan,Southern Tagalog,Dumaran Island,5,119.963997,10.59861
+Tinintinan,Southern Tagalog,Dumaran Island,5,119.993896,10.56379
+Danleg,Southern Tagalog,Palawan,5,119.667,10.55944
+Banglen,Southern Tagalog,Dumaran Island,5,119.8535,10.55547
+Inandeng,Southern Tagalog,Palawan,5,119.281403,10.54249
+Dumaran,Southern Tagalog,Dumaran Island,5,119.770302,10.53101
+Santa Teresita,Southern Tagalog,Palawan,5,119.672798,10.49954
+Bohol,Southern Tagalog,Dumaran Island,5,119.893402,10.49386
+Capayas,Southern Tagalog,Palawan,5,119.651802,10.47232
+Bacao,Southern Tagalog,Dumaran Island,5,119.788002,10.46256
+Ilian,Southern Tagalog,Palawan,5,119.574303,10.42533
+Tumarbong,Southern Tagalog,Palawan,5,119.459602,10.38439
+Barton,Southern Tagalog,Palawan,5,119.142899,10.37305
+San Nicholas,Southern Tagalog,Palawan,5,119.386902,10.36328
+Roxas,Southern Tagalog,Palawan,5,119.347801,10.32545
+Caruray,Southern Tagalog,Palawan,5,119.024498,10.32463
+Malcampo,Southern Tagalog,Palawan,5,119.292,10.29163
+Marofinas, ,Palawan,5,118.9646,10.27944
+Rizal,Southern Tagalog,Palawan,5,119.260902,10.24512
+Caramay,Southern Tagalog,Palawan,5,119.236,10.18861
+Tulariquin,Southern Tagalog,Palawan,5,119.213699,10.14075
+Nanad,Southern Tagalog,Palawan,5,118.811996,10.13249
+Tinitian,Southern Tagalog,Palawan,5,119.202797,10.07824
+Buenavista,Southern Tagalog,Palawan,5,118.816704,10.07462
+Langogan,Southern Tagalog,Palawan,5,119.128197,10.03578
+Baheli,Southern Tagalog,Palawan,5,118.773697,10.01342
+San Matias,Central Luzon, ,5,120.710503,14.99509
+San Isidro,Central Luzon, ,5,120.742798,14.99408
+San Simon,Central Luzon, ,5,120.757202,14.98299
+Valdez,Central Luzon, ,5,120.527802,14.97709
+Ngalan,Southern Tagalog,Polillo Island,5,121.861801,14.96335
+Floridablanca,Central Luzon, ,5,120.4953,14.94785
+San Pedro,Central Luzon, ,5,120.907898,14.9403
+Panukulan,Southern Tagalog,Polillo Island,5,121.813904,14.93622
+Santa Cruz,Central Luzon, ,5,121.028099,14.92994
+Pundaquit,Central Luzon, ,5,120.063904,14.91996
+Angat,Central Luzon, ,5,121.048897,14.91251
+Subic,Central Luzon, ,5,120.238998,14.88577
+Binibitinan,Southern Tagalog,Polillo Island,5,121.877403,14.88085
+San Roque,Central Luzon, ,5,120.957298,14.86537
+Tabang,Central Luzon, ,5,120.864502,14.84051
+Hagonoy,Central Luzon, ,5,120.689003,14.82889
+San Jose,Central Luzon, ,5,120.879997,14.79456
+Patnanongan,Southern Tagalog,Patnanogan Island,5,122.178497,14.77957
+Pamarauan,Central Luzon, ,5,120.816002,14.76678
+Silanguin,Central Luzon, ,5,120.133598,14.76298
+Infanta,Southern Tagalog, ,5,121.650597,14.7455
+Lauang Bato,Central Luzon, ,5,120.994102,14.73324
+Polillo,Southern Tagalog,Polillo Island,5,121.945602,14.71926
+Jomalig, ,Jomalig Island,5,122.368202,14.71673
+Tinajeros,Central Luzon, ,5,120.959801,14.68564
+Tanza,Central Luzon, ,5,120.937202,14.68268
+Morong,Central Luzon, ,5,120.270897,14.67885
+Tanque,National Capital Region, ,5,121.007301,14.67114
+Real,Southern Tagalog, ,5,121.595901,14.65503
+Bisliang,Southern Tagalog,Polillo Island,5,121.9459,14.63625
+Cabog,Central Luzon, ,5,120.472198,14.62939
+Bagac,Central Luzon, ,5,120.392998,14.59769
+San Andres,Southern Tagalog, ,5,121.119102,14.58184
+Limay,Central Luzon, ,5,120.593903,14.5604
+Muzon,Southern Tagalog, ,5,121.153999,14.52918
+Paysawan,Central Luzon, ,5,120.383598,14.5281
+Morong,Southern Tagalog, ,5,121.241203,14.51281
+Cabcaben,Central Luzon, ,5,120.588699,14.45205
+Tanza,Cavite, ,5,120.866302,14.42266
+Tehero,Southern Tagalog, ,5,120.859398,14.39489
+Amaya,Southern Tagalog, ,5,120.830803,14.38536
+Jalajala,Southern Tagalog, ,5,121.328499,14.35099
+Capalonga,Bicol, ,5,122.4935,14.32931
+Jose Panganiban,Bicol, ,5,122.685402,14.30448
+Mactang,Bicol, ,5,122.4375,14.30089
+Punta,Southern Tagalog, ,5,121.314903,14.29933
+Maragondon,Southern Tagalog, ,5,120.737099,14.27539
+Binauangan,Bicol, ,5,122.401604,14.27429
+Pangas,Bicol, ,5,122.374702,14.23924
+Pila,Southern Tagalog, ,5,121.369598,14.23851
+Batobalani,Bicol, ,5,122.739899,14.2357
+Nanhaya,Southern Tagalog, ,5,121.325897,14.22898
+Anibong,Southern Tagalog, ,5,121.433502,14.22301
+San Salvador,Southern Tagalog, ,5,121.490997,14.22246
+Cavilla,Southern Tagalog,Alabat,5,121.941803,14.22
+Magdalenal,Southern Tagalog, ,5,121.426697,14.19895
+Perez,Southern Tagalog,Alabat,5,121.929298,14.19775
+Bagacay,Bicol, ,5,122.847397,14.19112
+Magallanes,Southern Tagalog, ,5,120.757103,14.19034
+Luisiana,Southern Tagalog, ,5,121.508797,14.18681
+Bay,Southern Tagalog, ,5,121.284599,14.18372
+Vinzons,Bicol, ,5,122.909798,14.17632
+Calaguikhik,Southern Tagalog, ,5,122.219398,14.17456
+Talaga,Camarines Norte, ,5,122.982498,14.13706
+Caytan,Southern Tagalog, ,5,121.439201,14.13356
+Ik-ik,Southern Tagalog, ,5,121.072502,14.12901
+Talingting,Southern Tagalog, ,5,122.264999,14.12402
+Tagontong,Camarines Norte, ,5,123.023804,14.11082
+Tagas,Bicol, ,5,122.876099,14.11018
+Alabat,Southern Tagalog,Alabat,5,122.015404,14.1057
+San Jose,Southern Tagalog, ,5,121.786697,14.10375
+Luksuhin,Southern Tagalog, ,5,120.880898,14.0986
+Masolong,Bicol, ,5,122.759804,14.09381
+Caloocan,Southern Tagalog, ,5,120.965202,14.09369
+Mamboñgalon,Bicol, ,5,123.0308,14.07629
+Mascariña,Southern Tagalog,Alabat,5,122.093102,14.07195
+Basud,Bicol, ,5,122.967201,14.06926
+Alaminos,Southern Tagalog, ,5,121.248596,14.06648
+Mainit,Southern Tagalog, ,5,121.633904,14.06359
+Bayuyuñgan,Southern Tagalog, ,5,120.930199,14.05821
+Apad,Southern Tagalog,Alabat,5,122.100502,14.05693
+Lian,Southern Tagalog, ,5,120.663399,14.05458
+Boot,Southern Tagalog, ,5,121.079803,14.05019
+Bagbag,Southern Tagalog, ,5,121.107399,14.04854
+Tandoc,Bicol, ,5,123.298599,14.04727
+Balete,Southern Tagalog, ,5,121.099403,14.02243
+Tuy,Southern Tagalog, ,5,120.725197,14.02214
+Malvar,Southern Tagalog, ,5,121.167,14.01779
+Argosino,Southern Tagalog,Alabat,5,122.182503,14.00966
+San Vicente,Bicol, ,5,123.330704,14.00068
+Barana,Bicol, ,5,123.0812,13.97847
+Dao,Southern Tagalog, ,5,120.733002,13.97408
+Tagkawayan,Southern Tagalog, ,5,122.538399,13.96713
+Tiaong,Southern Tagalog, ,5,121.326897,13.96642
+Mapid,Bicol, ,5,123.453201,13.9584
+Canda,Southern Tagalog, ,5,120.700104,13.94734
+Rizal,Southern Tagalog, ,5,122.354599,13.94253
+Balayan,Southern Tagalog, ,5,120.7313,13.94215
+Calaca,Southern Tagalog, ,5,120.811996,13.93732
+Gongonan,Bicol, ,5,123.381699,13.93588
+Candelaria,Southern Tagalog, ,5,121.426903,13.93427
+Cabag,Southern Tagalog, ,5,121.840302,13.91882
+Pelantuna,Bicol, ,5,122.887901,13.91822
+Navotas,Southern Tagalog, ,5,120.696297,13.91756
+Malaue,Southern Tagalog, ,5,120.955704,13.91706
+Calawang,Southern Tagalog, ,5,120.860497,13.91567
+Lamon,Camarines Sur, ,5,123.298698,13.9034
+Calampan,Southern Tagalog, ,5,120.9767,13.902
+Magtang,Camarines Sur, ,5,123.2976,13.88643
+Castañas,Southern Tagalog, ,5,121.555099,13.88263
+Catabanga,Bicol, ,5,122.662804,13.8811
+Garchitorena,Camarines Sur, ,5,123.695099,13.87973
+Balagbag,Southern Tagalog, ,5,121.023697,13.87039
+Mandao,Bicol, ,5,123.060997,13.87009
+Sumaguil,Southern Tagalog, ,5,121.503304,13.86611
+Bucal,Batangas, ,5,120.668701,13.86536
+Bolboc,Southern Tagalog,Cabra Island,5,120.125702,13.85554
+Union,Bicol, ,5,123.321404,13.84668
+Pag-aguasan,Southern Tagalog, ,5,121.980103,13.84334
+Calatagan,Southern Tagalog, ,5,120.637497,13.83136
+San Juan,Southern Tagalog, ,5,121.399002,13.83091
+Maalas-as,Southern Tagalog, ,5,121.212898,13.81983
+Tinambac,Bicol, ,5,123.330399,13.81644
+Bikal,Camarines Sur, ,5,123.874397,13.80973
+Abubo,Bicol, ,5,122.964996,13.79899
+Tinga,Southern Tagalog, ,5,121.0783,13.79898
+Bauan,Southern Tagalog, ,5,121.010696,13.79456
+Amontay,Southern Tagalog, ,5,122.091003,13.78829
+Calamias,Southern Tagalog,Cabra Island,5,120.121597,13.78494
+Barceloneta,Bicol, ,5,123.045197,13.77231
+Caramoan,Bicol, ,5,123.860497,13.77103
+Turel,Bicol, ,5,123.377701,13.76781
+Pandanan,Bicol, ,5,123.951897,13.76675
+Gitoma,Bicol, ,5,124.147301,13.75869
+Mabini,Batangas, ,5,120.942001,13.75607
+Manambrag,Bicol, ,5,124.123199,13.74967
+Guijalo,Bicol, ,5,123.871803,13.74304
+Dagatan,Southern Tagalog, ,5,121.202003,13.73973
+Buenavista,Southern Tagalog, ,5,122.468697,13.73884
+Lagonoy,Bicol, ,5,123.523399,13.73836
+Lupi,Bicol, ,5,123.392899,13.73282
+Colongcogong,Bicol, ,5,123.968399,13.73071
+Looc,Southern Tagalog,Cabra Island,5,120.249298,13.72274
+Bitaogan,Bicol, ,5,123.841202,13.71626
+Karigsa,Camarines Sur, ,5,123.135101,13.71611
+Calabanga,Bicol, ,5,123.220398,13.71323
+Bagalañgit,Batangas, ,5,120.882797,13.70968
+Binahian,Bicol, ,5,122.860901,13.70636
+Goa,Bicol, ,5,123.491898,13.70107
+Fundado,Bicol, ,5,123.132401,13.6984
+General Luna,Southern Tagalog, ,5,122.174202,13.68932
+Maricaban, ,Grande Island,5,120.842499,13.66811
+Binobon,Camarines Sur, ,5,122.839699,13.66576
+Gamao, ,Grande Island,5,120.936096,13.65533
+Lobo,Southern Tagalog, ,5,121.214203,13.64877
+Sialat,Bicol, ,5,124.044899,13.64779
+Bahao,Bicol, ,5,122.834602,13.64499
+Ilihan,Batangas, ,5,121.0783,13.63644
+San Isidro,Southern Tagalog, ,5,122.245399,13.63518
+Tigaon,Bicol, ,5,123.498596,13.63302
+Sagnay,Bicol, ,5,123.533203,13.62394
+San Narciso,Quezon, ,5,122.567398,13.56924
+San Fernando,Bicol, ,5,123.144501,13.56544
+Pajo,Batangas, ,5,121.054398,13.56282
+Aragao, ,Tagubanhan Island,5,121.865196,13.56091
+San Agustin,Bicol, ,5,123.274597,13.56029
+Magnesia,Catanduanes, ,5,124.164497,13.54003
+Bagasacay,Southern Tagalog, ,5,122.567001,13.53914
+Mulanay,Southern Tagalog, ,5,122.407303,13.52428
+Puerto Galera,Southern Tagalog, ,5,120.947304,13.51541
+Pasacao,Bicol, ,5,123.041801,13.51453
+Mainit,Bicol, ,5,123.079903,13.49852
+Balagnam,Southern Tagalog, ,5,120.603104,13.49801
+Payte,Southern Tagalog,Tagubanhan Island,5,122.1008,13.47307
+Santa Cruz,Southern Tagalog,Tagubanhan Island,5,122.054901,13.46615
+Wawa,Southern Tagalog, ,5,120.7472,13.46338
+Tiwi,Bicol, ,5,123.683296,13.45923
+Boac,Southern Tagalog,Tagubanhan Island,5,121.837898,13.4492
+Cayohoson,Bicol, ,5,123.5737,13.44567
+Paluan,Southern Tagalog, ,5,120.465797,13.42241
+Suki,Mindoro Oriental, ,5,121.197998,13.41967
+Calapan,Southern Tagalog, ,5,121.176498,13.40791
+Sagorong,Albay, ,5,123.781898,13.39423
+Ignonoc,Southern Tagalog, ,5,120.367104,13.38993
+Ayon-Dao,Southern Tagalog, ,5,121.021004,13.38913
+Bonliw,Southern Tagalog,Tagubanhan Island,5,122.115601,13.37806
+Balo,Southern Tagalog,Tagubanhan Island,5,122.142998,13.37399
+Caorasan,Bicol, ,5,123.213898,13.37366
+Aurora,Southern Tagalog, ,5,122.523499,13.35047
+San Andres,Southern Tagalog, ,5,122.674202,13.32376
+Gasan,Southern Tagalog,Tagubanhan Island,5,121.852699,13.32324
+Balatan,Bicol, ,5,123.241898,13.31966
+Malilipot,Bicol, ,5,123.748299,13.30892
+Pinagsabangan,Southern Tagalog, ,5,121.1306,13.30261
+Polanqui,Bicol, ,5,123.484802,13.29707
+Danao,Southern Tagalog,Tagubanhan Island,5,122.014397,13.27619
+Mag-asawang Tubig,Southern Tagalog, ,5,121.241402,13.27361
+Mañgero,Southern Tagalog, ,5,122.6726,13.2715
+Pili,Bicol, ,5,123.8162,13.26832
+Gaba,Bicol,Agutaya Island,5,123.9804,13.26366
+Libog,Bicol, ,5,123.7771,13.23948
+Mamburao,Southern Tagalog, ,5,120.598396,13.22717
+Apitong,Southern Tagalog, ,5,121.184898,13.22015
+Budlungan,Southern Tagalog, ,5,121.116203,13.2172
+Linao,Bicol,Leyte Island,5,124.206802,13.19957
+Collat,Bicol, ,5,123.462997,13.19815
+Magulon,Southern Tagalog, ,5,121.442001,13.19568
+Rapu Rapu,Bicol,Leyte Island,5,124.126503,13.19443
+Bondoc Pt,Southern Tagalog, ,5,122.634102,13.19436
+Borbocolon,Southern Tagalog, ,5,121.277603,13.18925
+Pola,Southern Tagalog, ,5,121.440598,13.14439
+San Pascual,Bicol,Cuyo,5,122.988701,13.13121
+Manito,Bicol, ,5,123.871399,13.12863
+Jovellar,Bicol, ,5,123.600601,13.07025
+Santa Cruz,Southern Tagalog, ,5,120.757103,13.06023
+Putiao,Bicol, ,5,123.707603,13.05853
+Prieto Diaz,Bicol, ,5,124.193001,13.04298
+San Francisco,Bicol, ,5,123.784302,13.04157
+Bayuin,Southern Tagalog, ,5,121.389,13.04138
+Sawanga Bacon,Bicol, ,5,124.042999,13.03763
+Pagnanitojan,Bicol, ,5,123.876404,12.99476
+San Vicente,Bicol, ,5,123.794098,12.98559
+Batingan,Southern Tagalog, ,5,121.4785,12.96268
+Lagang,Romblon, ,5,122.091202,12.95488
+Abuyog,Bicol, ,5,124.056297,12.94874
+Pinagsalog,Bicol, ,5,123.670799,12.9295
+Concepcion,Mindoro Oriental, ,5,121.721703,12.92305
+Cagotaw,Bicol, ,5,123.853798,12.90982
+Macalaya,Bicol, ,5,123.7714,12.89325
+San Antonio,Bicol, ,5,123.6483,12.88804
+Tenagbac,Bicol, ,5,123.7285,12.88088
+Casiguran,Sorsogon, ,5,124.017197,12.87397
+Bogtong,Bicol, ,5,124.115799,12.86964
+Mabini,Sorsogon, ,5,123.995201,12.86535
+Bansud,Southern Tagalog, ,5,121.458504,12.86202
+Madanlog, ,Cuyo,5,123.278099,12.85158
+Magallanes,Sorsogon, ,5,123.838097,12.8346
+Escuala,Bicol, ,5,124.052299,12.82981
+San Isidro,Bicol, ,5,124.128899,12.81439
+Sablayan,Southern Tagalog, ,5,120.837502,12.81316
+Pangpang,Bicol, ,5,123.850098,12.80647
+Guiangra,Bicol, ,5,123.851402,12.78347
+Labasan,Southern Tagalog, ,5,121.472099,12.78316
+Bocaengaño,Bicol,Cuyo,5,123.316399,12.77775
+Biten,Bicol, ,5,123.850998,12.76132
+Dolos,Bicol, ,5,123.947998,12.76117
+Bongabong,Southern Tagalog, ,5,121.485298,12.74941
+Danao,Bicol, ,5,123.854698,12.73991
+Tagalan Sadit,Bicol,Cuyo,5,123.380203,12.70026
+Acliang,Southern Tagalog, ,5,121.361702,12.69224
+Guindahap, ,Cuyo,5,123.619499,12.68441
+Cawayan,Southern Tagalog, ,5,121.543999,12.65761
+Butag,Bicol, ,5,123.936798,12.63512
+Iriron,Southern Tagalog, ,5,120.933403,12.62271
+Calatrava,Southern Tagalog,Canipo Island,5,122.074898,12.62184
+Carman,Southern Tagalog,Canipo Island,5,122.120499,12.61804
+Kanturoy,Southern Tagalog, ,5,121.114403,12.61526
+Loca,Bicol,Lubic Island,5,123.305397,12.57598
+Tabonac,Southern Tagalog, ,5,121.0243,12.57567
+Calintaan,Southern Tagalog, ,5,120.944397,12.57332
+Roxas,Southern Tagalog, ,5,121.508102,12.57132
+Lamaoan,Bicol, ,5,124.081398,12.55188
+Calonacon,Southern Tagalog,Canipo Island,5,122.015198,12.54931
+Pitogo,Southern Tagalog, ,5,121.077202,12.53789
+Bantayan,Eastern Visayas, ,5,124.837097,12.52641
+Maquinalo,Northern Samar, ,5,124.707802,12.51241
+Capayan,Northern Samar, ,5,124.6651,12.51164
+Magdiwang,Southern Tagalog,Don Islands,5,122.510002,12.49346
+Danao,Southern Tagalog,Don Islands,5,122.632599,12.48935
+Sablayan,Southern Tagalog,Cuyo Islands,5,122.304398,12.48615
+San Isidro,Bicol,Lubic Island,5,123.270103,12.46923
+Cataja,Southern Tagalog,Don Islands,5,122.523697,12.46561
+Malubago,Southern Tagalog,Don Islands,5,122.433998,12.4546
+Anas,Bicol,Lubic Island,5,123.566902,12.43153
+San Agustin,Southern Tagalog, ,5,120.991096,12.42953
+Capul, ,Camandag Island,5,124.178497,12.42097
+Parao,Southern Tagalog,Don Islands,5,122.439301,12.41466
+Laguisoc,Bicol,Lubic Island,5,123.285797,12.40771
+Manalibong,Eastern Visayas, ,5,124.627602,12.40316
+Odiongan,Southern Tagalog,Canipo Island,5,121.984398,12.39913
+Bilat,Bicol,Lubic Island,5,123.5867,12.3952
+España,Southern Tagalog,Don Islands,5,122.500198,12.38862
+Calagundi-an,Eastern Visayas, ,5,124.350601,12.38362
+Amutag,Bicol,Lubic Island,5,123.270203,12.37754
+Sauang,Bicol,Cuyo,5,123.771202,12.37385
+Pilar, ,Caluya Island,5,124.2714,12.37258
+Cajidiocan,Southern Tagalog,Don Islands,5,122.6838,12.36738
+San Jose,Southern Tagalog, ,5,121.068802,12.35719
+Calagonsao,Southern Tagalog,Canipo Island,5,122.0914,12.35311
+Tabay,Southern Tagalog,Canipo Island,5,121.943199,12.3524
+Manuganaga,Bicol,Lubic Island,5,123.3908,12.33326
+Bulalacao,Southern Tagalog, ,5,121.336098,12.33318
+Maputat,Bicol,Lubic Island,5,123.565598,12.32235
+Nipa,Southern Tagalog,Canipo Island,5,122.082802,12.32067
+Salvacion,Bicol,Lubic Island,5,123.701103,12.31962
+Lope de Vega,Eastern Visayas, ,5,124.646797,12.30066
+Mambog,Bicol,Lubic Island,5,123.343201,12.29994
+Dawo,Eastern Visayas, ,5,124.487099,12.29934
+Bolo,Southern Tagalog, ,5,121.202003,12.29853
+Hangi,Eastern Visayas, ,5,125,12.29719
+Lourdes,Bicol,Lubic Island,5,123.552803,12.28596
+Azagra,Southern Tagalog,Don Islands,5,122.629501,12.27862
+Alcantara,Southern Tagalog,Canipo Island,5,122.055496,12.25914
+Boro Banco,Bicol,Lubic Island,5,123.675903,12.25488
+Mangarin B,Southern Tagalog, ,5,121.121101,12.25216
+Asid,Bicol,Lubic Island,5,123.527802,12.24679
+Toos, ,Lubic Island,5,123.233498,12.23672
+Uson,Bicol,Lubic Island,5,123.790703,12.22931
+Manolib,Bicol,Lubic Island,5,123.461197,12.22252
+Tarabucan,Eastern Visayas, ,5,124.934998,12.21643
+Santa Teresa,Southern Tagalog,Templo Island,5,121.115196,12.18797
+Mati,Southern Tagalog,Canipo Island,5,121.995102,12.18696
+Kandamal,Bicol,Lubic Island,5,123.788101,12.18007
+Bangad,Bicol,Lubic Island,5,123.3964,12.16757
+Decalachao,Southern Tagalog, ,5,120.090302,12.15757
+Santa Fe,Southern Tagalog,Canipo Island,5,122.0037,12.15662
+Calumpang,Bicol,Lubic Island,5,123.598999,12.15218
+Maricaban,Southern Tagalog, ,5,120.024597,12.14657
+Palanas,Bicol,Lubic Island,5,123.922997,12.14638
+Tabugon,Southern Tagalog,Canipo Island,5,122.015503,12.1281
+Palani, ,Lubic Island,5,123.215897,12.0973
+Borongan,Bicol,Lubic Island,5,123.620598,12.0883
+Palambrag,Eastern Visayas, ,5,124.865402,12.08543
+Palobandera,Bicol,Lubic Island,5,123.8088,12.08469
+San Nicolas,Southern Tagalog, ,5,120.1968,12.08117
+Barra,Bicol,Lubic Island,5,123.640999,12.07972
+Semirara, ,Jintotolo Island,5,121.392097,12.07044
+Sogud, ,Sibay Island,5,124.175797,12.07017
+Panguiranan,Bicol,Lubic Island,5,123.315002,12.0688
+Acogon, ,Naro Island,5,121.958504,12.06451
+Malbug,Bicol,Lubic Island,5,123.653503,12.05858
+Borac,Southern Tagalog, ,5,120.290001,12.04873
+Boayahan, ,Naro Island,5,121.944603,12.04375
+Santa Margarita,Eastern Visayas, ,5,124.661697,12.04229
+Bahud,Bicol,Lubic Island,5,123.198997,12.04004
+Balud,Eastern Visayas, ,5,124.725304,12.02013
+Labigan,Bicol,Lubic Island,5,123.712402,12.01568
+Coron,Southern Tagalog, ,5,120.208603,12.01056
+Bulao,Eastern Visayas, ,5,124.854797,11.98442
+Corocauayan,Samar, ,5,124.428497,11.98263
+Guiom, ,Lubic Island,5,123.733498,11.97924
+Balat-guti,Samar, ,5,124.411301,11.9698
+Pagsanjan,Samar, ,5,124.7229,11.96759
+Banuang Daan,Southern Tagalog,Sibuyan,5,120.265099,11.96168
+Imba, ,Molocamboc Island,5,121.552597,11.95817
+Pagsanghan,Eastern Visayas, ,5,124.866302,11.94708
+Guimbanwahan,Bicol,Lubic Island,5,123.1633,11.94647
+Bacjao, ,Maripipi Island,5,124.312798,11.94542
+Union,Aklan, ,5,121.958504,11.93601
+Cavayan, ,Lubic Island,5,123.772202,11.93555
+Bahay,Eastern Visayas, ,5,124.805199,11.93327
+Bangwang Daan,Southern Tagalog,Sibuyan,5,120.2575,11.92977
+Cantaguec,Eastern Visayas, ,5,124.875099,11.92645
+Culion,Palawan, ,5,120.058899,11.92575
+Almagro, ,Maripipi Island,5,124.296204,11.92495
+Santo Niño, ,Olango Island,5,124.4533,11.92248
+Pulanduta,Bicol,Lubic Island,5,123.169701,11.91648
+Hininga-an, ,Molocamboc Island,5,121.572701,11.91628
+San Vicente, ,Bulalacao Island,5,124.658798,11.90838
+Placer,Bicol,Lubic Island,5,123.917603,11.87881
+Bongliw,Eastern Visayas, ,5,124.902199,11.8706
+Buruanga,Western Visayas, ,5,121.8946,11.849
+Sibay, ,Buad Island,5,121.497597,11.84531
+Domorog,Bicol,Lubic Island,5,123.9683,11.84111
+Nabas,Western Visayas, ,5,122.091797,11.8321
+Silanga,Samar, ,5,124.703499,11.82918
+Bataguanan,Palawan, ,5,120.102798,11.82541
+Ibajay,Aklan, ,5,122.163803,11.82327
+Bangon,Eastern Visayas, ,5,124.918999,11.79832
+Santander,Western Visayas, ,5,121.873001,11.79084
+Molpok,Southern Tagalog,Culion Island,5,120.0308,11.76452
+Bulalacao, ,Bulusan,5,120.159203,11.75858
+Pandan,Western Visayas, ,5,122.096603,11.72653
+Capitun-an,Eastern Visayas, ,5,124.729103,11.72606
+Rizal,Samar, ,5,124.7686,11.72521
+Tucdao,Eastern Visayas, ,5,124.470299,11.70197
+Kawayan,Eastern Visayas, ,5,124.360901,11.68092
+Paet,Eastern Visayas, ,5,124.763,11.67752
+Culaba,Eastern Visayas, ,5,124.5383,11.65844
+Mualbual, ,Bagatao Island,5,124.870102,11.65128
+Malinao,Western Visayas, ,5,122.309097,11.64758
+Banga,Western Visayas, ,5,122.335297,11.6426
+Macalonud, ,Bagatao Island,5,124.850098,11.64125
+Daram,Eastern Visayas, ,5,124.793503,11.63755
+Tabojab,Eastern Visayas, ,5,124.557701,11.62622
+Bagacay,Eastern Visayas, ,5,124.818001,11.59919
+Sebaste,Western Visayas, ,5,122.1017,11.59507
+Talostosan,Eastern Visayas, ,5,124.446098,11.59155
+Carles,Western Visayas, ,5,123.138199,11.57475
+Igot,Eastern Visayas, ,5,124.961304,11.57025
+Gigantangan, ,South Gigante Island,5,124.271202,11.56842
+Panay,Western Visayas, ,5,122.793999,11.55957
+Balete,Western Visayas, ,5,122.379303,11.55841
+Ynalad,Eastern Visayas, ,5,124.320503,11.55024
+Lico,Eastern Visayas, ,5,124.458298,11.54918
+Guintampilan,Eastern Visayas, ,5,124.831596,11.54645
+San Andres,Eastern Visayas, ,5,124.889801,11.53658
+Bolo,Western Visayas, ,5,122.767403,11.51614
+Vilalon,Eastern Visayas, ,5,124.361702,11.51589
+Inanodlan,Eastern Visayas, ,5,124.967796,11.51507
+Narombacan,Eastern Visayas, ,5,124.918098,11.51446
+Tatabunan,Eastern Visayas, ,5,124.841301,11.51443
+Bonga,Eastern Visayas, ,5,124.5896,11.48714
+Montiflor,Western Visayas, ,5,122.999603,11.4848
+Pontevedra,Western Visayas, ,5,122.830597,11.48384
+Cabucgayan,Eastern Visayas, ,5,124.569397,11.48154
+Balasan,Western Visayas, ,5,123.088303,11.47513
+Biliran,Eastern Visayas, ,5,124.479301,11.47137
+Panitan,Western Visayas, ,5,122.768097,11.4671
+Estancia,Western Visayas, ,5,123.153099,11.46101
+Santa Rita,Eastern Visayas, ,5,124.948196,11.46048
+Nangalao, ,Cobrador Island,5,120.170998,11.44505
+President Roxas,Western Visayas, ,5,122.928398,11.43681
+Mambusao,Western Visayas, ,5,122.597702,11.43327
+Culasi,Western Visayas, ,5,122.058502,11.42702
+Sigma,Western Visayas, ,5,122.667198,11.42173
+Hipona,Western Visayas, ,5,122.8853,11.41707
+Alfonso XII,Western Visayas, ,5,122.343697,11.41685
+Tabun-acan,Western Visayas, ,5,123.024597,11.41573
+Binon-an,Western Visayas, ,5,123.140602,11.3962
+Dao,Western Visayas, ,5,122.688301,11.39474
+Daraon,Eastern Visayas, ,5,124.427002,11.38819
+Taguite,Eastern Visayas, ,5,124.965698,11.38702
+Cabulauan, ,Beni Island,5,120.105797,11.37483
+Bagahupi,Eastern Visayas, ,5,124.955597,11.36231
+Arevalo,Eastern Visayas, ,5,124.364502,11.35764
+Bagacai,Western Visayas, ,5,123.1054,11.35107
+Manamoc, ,Nangalao Island,5,120.6894,11.32021
+Carataya,Western Visayas, ,5,122.797203,11.3142
+Dumalag,Western Visayas, ,5,122.624199,11.31137
+Tabango,Eastern Visayas, ,5,124.375702,11.31099
+Managasnas,Eastern Visayas, ,5,124.588997,11.30145
+Consuegra,Eastern Visayas, ,5,124.5131,11.29701
+Madridejos,Central Visayas,Lapinig,5,123.732498,11.29672
+Campokpok,Eastern Visayas, ,5,124.412903,11.29648
+San Miguel,Eastern Visayas, ,5,124.834602,11.29533
+Tibiao,Antique, ,5,122.041397,11.29251
+Capoocan,Eastern Visayas, ,5,124.651497,11.28981
+Maya,Cebu, ,5,124.0597,11.27409
+San Dionisio,Western Visayas, ,5,123.095001,11.27197
+Aglalana,Western Visayas, ,5,122.6856,11.26673
+Bagacay,Eastern Visayas, ,5,124.9673,11.26661
+Baranbang,Eastern Visayas, ,5,124.429604,11.26605
+Sugud,Eastern Visayas, ,5,124.691002,11.26404
+Tapaz,Western Visayas, ,5,122.552399,11.2633
+Sara,Western Visayas, ,5,123.018204,11.25806
+Nagsulang,Western Visayas, ,5,122.961403,11.24609
+Talisay,Central Visayas, ,5,124.062401,11.24407
+Diit, ,Sicogon Island,5,120.931099,11.24073
+Villaba,Leyte, ,5,124.402397,11.2133
+Concepcion,Western Visayas, ,5,123.105797,11.21222
+Bitaogan,Western Visayas, ,5,122.652496,11.20605
+Alangalang,Eastern Visayas, ,5,124.848297,11.20562
+Sillon,Central Visayas,Lapinig,5,123.771896,11.19513
+Santa Fe,Eastern Visayas, ,5,124.919296,11.18858
+Antipolo,Central Visayas, ,5,123.9534,11.18726
+Kananga,Eastern Visayas, ,5,124.563904,11.18591
+Bulan,Eastern Visayas, ,5,124.4506,11.18481
+San Rafael,Western Visayas, ,5,122.830399,11.17935
+Calape,Central Visayas, ,5,124.0345,11.17663
+Ajuy,Western Visayas, ,5,123.020699,11.17423
+Agatuya,Palawan, ,5,120.942497,11.15548
+Caridad,Eastern Visayas, ,5,124.862801,11.152
+Lawa-an,Western Visayas, ,5,122.046303,11.14579
+Matag-ob,Eastern Visayas, ,5,124.474098,11.14564
+Bantayan,Central Visayas,Lapinig,5,123.725899,11.14325
+Lanawan,Eastern Visayas, ,5,124.932198,11.14101
+Canhandugan,Eastern Visayas, ,5,124.781403,11.13658
+Hubas,Eastern Visayas, ,5,124.891098,11.13333
+Tindog Sur,Central Visayas, ,5,123.9645,11.13231
+Aquiting,Eastern Visayas, ,5,124.586998,11.12869
+Tindog,Central Visayas, ,5,124.012901,11.12674
+Gama,Western Visayas, ,5,122.536598,11.12311
+Jayobo,Western Visayas, ,5,122.416397,11.10661
+Passi,Western Visayas, ,5,122.641899,11.10657
+Pastrana,Eastern Visayas, ,5,124.878998,11.10178
+San Jose,Eastern Visayas, ,5,124.5532,11.09586
+San Remigio,Cebu, ,5,123.941101,11.08474
+Culasi,Western Visayas, ,5,122.9795,11.07521
+Dueñas,Western Visayas, ,5,122.6185,11.07149
+Lublub,Western Visayas, ,5,122.1763,11.05862
+Lambunao,Western Visayas, ,5,122.477303,11.05674
+Bugasong,Western Visayas, ,5,122.069298,11.04731
+Nailon,Central Visayas, ,5,124.032997,11.04501
+Barotac Viejo,Western Visayas, ,5,122.854202,11.04496
+Lilo-an,Eastern Visayas, ,5,124.554298,11.04236
+Donghol,Eastern Visayas, ,5,124.6278,11.03963
+Banate,Western Visayas, ,5,122.816498,11.00592
+Dingle,Western Visayas, ,5,122.670502,11.00577
+Odlot,Central Visayas, ,5,124.039101,11.00555
+Cadiz Viejo,Western Visayas, ,5,123.200699,10.9993
+Kabadiangan,Eastern Visayas, ,5,124.918503,10.99252
+Anilao,Western Visayas, ,5,122.750099,10.9834
+Julita,Eastern Visayas, ,5,124.964401,10.97601
+Catapud,Western Visayas, ,5,123.251503,10.97143
+Puertobello,Eastern Visayas, ,5,124.538101,10.97007
+Salag,Central Visayas, ,5,124.039001,10.9667
+Seguinon,Eastern Visayas, ,5,124.681503,10.95057
+Tabogon,Central Visayas, ,5,124.0317,10.93845
+Hacienda Biac,Western Visayas, ,5,123.208199,10.93661
+Santo Niño,Eastern Visayas, ,5,124.957001,10.93593
+Chambery,Western Visayas, ,5,123.168404,10.93061
+Quiot,Eastern Visayas, ,5,124.440697,10.9289
+Rizal,Western Visayas, ,5,122.178902,10.91773
+Patnongon,Western Visayas, ,5,121.997597,10.91617
+Talisay,Western Visayas, ,5,122.780197,10.91176
+Barotac Nuevo,Western Visayas, ,5,122.7043,10.89957
+Rizal,Western Visayas, ,5,123.415802,10.89692
+Maasin,Western Visayas, ,5,122.436699,10.89661
+Tubud,Eastern Visayas, ,5,124.464104,10.8933
+Ilihan,Central Visayas, ,5,123.977798,10.89091
+LaPaz,Eastern Visayas, ,5,124.961502,10.89029
+Balugo,Leyte, ,5,124.715103,10.88783
+Cuyo,Southern Tagalog,Cocoro Island,5,121.062698,10.88186
+New Lucena,Western Visayas, ,5,122.598297,10.88115
+Estado,Western Visayas, ,5,123.067398,10.8803
+Calunangan,Eastern Visayas, ,5,124.513,10.87403
+Tagnucan,Central Visayas, ,5,124.044701,10.87172
+Buenavista,Western Visayas, ,5,121.974602,10.87162
+Tolingon,Eastern Visayas, ,5,124.482803,10.87143
+Tabunok,Central Visayas, ,5,123.880997,10.85237
+Mariñgian,Southern Tagalog,Cocoro Island,5,121.017097,10.85161
+Jalaud,Western Visayas, ,5,122.657097,10.84653
+Belison,Western Visayas, ,5,121.9636,10.84171
+San Remigio,Western Visayas, ,5,122.089203,10.83723
+MacArthur,Eastern Visayas, ,5,124.995102,10.83223
+Balaguen,Southern Tagalog,Cocoro Island,5,121.056198,10.83187
+Tabuelan,Central Visayas, ,5,123.876801,10.8278
+Palale,Eastern Visayas, ,5,124.944099,10.82238
+San Pedro,Western Visayas, ,5,121.955101,10.80577
+Pilar, ,Cuyo Island,5,124.561501,10.80551
+Tagaytay,Central Visayas, ,5,123.999496,10.80191
+Sambulon,Western Visayas, ,5,123.484901,10.79799
+Kantuma,Central Visayas, ,5,123.936897,10.79753
+San Miguel,Western Visayas, ,5,122.465103,10.78762
+Utod,Eastern Visayas, ,5,124.963799,10.78112
+Kabalawan,Central Visayas, ,5,123.952003,10.77069
+Lagolago,Eastern Visayas, ,5,124.799301,10.74314
+Catmon,Central Visayas, ,5,124.010498,10.72699
+Mandurriao,Western Visayas, ,5,122.536797,10.72329
+Igbaras,Western Visayas, ,5,122.268501,10.72239
+Balocawihay,Eastern Visayas, ,5,124.962196,10.71228
+Avila,Western Visayas, ,5,122.711197,10.71121
+Hamtic,Western Visayas, ,5,121.989304,10.70776
+Esperanza,Central Visayas,Ponson Island,5,124.419502,10.70232
+Baybay,Eastern Visayas, ,5,124.8106,10.68323
+Caridad,Central Visayas, ,5,123.806801,10.68191
+Puertobello,Central Visayas,Ponson Island,5,124.492897,10.67976
+San Jose,Central Visayas,Ponson Island,5,124.439903,10.67839
+Santa Cruz,Central Visayas,Caponyan Island,5,124.368698,10.67614
+Granada,Western Visayas, ,5,123.037102,10.66896
+Guimbal,Western Visayas, ,5,122.324898,10.66697
+Cankamalig,Western Visayas, ,5,123.464302,10.66438
+Jordan,Western Visayas, ,5,122.592102,10.66039
+Valencia,Western Visayas, ,5,122.712303,10.6599
+Monte Alegre,Central Visayas,Caponyan Island,5,124.341301,10.65075
+Himensulan,Central Visayas,Caponyan Island,5,124.3787,10.64629
+Consuelo,Central Visayas,Caponyan Island,5,124.306602,10.63539
+Montefolka,Eastern Visayas, ,5,124.808701,10.63225
+Maula,Eastern Visayas, ,5,124.850601,10.62269
+Murcia,Western Visayas, ,5,123.044197,10.61033
+Bayugan,Eastern Visayas, ,5,124.966904,10.60913
+Sum-ag,Western Visayas, ,5,122.921402,10.60556
+Plaridel,Central Visayas, ,5,123.7509,10.60523
+Calatrava,Western Visayas, ,5,123.480301,10.60256
+Carmen,Central Visayas, ,5,124.0186,10.59777
+Unidos,Central Visayas,Caponyan Island,5,124.309502,10.59643
+San Joaquin,Iloilo, ,5,122.142303,10.59432
+Plaridel,Eastern Visayas, ,5,124.773804,10.56471
+Abuanan,Western Visayas, ,5,122.996002,10.52947
+Dao,Western Visayas, ,5,121.949799,10.51994
+Balamban,Central Visayas, ,5,123.723701,10.49983
+Inopacan,Leyte, ,5,124.741302,10.49241
+Ma-ao Barrio,Western Visayas, ,5,122.9963,10.48983
+Compostela,Central Visayas, ,5,124.013397,10.46018
+Magdalena,Western Visayas, ,5,121.978401,10.43186
+Hindang,Eastern Visayas, ,5,124.736702,10.43128
+Panobolon,Western Visayas, ,5,122.544197,10.42116
+Concepcion,Eastern Visayas, ,5,124.791,10.40735
+Sogod,Eastern Visayas, ,5,124.984901,10.3905
+Talamban Viejo,Central Visayas, ,5,123.924797,10.38865
+Pontevedra,Western Visayas, ,5,122.872597,10.37632
+Hiongas,Eastern Visayas, ,5,124.757698,10.37432
+Tabonoc,Eastern Visayas, ,5,124.8004,10.36946
+Tilhaong,Central Visayas, ,5,123.986504,10.36336
+Bato,Eastern Visayas, ,5,124.7995,10.33024
+Banday,Eastern Visayas, ,5,124.972801,10.31307
+Punta Engaña,Lapu-Lapu City, ,5,124.0131,10.30596
+Matalom,Eastern Visayas, ,5,124.800201,10.28784
+Mambaling,Central Visayas, ,5,123.859596,10.28241
+San Isidro,Eastern Visayas, ,5,124.982597,10.25555
+Cordova,Cebu, ,5,123.950699,10.25253
+Aloquinsan,Central Visayas, ,5,123.5569,10.22176
+Juangon,Eastern Visayas, ,5,124.977699,10.21563
+Tigbawan,Eastern Visayas, ,5,124.908096,10.18657
+Guadalupe,Southern Leyte, ,5,124.770599,10.17075
+Villegas,Central Visayas, ,5,123.205498,10.16245
+Tugas, ,Maducang Island,5,124.612396,10.14745
+Talibon,Central Visayas, ,5,124.267998,10.14556
+Maasin,Eastern Visayas, ,5,124.843697,10.14483
+Jetafe,Central Visayas, ,5,124.1567,10.14321
+Bonbonon, ,Maducang Island,5,124.579399,10.1246
+Pitogo, ,Maducang Island,5,124.552399,10.12125
+Bigot,Central Visayas, ,5,124.305496,10.10394
+Aguining, ,Maducang Island,5,124.594398,10.08505
+Asinan, , ,5,124.115402,10.08497
+Macrohon,Eastern Visayas, ,5,124.949997,10.08047
+Napo,Central Visayas, ,5,123.614601,10.06839
+Sayao,Central Visayas, ,5,123.558502,10.0632
+Basiao, ,Maducang Island,5,124.5495,10.06166
+Ubay,Central Visayas, ,5,124.473198,10.05147
+Maubid,Central Visayas, ,5,124.129898,10.03587
+Ilog,Negros Occidental, ,5,122.770401,10.02995
+La Libertad,Central Visayas, ,5,123.234398,10.02849
+Cancamay,Central Visayas, ,5,124.209702,10.01332
+Bogang,Central Visayas, ,5,124.382103,10.00608
+Mapanas,Eastern Visayas, ,5,125.257004,12.47754
+Simora,Eastern Visayas, ,5,125.032204,12.46842
+Sila Pt,Eastern Visayas, ,5,125.306396,12.40509
+Gamay,Eastern Visayas, ,5,125.2976,12.39188
+Cagamotan,Eastern Visayas, ,5,125.284897,12.36366
+Las Navas,Eastern Visayas, ,5,125.031799,12.34345
+Lapinig,Northern Samar, ,5,125.303497,12.32128
+Jeuaran,Eastern Visayas, ,5,125.240501,12.29087
+Jipapad,Eastern Visayas, ,5,125.260399,12.2686
+Arteche,Eastern Visayas, ,5,125.376404,12.26336
+Alugan,Eastern Visayas, ,5,125.481201,12.22563
+San Policarpo,Eastern Samar, ,5,125.512299,12.18942
+Gicontol,Eastern Visayas, ,5,125.278397,12.06795
+Hinolasan,Eastern Visayas, ,5,125.305199,12.03099
+Can-ilay,Eastern Visayas, ,5,125.315598,12.01485
+Pandol,Eastern Visayas, ,5,125.448898,11.99367
+San Luis,Eastern Visayas, ,5,125.4254,11.94412
+Hinica-an,Eastern Visayas, ,5,125.024597,11.94281
+Paco,Eastern Visayas, ,5,125.042397,11.91365
+Taft,Eastern Visayas, ,5,125.421997,11.90106
+Lawa-an,Eastern Visayas, ,5,125.085098,11.86727
+San Vicente,Eastern Samar, ,5,125.469398,11.86132
+San Juan,Eastern Visayas, ,5,125.417,11.82397
+Sulat,Eastern Samar, ,5,125.456703,11.81393
+Salay,Eastern Visayas, ,5,125.035301,11.80935
+San Francisco,Eastern Samar, ,5,125.4646,11.79103
+Pequit,Eastern Visayas, ,5,125.064499,11.77463
+Consolabao,Eastern Visayas, ,5,125.232498,11.76246
+San Julian,Eastern Samar, ,5,125.460602,11.7548
+Pabanong,Eastern Visayas, ,5,125.065903,11.73751
+Hinabangan,Eastern Visayas, ,5,125.069801,11.70336
+Anitaguipan Pt,Eastern Visayas, ,5,125.461899,11.6821
+Punta Maria,Eastern Samar, ,5,125.4879,11.67693
+Buluan,Eastern Visayas, ,5,125.151901,11.62612
+Hubasan,Eastern Visayas, ,5,125.106499,11.62372
+Calbiga,Eastern Visayas, ,5,125.012703,11.60607
+Lalawigan,Eastern Visayas, ,5,125.393204,11.60578
+Aaygayon,Eastern Visayas, ,5,125.032898,11.57294
+Magdauat,Eastern Visayas, ,5,125.118103,11.5263
+Maybocog,Eastern Samar, ,5,125.4916,11.51864
+Barasanun,Eastern Visayas, ,5,125.028702,11.50855
+San Buenaventura,Eastern Visayas, ,5,125.509804,11.47959
+Balago,Eastern Visayas, ,5,125.470901,11.45934
+Rizal,Eastern Visayas, ,5,125.497498,11.4481
+Marmag,Eastern Visayas, ,5,125.529602,11.44354
+Llorente,Eastern Visayas, ,5,125.548798,11.41355
+Sohoton,Eastern Visayas, ,5,125.136101,11.4038
+San Jose,Eastern Visayas, ,5,125.611298,11.36509
+Santa Elena,Eastern Visayas, ,5,125.011902,11.35821
+Balagon,Eastern Visayas, ,5,125.149696,11.35276
+Buenavista,Eastern Visayas, ,5,125.066803,11.3452
+Hernani,Eastern Visayas, ,5,125.618103,11.32935
+Mongabong,Samar, ,5,125.015297,11.30882
+Batong,Eastern Visayas, ,5,125.602097,11.30552
+Basey,Samar, ,5,125.064499,11.28592
+Nouvelas Oriental,Eastern Visayas, ,5,125.152802,11.28441
+San Antonio,Samar, ,5,125.014702,11.28275
+General MacArthur,Eastern Visayas, ,5,125.5401,11.25026
+Matarinao,Eastern Samar, ,5,125.600998,11.22985
+Osmeña,Eastern Visayas, ,5,125.191299,11.19723
+Lusod,Eastern Visayas, ,5,125.651398,11.19076
+Buenavista,Eastern Visayas, ,5,125.537003,11.18676
+Asgad,Eastern Visayas, ,5,125.675598,11.17881
+Sequinon,Eastern Visayas, ,5,125.582703,11.17429
+Quinapondan,Eastern Visayas, ,5,125.527397,11.1711
+Binocyahan,Samar, ,5,125.206596,11.16282
+Salcedo,Eastern Visayas, ,5,125.661903,11.1519
+Lawa-an,Eastern Visayas, ,5,125.304298,11.14162
+Icting,Samar, ,5,125.209198,11.14157
+Santa Margarita,Eastern Samar, ,5,125.602997,11.12762
+Paya,Eastern Visayas, ,5,125.478699,11.12384
+Marabut,Samar, ,5,125.216103,11.11113
+Cagaut,Eastern Samar, ,5,125.577003,11.10252
+Mercedes,Eastern Visayas, ,5,125.7089,11.10077
+Bobon,Eastern Visayas, ,5,125.682602,11.09083
+Gigoso,Eastern Samar, ,5,125.512299,11.08896
+Sang-an,Eastern Samar, ,5,125.693497,11.03985
+Baras,Eastern Samar, ,5,125.7742,11.01663
+Rizal,Eastern Visayas, ,5,125.0242,10.92107
+Inaculangan,Eastern Visayas,Calicoan Island,5,125.669998,10.7754
+Abuyog,Leyte, ,5,125.013,10.74704
+Homonhon,Eastern Visayas,Calicoan Island,5,125.723602,10.74285
+Cagosoan Pt,Eastern Visayas,Calicoan Island,5,125.817299,10.72489
+Buaya,Eastern Visayas, ,5,125.090698,10.70603
+Silago,Eastern Visayas, ,5,125.162003,10.53091
+Rizal,Northern Mindanao,Dinagat,5,125.619301,10.41975
+Hinunangan,Eastern Visayas, ,5,125.203201,10.39494
+Mak,Eastern Visayas, ,5,125.011101,10.38992
+Sunoc,Eastern Visayas, ,5,125.169296,10.37374
+Loreto,Northern Mindanao,Dinagat,5,125.581497,10.35999
+Guinsaugon,Eastern Visayas, ,5,125.112701,10.35935
+Hinudayan,Eastern Visayas, ,5,125.250603,10.3538
+Libagon,Eastern Visayas, ,5,125.058998,10.30171
+Saint Bernard,Eastern Visayas, ,5,125.122902,10.28926
+Malinao,Northern Mindanao,Dinagat,5,125.620903,10.25855
+Himayangan,Eastern Visayas, ,5,125.116096,10.20229
+San Jose,Northern Mindanao,Dinagat,5,125.564201,10.1791
+Valencia,Northern Mindanao,Dinagat,5,125.654999,10.15414
+Lipata,Northern Mindanao,Dinagat,5,125.499802,10.13672
+Estela,Eastern Visayas,Panaon Island,5,125.185799,10.13005
+Puerto Princesa,Northern Mindanao,Dinagat,5,125.492798,10.11334
+Candatag,Eastern Visayas, ,5,125.011002,10.11285
+Bahay,Eastern Visayas,Panaon Island,5,125.223602,10.08757
+Melgar,Northern Mindanao,Dinagat,5,125.522697,10.07023
+San Francisco,Eastern Visayas,Panaon Island,5,125.164299,10.06148
+Alegria,Northern Mindanao,Tona Island,5,126.063599,10.05127
+Padre Burgos,Eastern Visayas, ,5,125.016296,10.03268
+Sapao,Northern Mindanao,Tona Island,5,126.0439,10.01967
+Burgos,Northern Mindanao,Tona Island,5,126.077698,10.01504
+Betogoc,Ilocos, ,5,119.792999,15.9888
+Dasol,Ilocos, ,5,119.881798,15.98876
+Bario,Ilocos, ,5,119.947998,15.98642
+Ul,Ilocos, ,5,119.817902,15.96746
+Amalbalan,Ilocos, ,5,119.8722,15.96666
+Tambobong,Ilocos, ,5,119.780197,15.9378
+Egnia,Ilocos, ,5,119.884201,15.91172
+Infanta,Ilocos, ,5,119.911201,15.82662
+Baluarte,Zambales, ,5,119.8834,15.737
+Lacapon,Zambales, ,5,119.917099,15.70942
+Lauis,Central Luzon, ,5,119.944298,15.59752
+Oyong,Central Luzon, ,5,119.947098,15.55129
+Masinloc,Central Luzon, ,5,119.954697,15.5366
+Palauig,Central Luzon, ,5,119.904999,15.4322
+Lucero, ,Santiago Island,5,119.915901,16.392929
+Pilar, ,Santiago Island,5,119.950798,16.3836
+Bolinao,Ilocos, ,5,119.8936,16.383539
+Dolaoan,Ilocos,Cabarruyan Island,5,119.971199,16.327459
+Tupa,Ilocos, ,5,119.848999,16.326401
+Anda,Ilocos,Cabarruyan Island,5,119.950897,16.288151
+Zaragoza,Ilocos, ,5,119.8946,16.26189
+Olanen,Ilocos, ,5,119.779297,16.255171
+Santiago,Ilocos,Cabarruyan Island,5,119.999001,16.23485
+Pamaoran,Ilocos, ,5,119.946297,16.230061
+Lucap,Ilocos, ,5,119.995499,16.1887
+Bani,Ilocos, ,5,119.861702,16.18512
+Rena Pt,Ilocos, ,5,119.781403,16.13822
+Agno,Ilocos, ,5,119.801697,16.11767
+Bangan-Oda,Ilocos, ,5,119.828903,16.112101
+Tupa,Ilocos, ,5,119.778503,16.083019
+Bacnit,Ilocos, ,5,119.9403,16.069189
+Tambacan,Ilocos, ,5,119.859901,16.06069
+Baruan,Ilocos, ,5,119.769897,16.00909
+Pogonacolac,Ilocos, ,5,119.873497,16.00551
+Carranglan,Central Luzon, ,5,121.050598,15.96782
+Villasis,Ilocos, ,5,120.586197,15.90273
+Cayerson,Ilocos, ,5,120.286797,15.89625
+Aguilar,Ilocos, ,5,120.239799,15.89119
+Convercion,Central Luzon, ,5,121.1334,15.88568
+Esmeralda,Ilocos, ,5,120.712402,15.883
+Telbang,Ilocos, ,5,120.453102,15.79318
+Baler,Southern Tagalog, ,5,121.560997,15.759
+Rizal,Central Luzon, ,5,121.107399,15.71057
+Kiapo Ilio,Southern Tagalog, ,5,121.466499,15.70328
+Baloc,Central Luzon, ,5,120.892502,15.63814
+Bawa,Central Luzon, ,5,120.601501,15.60794
+Talabutab Norte,Central Luzon, ,5,121.051804,15.60605
+Nambalan,Central Luzon, ,5,120.463203,15.59894
+Calibuñgan,Central Luzon, ,5,120.727997,15.59652
+Pagod,Central Luzon, ,5,121.221199,15.59617
+Victoria,Central Luzon, ,5,120.684196,15.57638
+Coto,Central Luzon, ,5,120.088799,15.57004
+San Vicente,Central Luzon, ,5,121.2332,15.56505
+Santo Niño,Central Luzon, ,5,120.817101,15.55078
+Licab,Central Luzon, ,5,120.771202,15.54899
+Mapait,Central Luzon, ,5,121.132599,15.5335
+Cabu,Central Luzon, ,5,121.055397,15.52145
+Tubang,Central Luzon, ,5,120.570099,15.49045
+Burgos,Central Luzon, ,5,120.313698,15.48623
+Bitulok,Central Luzon, ,5,121.311699,15.47908
+South Calqued,Central Luzon, ,5,121.092697,15.46617
+San Luis,Central Luzon, ,5,120.571999,15.4552
+Carmen,Central Luzon, ,5,120.830101,15.44778
+Minatula,Central Luzon, ,5,120.944702,15.43499
+Dumarais,Central Luzon, ,5,120.653297,15.43
+Cuyapa,Central Luzon, ,5,121.350403,15.42939
+Caut,Central Luzon, ,5,120.7267,15.42597
+Santa Rosa,Central Luzon, ,5,120.938202,15.42301
+San Juan,Central Luzon, ,5,120.721397,15.40063
+Dingalan,Southern Tagalog, ,5,121.4133,15.38933
+Santa Monica,Central Luzon, ,5,120.725403,15.35831
+Cabog,Southern Tagalog, ,5,121.371902,15.31711
+Talaba,Central Luzon, ,5,120.889198,15.30002
+Bayocboc,Central Luzon, ,5,121.081802,15.29373
+Botolan,Central Luzon, ,5,120.014099,15.2799
+Poonbato,Central Luzon, ,5,120.174896,15.25796
+San Rogue,Central Luzon, ,5,120.957001,15.24099
+Pulang Buli,Central Luzon, ,5,120.955399,15.22267
+Quitangil,Central Luzon, ,5,120.576202,15.21903
+San Vicente,Central Luzon, ,5,120.675499,15.19863
+Cabangan,Central Luzon, ,5,120.051498,15.16207
+Gatiauin,Central Luzon, ,5,120.7435,15.15656
+Buensuceso,Central Luzon, ,5,120.694702,15.14351
+Pasbul,Central Luzon, ,5,120.516502,15.11886
+Maloma,Central Luzon, ,5,120.068703,15.11493
+San Ildefonso,Central Luzon, ,5,120.963097,15.07639
+Payodpod,Central Luzon, ,5,120.231697,15.07103
+Magdalo,Southern Tagalog,Polillo Island,5,121.993202,15.04163
+Maguinao,Central Luzon, ,5,120.939301,15.02872
+Libjo,Southern Tagalog,Polillo Island,5,121.840797,15.0279
+Diliman,Central Luzon, ,5,120.952202,15.02705
+Santa Fe,Central Luzon, ,5,120.223198,15.0203
+Himacay,Central Luzon, ,5,120.889099,15.01968
+Suban,Central Luzon, ,5,120.6539,15.00163
+San Dionisio,Cagayan Valley,Babuyan Island,5,121.946899,19.494881
+Banua,Cagayan Valley,Calayan Island,5,121.424698,19.379709
+Rarasi,Cagayan Valley,Calayan Island,5,121.473,19.371111
+Kaniwalan, ,Calayan Island,5,121.407898,19.295191
+Nagsidel, ,Calayan Island,5,121.448601,19.273729
+Dadao,Cagayan Valley,Calayan Island,5,121.4758,19.267639
+Visita,Cagayan Valley,Dalupiri Island,5,121.2388,19.060101
+Banoa,Cagayan Valley,Dalupiri Island,5,121.232399,19.03898
+Minabul,Cagayan Valley,Camiguin Island,5,121.880402,18.95941
+Cadagatan,Cagayan Valley,Camiguin Island,5,121.878899,18.884291
+Poso, ,Fuga Island,5,121.283096,18.877609
+Sorongan,Cagayan Valley,Fuga Island,5,121.406502,18.862619
+Namuac,Cagayan Valley, ,5,121.164803,18.61376
+Claveria,Cagayan Valley, ,5,121.078598,18.606649
+Santiago,Cagayan Valley, ,5,121.115097,18.594839
+Batitgao,Cagayan Valley, ,5,121.136398,18.59277
+Aggao,Ilocos, ,5,120.874397,18.592211
+Portugal,Cagayan Valley, ,5,121.013397,18.580891
+Kilkiling,Cagayan Valley, ,5,121.057098,18.58065
+Tangatong,Ilocos Norte, ,5,120.789001,18.56645
+Macatel,Cagayan Valley, ,5,121.012199,18.543171
+Filomeno,Cagayan Valley, ,5,121.078102,18.539909
+Bangan,Cagayan Valley, ,5,121.261703,18.53886
+Buraan,Ilocos, ,5,120.618301,18.5361
+Payac,Ilocos, ,5,120.7248,18.512529
+Maragnat,Cagayan Valley, ,5,121.047401,18.50235
+San Vincente,Cagayan Valley, ,5,122.153801,18.49651
+Taccuen,Cagayan Valley, ,5,121.2798,18.49324
+San Juan,Cagayan Valley, ,5,121.338097,18.48077
+Fugu,Cagayan Valley, ,5,121.381897,18.48045
+Nagubugan,Ilocos, ,5,120.702301,18.47875
+Bojeador C,Ilocos, ,5,120.573402,18.474319
+Bunot,Cagayan Valley, ,5,121.031998,18.472441
+Adam,Ilocos, ,5,120.906197,18.468241
+Marede,Cagayan Valley, ,5,122.186203,18.448339
+Naguilian,Cagayan Valley, ,5,121.413803,18.444
+Abulug,Cagayan Valley, ,5,121.457603,18.442739
+Casambalangan,Cagayan Valley, ,5,122.1334,18.40831
+Budbudac,Ilocos, ,5,120.6026,18.40555
+Cabuluan,Cagayan Valley, ,5,121.515602,18.40328
+Cabayo,Ilocos, ,5,120.741501,18.40122
+Calog,Cagayan Valley, ,5,121.3918,18.379181
+Tanglagan,Cordillera Administrative Region, ,5,120.966499,18.374109
+Batubatu,Cagayan Valley, ,5,121.456802,18.361971
+Catuguran,Cagayan Valley, ,5,121.544296,18.356621
+Zitanga,Cagayan Valley, ,5,121.500504,18.34956
+Aparri,Cagayan Valley, ,5,121.641602,18.34836
+Danao,Ilocos, ,5,120.736198,18.345131
+Bisagu,Cagayan Valley, ,5,121.612297,18.343981
+Bawa,Cagayan Valley, ,5,122.082497,18.34384
+Cabangaran,Ilocos, ,5,120.777702,18.340139
+San Isiaro,Cordillera Administrative Region, ,5,121.347603,18.335871
+Tumoc,Cordillera Administrative Region, ,5,121.374901,18.33567
+Colonia Number Two,Cagayan Valley, ,5,121.4254,18.335291
+Karusiquis,Ilocos, ,5,120.679398,18.331791
+Cabiraoan,Cagayan Valley, ,5,122.099403,18.329411
+Naguilian,Cordillera Administrative Region, ,5,121.036201,18.32925
+Ducan,Cagayan Valley, ,5,121.576202,18.327579
+Punta,Cagayan Valley, ,5,121.728897,18.320641
+Marag,Cordillera Administrative Region, ,5,121.2005,18.31551
+Alilinu,Cagayan Valley, ,5,121.659599,18.30735
+Luna,Cordillera Administrative Region, ,5,121.346397,18.303391
+Balza,Cagayan Valley, ,5,121.7714,18.300739
+Alsem,Ilocos, ,5,120.714699,18.30072
+Bangag,Cagayan Valley, ,5,121.554497,18.297119
+San Benigno,Ilocos, ,5,120.594002,18.28853
+Talatal,Ilocos, ,5,120.623398,18.287479
+Babayuan,Cagayan Valley, ,5,121.648499,18.26475
+Gonzaga,Cagayan Valley, ,5,121.990898,18.26252
+Tagung,Cagayan Valley, ,5,121.686401,18.260691
+Allacapan,Cagayan Valley, ,5,121.584198,18.257879
+Tabangan,Cordillera Administrative Region, ,5,121.040802,18.25378
+Buguey,Cagayan Valley, ,5,121.883598,18.24671
+Cullit,Cagayan Valley, ,5,121.708504,18.24192
+Caratan,Cagayan Valley, ,5,121.601501,18.231741
+Malabibit,Cordillera Administrative Region, ,5,121.446899,18.230221
+Tamucalao,Ilocos, ,5,120.641403,18.229389
+Casicallan,Cagayan Valley, ,5,121.545998,18.22014
+Duggil,Cagayan Valley, ,5,121.726799,18.219469
+Talinaan,Ilocos, ,5,120.553299,18.216101
+Masi,Cagayan Valley, ,5,121.901703,18.209391
+Lafu,Cagayan Valley, ,5,121.639198,18.2082
+Maruaya,Ilocos, ,5,120.749702,18.203859
+Binag,Cagayan Valley, ,5,121.835503,18.19985
+Pagogo,Ilocos, ,5,120.782097,18.194059
+Papaoar,Cordillera Administrative Region, ,5,121.123199,18.15852
+San Jose,Ilocos, ,5,120.647202,18.155861
+Santa Maria,Cagayan Valley, ,5,121.627899,18.15353
+Calayab,Ilocos, ,5,120.534798,18.148439
+Nang-guyudan,Ilocos, ,5,120.548897,18.1397
+Magapit,Cagayan Valley, ,5,121.670502,18.137369
+Maluyo,Cagayan Valley, ,5,121.591698,18.131559
+Kapinatan,Cordillera Administrative Region, ,5,121.344902,18.127939
+Aputan,Cordillera Administrative Region, ,5,121.054001,18.117319
+Nanagan,Cordillera Administrative Region, ,5,120.990196,18.11573
+Lumbad,Ilocos, ,5,120.718803,18.094681
+Solsona,Ilocos, ,5,120.765404,18.0945
+Dibagat,Cordillera Administrative Region, ,5,121.095398,18.08807
+Aripip,Cordillera Administrative Region, ,5,121.3144,18.08453
+Iamdagan,Ilocos, ,5,120.800797,18.08082
+Maabayan,Cordillera Administrative Region, ,5,121.3367,18.0788
+San Pedro,Ilocos, ,5,120.627701,18.07757
+Mabbut,Cordillera Administrative Region, ,5,121.158997,18.07609
+Nabannagan,Cagayan Valley, ,5,121.528999,18.070829
+Barong,Ilocos, ,5,120.726799,18.054991
+Nabbacayan,Cagayan Valley, ,5,121.654503,18.04948
+Capissayan,Cagayan Valley, ,5,121.846397,18.049351
+Cumao,Cagayan Valley, ,5,121.765701,18.04829
+Sicalao,Cagayan Valley, ,5,121.457703,18.034269
+Lomismo,Cagayan Valley, ,5,121.6427,18.02309
+Musimut,Cordillera Administrative Region, ,5,121.119202,18.020229
+Tumedtedted,Ilocos, ,5,120.638603,18.01757
+Banna,Ilocos, ,5,120.650597,17.982719
+San Megro,Ilocos, ,5,120.716301,17.982491
+Baduat,Cordillera Administrative Region, ,5,121.205803,17.9813
+Carupian,Cagayan Valley, ,5,121.7649,17.970329
+Dalagig,Cagayan Valley, ,5,121.718201,17.9587
+Awallan,Cagayan Valley, ,5,121.927803,17.95476
+Tallu,Cagayan Valley, ,5,121.629799,17.953011
+Dungao,Cagayan Valley, ,5,121.611298,17.95224
+Baggao,Cagayan Valley, ,5,121.780998,17.942329
+Paor-Patoc,Ilocos, ,5,120.696999,17.939449
+Annayatan,Cagayan Valley, ,5,121.864098,17.938459
+Papadog,Ilocos, ,5,120.633499,17.935619
+Dares,Cagayan Valley, ,5,121.888603,17.930389
+Badoc,Ilocos, ,5,120.470001,17.92931
+Imurung,Cagayan Valley, ,5,121.9114,17.923901
+Dublon,Cagayan Valley, ,5,121.708298,17.918989
+Padpadong,Ilocos, ,5,120.658798,17.91531
+Lobit,Ilocos Norte, ,5,120.4347,17.9132
+Camanga,Ilocos, ,5,120.562897,17.912901
+Turod,Ilocos, ,5,120.522003,17.90357
+Dabtac,Cagayan Valley, ,5,121.871803,17.89617
+Afusing,Cagayan Valley, ,5,121.722702,17.882099
+Montealegre,Cagayan Valley, ,5,121.776901,17.881479
+Naglibacan,Cordillera Administrative Region, ,5,120.922203,17.87784
+Battog,Ilocos, ,5,120.476799,17.876711
+Balanni,Cagayan Valley, ,5,121.496498,17.868521
+Binacud,Ilocos, ,5,120.4655,17.863251
+Bolinao,Ilocos, ,5,120.568398,17.863001
+Macatal,Cagayan Valley, ,5,121.899101,17.85367
+Gabut,Cagayan Valley, ,5,121.8451,17.849529
+Niug Norte,Cagayan Valley, ,5,121.6175,17.849119
+Acilip,Cordillera Administrative Region, ,5,120.8507,17.84568
+Apayao,Cagayan Valley, ,5,121.506599,17.842991
+Tauinin,Cordillera Administrative Region, ,5,121.242104,17.83646
+Santa Cruz,Cordillera Administrative Region, ,5,121.316002,17.835951
+Pacac,Cagayan Valley, ,5,121.679398,17.834431
+Dadda,Cagayan Valley, ,5,121.758301,17.830059
+Cabaruan,Cagayan Valley, ,5,121.639397,17.822069
+Concepcion,Cagayan Valley, ,5,121.746696,17.809851
+Bulungcanag,Cagayan Valley, ,5,121.414703,17.80979
+Patro,Ilocos Sur, ,5,120.406197,17.795959
+Siuan,Cagayan Valley, ,5,121.371803,17.79315
+Paddaoan,Cordillera Administrative Region, ,5,121.2743,17.7896
+Casinsingan,Cagayan Valley, ,5,121.633102,17.78396
+Lapat,Cordillera Administrative Region, ,5,120.939003,17.783079
+Acsimao,Cordillera Administrative Region, ,5,120.993599,17.768669
+Baybaytin,Cordillera Administrative Region, ,5,120.693398,17.76688
+Santa Barbara,Cagayan Valley, ,5,121.752602,17.756639
+Sulbec,Ilocos, ,5,120.501801,17.751261
+Ipil,Cagayan Valley, ,5,121.709503,17.74934
+Tuao,Cordillera Administrative Region, ,5,121.397202,17.740761
+Barung,Cagayan Valley, ,5,121.651802,17.739969
+Lagayan,Cordillera Administrative Region, ,5,120.703102,17.733141
+Band,Cordillera Administrative Region, ,5,120.655197,17.73061
+Pingaping,Cordillera Administrative Region, ,5,120.728401,17.73035
+Apao,Cordillera Administrative Region, ,5,120.817101,17.723261
+Guisit,Ilocos Sur, ,5,120.420097,17.716379
+Aggugaddah,Cagayan Valley, ,5,121.804199,17.69986
+Abot,Cordillera Administrative Region, ,5,120.666397,17.696859
+Magsingal,Ilocos, ,5,120.418602,17.684031
+Cayapa,Cordillera Administrative Region, ,5,120.830704,17.68321
+Paganao,Cordillera Administrative Region, ,5,120.791603,17.68022
+Mataragan,Cordillera Administrative Region, ,5,120.910301,17.671551
+Bacaoc,Cordillera Administrative Region, ,5,120.762001,17.669559
+Annafunan,Cagayan Valley, ,5,121.718803,17.653139
+Atulayan,Cagayan Valley, ,5,121.668602,17.65077
+Concong,Cagayan Valley, ,5,121.780098,17.632481
+Gadu,Cagayan Valley, ,5,121.6064,17.63154
+Bañacao,Cordillera Administrative Region, ,5,120.584503,17.629709
+Basiing,Ilocos, ,5,120.384598,17.620729
+Lingsat,Ilocos, ,5,120.461998,17.615191
+Lagangilang,Cordillera Administrative Region, ,5,120.732101,17.6117
+Magaogao,Cordillera Administrative Region, ,5,121.441002,17.60887
+Nabbotuan,Cagayan Valley, ,5,121.5737,17.60355
+Paoa,Cordillera Administrative Region, ,5,120.7715,17.60346
+Bangong,Cordillera Administrative Region, ,5,120.889297,17.60239
+Tawan,Cordillera Administrative Region, ,5,121.221199,17.601959
+Catagaman,Cagayan Valley, ,5,121.702003,17.601
+Tapiun,Cordillera Administrative Region, ,5,121.181297,17.59798
+Tood,Cordillera Administrative Region, ,5,121.248901,17.5721
+Alibago,Cagayan Valley, ,5,121.694298,17.565729
+Ba-ay,Cordillera Administrative Region, ,5,120.8787,17.55015
+Bugbug,Cordillera Administrative Region, ,5,120.706497,17.54439
+San Miguel,Cordillera Administrative Region, ,5,120.726196,17.544319
+Carsuan,Cordillera Administrative Region, ,5,120.511002,17.54228
+Fuarte,Ilocos Sur, ,5,120.360497,17.535839
+Galap,Cordillera Administrative Region, ,5,121.006897,17.53397
+Naguilian,Cordillera Administrative Region, ,5,120.758499,17.53071
+Balawag,Cordillera Administrative Region, ,5,121.236801,17.529779
+Dalupang,Cagayan Valley, ,5,121.833298,17.527611
+Barbarit,Cordillera Administrative Region, ,5,120.506699,17.519369
+Alaludig,Cordillera Administrative Region, ,5,120.700798,17.513399
+Salldeng,Cordillera Administrative Region, ,5,120.757004,17.513201
+Dadal-eman,Cordillera Administrative Region, ,5,121.152496,17.496401
+Bazar,Cordillera Administrative Region, ,5,120.810303,17.486019
+Gobgob,Cordillera Administrative Region, ,5,121.429604,17.486
+Lingaling,Cagayan Valley, ,5,121.754501,17.484619
+Dao-angan,Cordillera Administrative Region, ,5,121.218803,17.483259
+Malaap,Cordillera Administrative Region, ,5,121.2556,17.483021
+Talalang,Cordillera Administrative Region, ,5,121.059601,17.48139
+Ududiao,Cordillera Administrative Region, ,5,120.8694,17.478109
+Cagutuñgan,Cordillera Administrative Region, ,5,120.5951,17.46521
+Naganacan,Cagayan Valley, ,5,121.6679,17.457291
+San Guillermo,Cordillera Administrative Region, ,5,120.748497,17.453171
+Labaan,Cordillera Administrative Region, ,5,120.8162,17.444429
+Narvacan,Ilocos, ,5,120.461502,17.44264
+San Pablo,Ilocos, ,5,120.547203,17.43704
+San Juan,Cagayan Valley, ,5,121.718102,17.42869
+Tabuk,Cordillera Administrative Region, ,5,121.440804,17.4209
+Bolanao,Cordillera Administrative Region, ,5,121.286102,17.41921
+Pilar,Cordillera Administrative Region, ,5,120.589302,17.418051
+Aggub,Cagayan Valley, ,5,121.734299,17.417601
+Cabanguan,Cagayan Valley, ,5,121.871101,17.41625
+Ableg,Cordillera Administrative Region, ,5,121.187302,17.409969
+Lagaosian,Cordillera Administrative Region, ,5,120.665703,17.404011
+Danac,Cordillera Administrative Region, ,5,120.897003,17.391781
+Balangan,Cordillera Administrative Region, ,5,120.924896,17.391649
+Baballasioan,Ilocos, ,5,120.534401,17.38855
+Masipi,Cagayan Valley, ,5,121.872299,17.378731
+Toqueng,Cordillera Administrative Region, ,5,120.780502,17.378151
+Santa Maria,Ilocos, ,5,120.4739,17.373871
+Antagan,Cagayan Valley, ,5,121.742302,17.368839
+Lubuagan,Cordillera Administrative Region, ,5,121.173599,17.356359
+Taloctoc,Cordillera Administrative Region, ,5,121.237,17.355949
+Villavicja,Cordillera Administrative Region, ,5,120.5877,17.3547
+Batong Buhay,Cordillera Administrative Region, ,5,121.060204,17.352791
+Mantopngan,Cordillera Administrative Region, ,5,121.226501,17.33906
+Tangaoan,Ilocos, ,5,120.463997,17.336149
+Tupac,Cordillera Administrative Region, ,5,121.4207,17.320721
+Tubtubo,Cordillera Administrative Region, ,5,120.647697,17.32069
+Malig,Cagayan Valley, ,5,121.603302,17.31358
+Awingan,Cordillera Administrative Region, ,5,121.232101,17.30228
+Baliga,Cordillera Administrative Region, ,5,120.693298,17.30217
+Matanobong,Ilocos Sur, ,5,120.437202,17.295771
+Caocabayan,Cordillera Administrative Region, ,5,120.741798,17.282209
+Bogui,Cordillera Administrative Region, ,5,121.327599,17.27619
+Abbuatan,Cagayan Valley, ,5,121.722099,17.275761
+Tulgeo,Cordillera Administrative Region, ,5,121.093498,17.26499
+Minanga,Cagayan Valley, ,5,121.838203,17.25909
+Lubo,Cordillera Administrative Region, ,5,121.224403,17.25853
+Candon Pt, , ,5,120.416,17.25672
+Biqui,Ilocos, ,5,120.514297,17.25112
+Paragu,Cagayan Valley, ,5,121.821899,17.246531
+Supo,Ilocos, ,5,120.684196,17.23579
+Lupac,Ilocos, ,5,120.556297,17.221359
+Panpanaoil,Ilocos, ,5,120.606796,17.22121
+Lidaoan,Ilocos, ,5,120.6576,17.210449
+Belwang,Cordillera Administrative Region, ,5,121.044502,17.205919
+Canapi,Cagayan Valley, ,5,121.856697,17.202379
+Imbiao,Cagayan Valley, ,5,121.7388,17.18799
+Lingaling,Cagayan Valley, ,5,121.832901,17.18284
+Manaog,Cagayan Valley, ,5,121.797501,17.16906
+Tico,Cordillera Administrative Region, ,5,121.3134,17.160431
+Bacolod,Cagayan Valley, ,5,121.845901,17.160101
+Bituagan,Cordillera Administrative Region, ,5,121.066299,17.153521
+Mainit,Cordillera Administrative Region, ,5,120.955902,17.151279
+Sanguspa,Ilocos, ,5,120.532204,17.14999
+Fuyot,Cagayan Valley, ,5,121.9412,17.1467
+Cadu,Cagayan Valley, ,5,121.955704,17.132481
+Patiacan,Ilocos, ,5,120.788101,17.1266
+Lapusan,Cagayan Valley, ,5,122.4142,17.122259
+Arangin-Dinaratan,Ilocos, ,5,120.529297,17.12035
+Cabaritan,Ilocos, ,5,120.467598,17.1178
+Roxas,Cagayan Valley, ,5,121.573402,17.11742
+Langigen,Cordillera Administrative Region, ,5,121.452797,17.11418
+Bintacan,Cagayan Valley, ,5,121.974899,17.11352
+Pitnor,Cagayan Valley, ,5,121.752701,17.11297
+Tochey,Cordillera Administrative Region, ,5,121.271797,17.10985
+Butiqui,Cordillera Administrative Region, ,5,121.435097,17.10866
+Banacao,Ilocos, ,5,120.690903,17.0973
+Diabbut,Cagayan Valley, ,5,122.391098,17.09601
+Basac,Cordillera Administrative Region, ,5,120.854103,17.09524
+Namakalan,Cordillera Administrative Region, ,5,121.570198,17.09343
+San Jose,Ilocos, ,5,120.495598,17.092131
+Bonot,Cordillera Administrative Region, ,5,121.302597,17.089861
+Mabalili,Cordillera Administrative Region, ,5,120.798203,17.087
+Upi,Cagayan Valley, ,5,121.831802,17.082529
+Callang,Cagayan Valley, ,5,121.630302,17.07172
+Tolag,Cordillera Administrative Region, ,5,121.197998,17.063709
+Gayong Gayong Norte,Cagayan Valley, ,5,121.903603,17.063431
+Sindon,Cagayan Valley, ,5,122.008499,17.06159
+Palanan,Cagayan Valley, ,5,122.428001,17.061131
+Matusalela,Cagayan Valley, ,5,121.584602,17.06081
+Pinipin,Ilocos, ,5,120.4786,17.057131
+Benito Soliven,Cagayan Valley, ,5,121.959297,17.04447
+Sumadel,Cordillera Administrative Region, ,5,120.829803,17.034069
+Bagnen,Cordillera Administrative Region, ,5,120.886803,17.03101
+Banguero,Cagayan Valley, ,5,121.770897,17.022381
+Yeban,Cagayan Valley, ,5,121.961899,17.02183
+Dili,Ilocos Sur, ,5,120.452797,17.018419
+Simpa,Cagayan Valley, ,5,121.908897,17.00968
+Bauk,Cordillera Administrative Region, ,5,120.872002,17.005791
+Namatingan,Ilocos, ,5,120.563797,17.00551
+Dain,Ilocos, ,5,120.714203,17.00363
+Bagho,Cagayan Valley, ,5,121.664299,16.99189
+Santa Cruz,Cordillera Administrative Region, ,5,121.544701,16.9902
+Cervantes,Ilocos, ,5,120.731697,16.98811
+Daragutan,Cagayan Valley, ,5,122.028603,16.98167
+Banayan,Cordillera Administrative Region, ,5,120.903999,16.974751
+Villa Fugu,Cagayan Valley, ,5,121.628502,16.973061
+Malalinta,Cordillera Administrative Region, ,5,121.520401,16.97262
+Mayoyao,Cordillera Administrative Region, ,5,121.216003,16.9694
+Antatet,Cagayan Valley, ,5,121.725197,16.96883
+Bitalag,Ilocos, ,5,120.462898,16.96784
+Uso,Ilocos, ,5,120.534401,16.963449
+Cauayan,Cagayan Valley, ,5,121.787598,16.95705
+Daliog,Cordillera Administrative Region, ,5,121.385101,16.95454
+Cabatuen,Cagayan Valley, ,5,121.662399,16.953609
+Uguap,Cagayan Valley, ,5,121.8937,16.94899
+Palutan,Cagayan Valley, ,5,122.010201,16.94437
+Talebubu,Ilocos, ,5,120.767998,16.941629
+Tierra Virgen,Cagayan Valley, ,5,121.924103,16.937481
+Baringin,Cagayan Valley, ,5,121.769997,16.936251
+Banaao,Cordillera Administrative Region, ,5,120.827797,16.931549
+Guyabal,Cagayan Valley, ,5,121.806099,16.917721
+Tibo,Ilocos, ,5,120.572197,16.905769
+Ursuban,Ilocos, ,5,120.503601,16.904539
+Caggong,Cagayan Valley, ,5,121.569504,16.901091
+Nagrumboan,Cagayan Valley, ,5,121.705597,16.899111
+Opul,Cordillera Administrative Region, ,5,121.451401,16.891121
+Agdeppa,Ilocos, ,5,120.420303,16.89068
+Australia,Cagayan Valley, ,5,121.560799,16.888849
+Dagupan,Cordillera Administrative Region, ,5,121.519402,16.867319
+Lepanto,Cordillera Administrative Region, ,5,120.773499,16.86717
+San Isidro,Cagayan Valley, ,5,121.792397,16.866119
+Amistad,Cagayan Valley, ,5,121.673203,16.85886
+Old Centro,Ilocos, ,5,120.485901,16.85824
+Amilongan,Ilocos, ,5,120.574898,16.8552
+Osariz,Cordillera Administrative Region, ,5,121.510696,16.850981
+Del Pilar,Cagayan Valley, ,5,121.741402,16.84704
+Limu,Ilocos, ,5,120.615799,16.845249
+Hungduan,Cordillera Administrative Region, ,5,121.003998,16.836611
+Sinamar Norte,Cagayan Valley, ,5,121.5774,16.834009
+Oscoris,Cagayan Valley, ,5,121.516098,16.82358
+Cundy,Cordillera Administrative Region, ,5,121.113899,16.81959
+Tal-li-pugo,Ilocos, ,5,120.402603,16.814871
+Lubub,Cagayan Valley, ,5,121.841202,16.80971
+Awa,Cordillera Administrative Region, ,5,121.093903,16.804661
+Linglingay,Cagayan Valley, ,5,121.690002,16.79719
+Amposungan,Cordillera Administrative Region, ,5,120.740997,16.790051
+Tubaday,Ilocos, ,5,120.520699,16.78372
+Buyasan,Cagayan Valley, ,5,122.012199,16.77854
+Dalakip,Cagayan Valley, ,5,121.744904,16.772909
+Lettac,Ilocos, ,5,120.456497,16.77264
+Kiangan,Cordillera Administrative Region, ,5,121.055298,16.770691
+Dalimona,Cordillera Administrative Region, ,5,120.8386,16.76157
+Duit,Cordillera Administrative Region, ,5,121.082199,16.74593
+San Guillermo,Cagayan Valley, ,5,121.804199,16.74437
+Bacnotan,Ilocos, ,5,120.355698,16.72508
+Echague,Cagayan Valley, ,5,121.715302,16.714479
+Napsong,Cordillera Administrative Region, ,5,120.688202,16.713011
+Loria,Cagayan Valley, ,5,121.779099,16.712469
+Nayon,Cordillera Administrative Region, ,5,121.240997,16.708019
+Obobug,Ilocos, ,5,120.492699,16.699539
+Ipil,Cagayan Valley, ,5,121.635201,16.698429
+Malitao,Cagayan Valley, ,5,121.671402,16.68692
+Balacbac,Ilocos, ,5,120.609299,16.672541
+Libertad,Cagayan Valley, ,5,121.632004,16.664909
+Malabago,Cordillera Administrative Region, ,5,121.220703,16.65893
+Amantoc,Ilocos, ,5,120.460503,16.65748
+Lasitas,Ilocos, ,5,120.5392,16.65449
+Pacpacac,Ilocos, ,5,120.391998,16.646391
+Arabiat,Cagayan Valley, ,5,121.608597,16.64275
+Sinappil,Cagayan Valley, ,5,121.500397,16.638781
+Dackel,Cagayan Valley, ,5,121.233299,16.628771
+San Juan,Cagayan Valley, ,5,121.683899,16.626699
+Santiago,Ilocos, ,5,120.340897,16.61277
+Bagabag,Cagayan Valley, ,5,121.250099,16.60541
+Dalibubun,Cagayan Valley, ,5,121.677101,16.605101
+Lukban,Cagayan Valley, ,5,121.461601,16.604839
+Tinas,Ilocos, ,5,120.464699,16.584459
+Tabaao,Cordillera Administrative Region, ,5,120.585602,16.58135
+Kagosit,Cordillera Administrative Region, ,5,120.8479,16.578991
+Bimmotobol,Ilocos, ,5,120.412201,16.576139
+Taoang,Ilocos, ,5,120.509804,16.57593
+Linumut,Cagayan Valley, ,5,121.784798,16.57123
+Dipangit,Cagayan Valley, ,5,121.677498,16.56945
+Abulan,Cagayan Valley, ,5,121.755798,16.56732
+Uddiawan,Cagayan Valley, ,5,121.146202,16.562321
+Palintocang,Ilocos, ,5,120.336403,16.562229
+Dumayup,Cagayan Valley, ,5,121.268204,16.561541
+Bantug,Cagayan Valley, ,5,121.702003,16.558041
+Luncuie,Ilocos, ,5,120.495102,16.539459
+Minuri,Cagayan Valley, ,5,121.853996,16.534201
+Saguday,Cagayan Valley, ,5,121.637901,16.53347
+Baccuit,La Union, ,5,120.324699,16.53002
+Malasian,Cagayan Valley, ,5,121.577003,16.52841
+Ricarte,Cagayan Valley, ,5,121.521896,16.527479
+Balluay,Cordillera Administrative Region, ,5,120.540199,16.51548
+Masaya,Cagayan Valley, ,5,121.745003,16.50872
+Mapalad,Cagayan Valley, ,5,121.817299,16.49124
+Calot,Cordillera Administrative Region, ,5,120.511002,16.484671
+Angcaoay,Ilocos, ,5,120.441101,16.483431
+Ambuklao Dam,Cordillera Administrative Region, ,5,120.736702,16.478359
+Palaisan,Cagayan Valley, ,5,121.604698,16.47576
+San Cornelio,Ilocos, ,5,120.3536,16.4527
+La Trinidad,Cordillera Administrative Region, ,5,120.577797,16.44799
+Topside,Cordillera Administrative Region, ,5,120.6259,16.43943
+Caba,Ilocos, ,5,120.343102,16.42993
+Palacian,Cagayan Valley, ,5,121.783203,16.42449
+Duminamad,Cagayan Valley, ,5,121.643997,16.41741
+Tarigtig Pt,Southern Tagalog, ,5,122.184502,16.415899
+Santo Domingo,Cagayan Valley, ,5,121.095497,16.41361
+Uldugan,Cagayan Valley, ,5,121.726501,16.41106
+Diniyog,Southern Tagalog, ,5,122.210297,16.39044
+Candanglaan,Ilocos, ,5,120.387001,16.388069
+Aringay,La Union, ,5,120.3433,16.383921
+Villahemosa,Cagayan Valley, ,5,121.695602,16.366631
+Pitican,Cordillera Administrative Region, ,5,120.715797,16.36051
+Mauan,Cagayan Valley, ,5,121.052597,16.352341
+Tavora,Ilocos, ,5,120.410103,16.3431
+Alloy,Cagayan Valley, ,5,121.2948,16.333561
+Dumabato,Cagayan Valley, ,5,121.692299,16.321939
+Agoo,Ilocos, ,5,120.362198,16.321581
+Mabasa,Cagayan Valley, ,5,121.127502,16.320471
+Danglay,Cordillera Administrative Region, ,5,120.6661,16.318569
+Talimpago,Cagayan Valley, ,5,121.279503,16.317591
+Pingkian,Cagayan Valley, ,5,120.945702,16.311541
+Tabaan,Cordillera Administrative Region, ,5,120.506104,16.31061
+Binga Dam,Cordillera Administrative Region, ,5,120.733002,16.30851
+Malasin,Cagayan Valley, ,5,121.100502,16.306959
+Tondol,Ilocos,Cabarruyan Island,5,120.004204,16.304079
+Aritao,Cagayan Valley, ,5,121.032402,16.30051
+Manga,Cagayan Valley, ,5,121.178299,16.296921
+Kayapa,Cagayan Valley, ,5,120.869698,16.2925
+Santa Maria,Cagayan Valley, ,5,121.086098,16.281071
+Casiguran,Southern Tagalog, ,5,122.123299,16.27968
+Abbag,Cagayan Valley, ,5,121.655602,16.276171
+Siguem,Cagayan Valley, ,5,121.317497,16.269119
+Buebue,Cordillera Administrative Region, ,5,120.587303,16.244419
+Pasaruboy,Southern Tagalog, ,5,122.135696,16.227831
+Casiguran B,Southern Tagalog, ,5,122.048798,16.223249
+Alicad,Cagayan Valley, ,5,121.605797,16.21513
+Consuelo,Cagayan Valley, ,5,120.937401,16.18972
+Lilit,Ilocos, ,5,120.5914,16.182659
+Malico,Cagayan Valley, ,5,120.867599,16.180229
+Baliti,Cagayan Valley, ,5,121.062798,16.180059
+Dinipan,Southern Tagalog, ,5,122.097397,16.17519
+Alacan,Ilocos, ,5,120.426804,16.168301
+Nabaul,Pangasinan, ,5,120.085602,16.160009
+Labayug,Ilocos, ,5,120.566597,16.157459
+Mangauit,Cagayan Valley, ,5,121.229698,16.157169
+Casiguran,Southern Tagalog, ,5,121.936302,16.136471
+Tauayan,Cagayan Valley, ,5,121.382301,16.12603
+Panasgasan,Ilocos, ,5,120.082603,16.11697
+Awayan,Central Luzon, ,5,121.0382,16.099569
+Bombuaya,Ilocos, ,5,120.672501,16.092581
+Mangas,Ilocos, ,5,120.0952,16.090771
+Pedro Martir,Ilocos, ,5,120.023499,16.087021
+Debutunan Pt,Southern Tagalog, ,5,121.770798,16.08227
+San Jose,Ilocos, ,5,120.470497,16.079109
+Santa Maria,Ilocos, ,5,120.437103,16.07357
+Dakgan,Cagayan Valley, ,5,121.469902,16.072359
+Capantolan,Ilocos, ,5,120.0952,16.063641
+Maria Evalle,Central Luzon, ,5,120.947502,16.063141
+Carael,Ilocos, ,5,120.314003,16.0532
+Washington,Ilocos, ,5,120.793198,16.040609
+Labangan,Ilocos, ,5,120.152298,16.029949
+Canaoalan,Ilocos, ,5,120.295601,16.027031
+Maniboc,Ilocos, ,5,120.223,16.02523
+Damaloguen,Ilocos, ,5,120.181297,16.018709
+Umubi,Cagayan Valley, ,5,121.292198,16.01462
+Buenlag,Ilocos, ,5,120.357498,16.01104
+Abaca,Cagayan Valley, ,5,121.207298,16.00699
+Baloboc,Ilocos, ,5,120.222,16.006519
+Gadeng,Cagayan Valley, ,5,121.335999,16.00338
+Ariston,Ilocos, ,5,120.676399,16.00276
+Itbayat,Cagayan Valley,Itbayat Island,5,121.835197,20.78545
+Santa Lucia,Cagayan Valley,Itbayat Island,5,121.850403,20.74192
+Raile,Cagayan Valley,Itbayat Island,5,121.8041,20.72928
+Basco,Cagayan Valley,Batan Island,5,121.971703,20.45174
+Mahatao,Cagayan Valley,Batan Island,5,121.949097,20.41555
+Ivana, ,Batan Island,5,121.918098,20.369301
+Itbud,Cagayan Valley,Batan Island,5,121.959198,20.3675
+Sabtang,Cagayan Valley,Sabtang Island,5,121.868301,20.328409
+Nakanmuan,Cagayan Valley,Sabtang Island,5,121.842102,20.323879
+Chavayan,Cagayan Valley,Sabtang Island,5,121.879303,20.3088
+Anibun,Southern Tagalog,Kagayan de Sulu Island,5,118.46328,7.030048
+Malaka,Western Mindanao, ,5,119.889328,5.071724
+Kinablañgan,Davao Oriental, ,5,126.549382,7.696109
+Dancalan,Bicol, ,5,123.589426,12.924324
+Bancuan,Palawan, ,5,120.186267,11.990418
+Calubian,Eastern Visayas, ,5,124.43734,11.43412
+Banda, ,Dit Island,5,120.981297,10.821021
+San Francisco,Central Visayas,Caponyan Island,5,124.360454,10.617374
+Calay-ab,Ilocos, ,5,120.365906,17.659601
+Tammocalao,La Union, ,5,120.334985,16.750129
+Tago,Southern Mindanao, ,5,126.234091,9.021659
+Abaca,Central Visayas, ,6,123.75,10.216667
+Abalete,Southern Tagalog, ,6,120.433333,13.516667
+Abbigoy,Cordillera Administrative Region, ,6,121.35,17.583333
+Abiang,Cordillera Administrative Region, ,6,120.683333,16.583333
+Abihao,Bicol, ,6,124.35,13.666667
+Abinuan,Cordillera Administrative Region, ,6,121.216667,16.85
+Abis,Central Visayas, ,6,122.916667,9.716667
+Abucay, ,Palasan Island,6,122.033333,14.85
+Abuyo,Cagayan Valley, ,6,121.233333,15.9
+Abuyog,Bicol, ,6,122.633333,14.166667
+Acle,Central Luzon, ,6,121.066667,15.05
+Addalem,Cagayan Valley, ,6,121,16.5
+Adiagñao,Bicol, ,6,123.7,13.716667
+Adlaon,Central Visayas, ,6,123.866667,10.466667
+Adoy,Southern Mindanao, ,6,126.133333,7.333333
+Afga,Western Visayas, ,6,122.25,11.783333
+Ag-ambulong,Western Visayas, ,6,122.466667,11.383333
+Agay-ay,Eastern Visayas, ,6,125.216667,10.25
+Agbao-ud,Western Visayas, ,6,122.3,11.5
+Agbonan,Central Visayas, ,6,123.983333,9.85
+Aglubong,Western Visayas, ,6,122.35,11.016667
+Agora,Cordillera Administrative Region, ,6,121.266667,18.183333
+Agrupacion,Bicol, ,6,122.833333,13.8
+Agtalos,Western Visayas, ,6,122.233333,11.583333
+Aguingayan,Eastern Visayas, ,6,125.05,12.05
+Agutay, ,North Gigante Island,6,124.333333,11.816667
+Ahan,Central Mindanao, ,6,124.316667,6.85
+Alabuna,Sulu, ,6,120.45,6.15
+Alacaac,Central Luzon, ,6,121.183333,15.316667
+Alayan,Cagayan Valley, ,6,121.433333,16.316667
+Alayao,Bicol, ,6,122.583333,14.266667
+Ale,Northern Mindanao, ,6,125.35,7.75
+Alegria,Bicol,Lubic Island,6,124.05,11.783333
+Alfonso Castaneda,Southern Tagalog, ,6,121.3,15.8
+Aliaugon,Cordillera Administrative Region, ,6,121.05,16.616667
+Alibasao,Western Visayas, ,6,123.15,10.6
+Alibayan,Central Mindanao, ,6,125.183333,7.166667
+Alitungan,Southern Tagalog, ,6,120.766667,13.216667
+Alo,Central Visayas, ,6,123.4,9.5
+Alobijod,Western Visayas, ,6,122.516667,10.533333
+Altavas,Western Visayas, ,6,122.483333,11.533333
+Alupay,Southern Tagalog, ,6,121.633333,14.166667
+Alupipeu,Cagayan Valley, ,6,121.466667,15.95
+Alzate,Central Luzon, ,6,120.766667,15.75
+Amaga,Southern Mindanao, ,6,126.083333,8.533333
+Amanparan,Central Luzon, ,6,120,15.766667
+Ambabu,Cagayan Valley, ,6,122.166667,17.016667
+Ambulong,Mindoro Occidental, ,6,121.016667,12.216667
+Amganad,Cordillera Administrative Region, ,6,121.066667,16.916667
+Amio,Central Visayas, ,6,122.966667,9.466667
+Amnay,Southern Tagalog, ,6,120.933333,13.033333
+Amtic,Bicol, ,6,123.633333,13.3
+Ana Maria Hacienda,Western Visayas, ,6,123,10.35
+Anao,Central Visayas, ,6,123.333333,9.6
+Anapog,Central Visayas, ,6,123.933333,10.666667
+Angsikan,Southern Mindanao, ,6,125.466667,7.483333
+Aningatan,Western Visayas, ,6,122.233333,10.833333
+Anoling,Northern Mindanao, ,6,126.016667,8.35
+Anonang,Southern Tagalog, ,6,122.45,13.616667
+Anos,Southern Tagalog, ,6,122.183333,13.833333
+Antolon,Bicol, ,6,123.766667,13.8
+Apad Lutao,Southern Tagalog, ,6,122.333333,14.05
+Apanangon,Central Visayas, ,6,123.116667,10.033333
+Apar,Southern Tagalog, ,6,121.3,13.683333
+Apis,Northern Samar, ,6,124.433333,12.616667
+Apoloy,Central Visayas, ,6,123.016667,9.166667
+Apunan,Cordillera Administrative Region, ,6,120.766667,16.65
+Aran,Bicol, ,6,122.95,13.583333
+Atga,Northern Mindanao, ,6,125.683333,8.85
+Atiotis,Western Visayas, ,6,122.016667,10.583333
+Awihao,Central Visayas, ,6,123.633333,10.366667
+Babaddi,Cagayan Valley, ,6,120.933333,16.416667
+Babuyan,Ilocos, ,6,120,15.866667
+Bacaran,Western Mindanao, ,6,123.35,7.983333
+Bachauan,Southern Tagalog,Canipo Island,6,122.1,12.466667
+Badiang,Central Visayas, ,6,123.2,9.3
+Bagacay,Southern Tagalog,Tagubanhan Island,6,121.916667,13.4
+Bagaen,Cagayan Valley, ,6,120.95,16.6
+Bagalay,Bicol, ,6,124.416667,13.8
+Baganainip,Central Luzon, ,6,120.316667,15.25
+Bagas, ,Masbate Island,6,123.833333,13.9
+Bagoladio,Bicol, ,6,123.266667,13.466667
+Bag-ong-Barrio,Western Visayas, ,6,122.383333,11.25
+Bagongbayan,Southern Tagalog, ,6,121.433333,14.516667
+Bagong Silang,Southern Tagalog, ,6,122.466667,14.05
+Bagsac,Bilatan Island,Bilatan Island,6,120,5
+Bagtic,Central Visayas, ,6,123.016667,9.683333
+Bagumbayan,National Capital Region, ,6,121.05,14.466667
+Bahay,Southern Tagalog, ,6,122.633333,13.433333
+Bakung,Western Mindanao, ,6,120,5.166667
+Balagon,Eastern Visayas, ,6,125.25,11.933333
+Balatasan,Southern Tagalog, ,6,121.4,12.4
+Balaton,Bicol, ,6,123.55,13.916667
+Balatukan,Central Mindanao, ,6,125.1,7.45
+Baligidian,Northern Mindanao, ,6,125.2,8.633333
+Balo,Cordillera Administrative Region, ,6,121.4,17.216667
+Balo Balo, ,Siasi Island,6,120.3,5.366667
+Balokbalok,Southern Tagalog, ,6,120.783333,12.95
+Balon,Northern Mindanao, ,6,123.75,8.283333
+Baluguhan,Southern Tagalog, ,6,120.633333,13.35
+Banaba,Southern Tagalog, ,6,120.85,14.216667
+Banacboc, ,Guintinua Island,6,122.95,14.416667
+Banate,Southern Mindanao, ,6,125.316667,6.466667
+Banban,Central Visayas, ,6,123.2,10.333333
+Banga,Eastern Visayas, ,6,124.883333,10.466667
+Bangad,Southern Tagalog, ,6,121.219698,14.366437
+Bangalao,Sulu, ,6,121.533333,6.016667
+Bantayan,Central Visayas, ,6,123.1,9.766667
+Barcelona,Western Visayas, ,6,122.7,10.566667
+Barlig,Cordillera Administrative Region, ,6,121.1,17.05
+Barotuan,Southern Tagalog,Palawan,6,119.45,11.3
+Batad,Central Visayas, ,6,123.933333,10.983333
+Batan,Western Mindanao, ,6,123.183333,8.233333
+Batan, ,Sugbai Island,6,120.35,5.216667
+Batitio,Cordillera Administrative Region, ,6,120.966667,16.733333
+Batobato,Western Visayas, ,6,122.216667,11.416667
+Batongan,Cordillera Administrative Region, ,6,121.333333,16.833333
+Batongbaga,Ilocos, ,6,120.066667,15.966667
+Batunan,Southern Mindanao, ,6,126.216667,8.433333
+Bauan,Cagayan Valley, ,6,121.916667,17.733333
+Baungon,Northern Mindanao, ,6,124.65,8.366667
+Bayabas,Southern Tagalog, ,6,122.35,13.833333
+Bayan,Central Luzon, ,6,121.05,14.816667
+Baylo,Northern Mindanao, ,6,125.716667,8.416667
+Bayog,Western Mindanao, ,6,123.066667,7.866667
+Bazal,Southern Tagalog, ,6,121.433333,15.8
+Benuuangan,Eastern Visayas, ,6,125.316667,11.483333
+Beri, ,Busuanga Island,6,124.366667,12.683333
+Beri,Eastern Visayas, ,6,125.333333,12.183333
+Bigbiga,Central Luzon, ,6,120.383333,15.55
+Bilangbilangan Island,Bohol, ,6,124.45,10.25
+Biña Francia,Bicol,Igbon Island,6,123.866667,13.35
+Binatug,Cagayan Valley, ,6,122.133333,16.833333
+Bintaualan, ,Kang Tipayan,6,120.633333,5.233333
+Binungan,Central Mindanao, ,6,125.2,7.433333
+Bitaogan,Southern Mindanao, ,6,125.95,9.15
+Bitaugan,Southern Mindanao, ,6,125.9,9.05
+Bitoon, ,Batbatan Island,6,123.883333,11.316667
+Blaun,Southern Mindanao, ,6,124.283333,6.266667
+Bocboc, ,Ambil Island,6,120.383333,13.65
+Bogotban,Western Visayas, ,6,122.683333,9.65
+Bona,Northern Mindanao, ,6,124.4,8.433333
+Bongalonan,Quezon, ,6,122.466667,13.433333
+Bongdo,Eastern Visayas, ,6,124.766667,12.116667
+Bontogon,Northern Mindanao, ,6,125.1,8.3
+Borac,Eastern Visayas, ,6,125.45,11.366667
+Borbon,Northern Mindanao, ,6,125.85,8.5
+Bubonao,Southern Mindanao, ,6,125.65,7.783333
+Bubuam, ,Tubigan Island,6,120.966667,6.183333
+Buenavista,Southern Tagalog, ,6,121.516667,15.85
+Buenavista,Southern Tagalog, ,6,120.7,13.133333
+Buenavista,Palawan, ,6,120.233333,12.166667
+Buenavista, ,Limasawa,6,125.55,9.866667
+Buga,Bicol, ,6,123.35,13.3
+Bug-ang,Western Visayas, ,6,123.383333,10.75
+Bugatay,Cagayan Valley, ,6,121.9,17.616667
+Bukut, ,Tapul Island,6,120.733333,5.466667
+Buncarot,Southern Tagalog, ,6,121.366667,12.95
+Buneg,Cordillera Administrative Region, ,6,121.183333,17.7
+Bungan,Southern Mindanao, ,6,125.433333,7.333333
+Busdi,Northern Mindanao, ,6,125.25,8.266667
+Cabadiangan, ,Unib Island,6,125.05,12.666667
+Cabanbaan,Western Visayas, ,6,122.966667,10.083333
+Cabangahan,Southern Mindanao, ,6,125.833333,9.266667
+Cabatang,Southern Tagalog, ,6,121.45,14.033333
+Cabigano,Eastern Visayas, ,6,124.916667,12.416667
+Cabolug,Cagayan Valley, ,6,120.766667,16.216667
+Cabonga-an,Eastern Visayas, ,6,124.816667,12.283333
+Cabugaan, ,Carabao Island,6,122.233333,12.666667
+Cabungalunan,Southern Tagalog,Polillo Island,6,121.983333,14.95
+Cacaoitan,Ilocos, ,6,120.316667,15.666667
+Caculucuan,Cagayan Valley, ,6,122.266667,17.016667
+Cagayancillo, ,Boliungan,6,121.216667,9.583333
+Cagugauran,Western Visayas, ,6,122.483333,11.2
+Cahicsan,Eastern Visayas, ,6,124.766667,12.4
+Calabasan,Central Luzon, ,6,121.133333,14.866667
+Calabugao,Northern Mindanao, ,6,125.15,8.416667
+Calamias, ,Cabalete Island,6,121.816667,14.3
+Calampuan,Southern Tagalog, ,6,121.016667,13.1
+Calanca,Bicol, ,6,124.316667,13.8
+Calandagan, ,San Andres,6,120.25,10.65
+Calapayan,Central Visayas, ,6,123.65,10.2
+Calaptan,Western Visayas, ,6,123.116667,10.8
+Calaya,Western Visayas, ,6,122.616667,10.483333
+Caliitan,Central Luzon, ,6,121.183333,15.416667
+Calmung, ,Mantinloc Island,6,119.283333,11.183333
+Caluekan, ,Balesin Island,6,122.033333,14.416667
+Calutcot,Quezon, ,6,122.15,14.9
+Cambanuc,Central Visayas, ,6,123.733333,10.366667
+Camburanan,Western Visayas, ,6,122.133333,11.266667
+Camp Bliss,Southern Tagalog, ,6,121,13.25
+Camp Sanchez,Central Luzon, ,6,120.366667,15.116667
+Canani,Eastern Visayas, ,6,124.516667,12.433333
+Cancilayan,Western Visayas, ,6,122.733333,9.883333
+Candugay,Central Visayas, ,6,123.5,10.133333
+Canipo, ,Guintacan Island,6,120.95,10.983333
+Cansiguin,Central Visayas, ,6,123.5,9.85
+Cantaup,Central Visayas, ,6,123.066667,9.933333
+Cappa Ibanag,Cordillera Administrative Region, ,6,121.55,17.216667
+Capuluan,Southern Tagalog, ,6,122.433333,13.883333
+Carayacay,Eastern Visayas, ,6,125.183333,12.133333
+Catugasan,Western Visayas, ,6,123.1,10.5
+Cocob, ,Sibuguey,6,122.283333,6.883333
+Codcod,Western Visayas, ,6,123.25,10.466667
+Cogon,Western Visayas, ,6,122.1,10.733333
+Colorado,Bicol,Lubic Island,6,123.366667,12.466667
+Concepcion,Quezon, ,6,122,13.966667
+Cubay,Western Visayas, ,6,122.733333,11.083333
+Daclig Camp,Cagayan Valley, ,6,121.366667,16.483333
+Dagao,Northern Mindanao, ,6,125.266667,7.85
+Dagara,Cordillera Administrative Region, ,6,121.066667,17.916667
+Danasan,Central Visayas, ,6,123.85,10.583333
+Dancalan,Bicol,Cuyo,6,123.1,13.033333
+Dansolihon,Northern Mindanao, ,6,124.566667,8.316667
+Daraitan,Southern Tagalog, ,6,121.4,14.616667
+Datingbayan,Southern Tagalog,Tagubanhan Island,6,121.95,13.5
+Datu Gibung,Northern Mindanao, ,6,125.466667,8.066667
+Datu Unot,Central Mindanao, ,6,125.233333,7.266667
+Baler,Aurora, ,6,121.65,15.983333
+Diadi,Cagayan Valley, ,6,121.366667,16.666667
+Didipio,Cagayan Valley, ,6,121.533333,16.35
+Dimagalin,Central Mindanao, ,6,124.35,8.1
+Dinapigui,Cagayan Valley, ,6,122.35,16.666667
+Dipalo,Western Mindanao, ,6,123.333333,8.133333
+Divilican,Cagayan Valley, ,6,122.3,17.333333
+Dulangan,Northern Mindanao, ,6,125.833333,8.683333
+Duldulumon,Central Mindanao, ,6,125.083333,7.35
+Dumalaguing,Northern Mindanao, ,6,125.066667,8.533333
+Flora,Central Luzon, ,6,120.416667,15.25
+Gabi, ,Maniguin Island,6,123.333333,11.6
+Galicia,Western Visayas, ,6,122.166667,11.516667
+Gampongan,Bicol, ,6,123.35,13.2
+Gangalan,Cagayan Valley, ,6,122.2,16.75
+Gapusan,Western Mindanao, ,6,123.35,8.266667
+Gata,Central Mindanao, ,6,124.766667,7.466667
+Gelino,Eastern Visayas, ,6,124.716667,12.216667
+Gines,Western Visayas, ,6,122.333333,10.866667
+Guindawahan,Bicol,Lubic Island,6,124.033333,11.916667
+Gumitan,Southern Mindanao, ,6,125.35,7.433333
+Hantag,Southern Tagalog, ,6,121.216667,14.783333
+Hila-an,Eastern Visayas, ,6,124.966667,10.516667
+Himakinod,Eastern Visayas, ,6,125.033333,12.2
+Hiwasayan,Quezon, ,6,122.516667,13.816667
+Inalad,Eastern Visayas, ,6,125.366667,11.3
+Inao-awan,Southern Tagalog, ,6,121.583333,14.266667
+Kabantao,Northern Mindanao, ,6,125.65,8.483333
+Kabolijan,Central Visayas, ,6,123.55,9.966667
+Kamo,Southern Mindanao, ,6,126.333333,7.75
+Kanapauan,Bicol, ,6,122.483333,14.2
+Kanmansad,Quezon, ,6,122.516667,13.25
+Kapaya,Central Mindanao, ,6,124.483333,6.5
+Kasayan,Southern Mindanao, ,6,125.566667,5.983333
+Katolohan,Western Visayas, ,6,122.533333,9.766667
+Kibutai,Central Mindanao, ,6,124.466667,8.3
+Kinaludan,Northern Mindanao, ,6,125.7,8.983333
+Kinasakitan,Southern Tagalog, ,6,121.5,15.05
+Klintak,Southern Mindanao, ,6,125.383333,5.883333
+Kolibog,Northern Mindanao, ,6,124.966667,8.816667
+Kulassian, ,Malamaui Island,6,120.666667,6.416667
+Kumonal,Southern Mindanao, ,6,125.616667,7.183333
+Labayat,Southern Tagalog, ,6,121.633333,14.483333
+Lapa-an,Eastern Visayas, ,6,124.583333,12.216667
+Lapacan,Western Mindanao, ,6,122.1,7.066667
+Latian,Southern Mindanao, ,6,125.55,6.2
+Laugan,Northern Mindanao, ,6,125.166667,7.883333
+Lawaan,Central Visayas, ,6,123.933333,10.533333
+Layagoang, ,Dinagat,6,125.683333,10.066667
+Libertad,Central Mindanao, ,6,124.966667,6.65
+Lingdan,Southern Mindanao, ,6,125.966667,7.383333
+Lo-oc, ,Tagauayan Island,6,123.666667,11.883333
+Loog,Western Mindanao,Panducan Island,6,121.783333,6.066667
+Lubi,Eastern Visayas, ,6,124.783333,10.966667
+Lubigan,Central Luzon, ,6,120.433333,15.466667
+Lumakil,Southern Mindanao, ,6,125.016667,6.133333
+Mabuhay,Southern Mindanao, ,6,125.55,7.333333
+Mabuñga,Southern Tagalog, ,6,121.3,13.783333
+Magluga,Southern Mindanao, ,6,125.483333,7.783333
+Magtuga,Southern Mindanao, ,6,125.583333,7.866667
+Makuyana,Cagayan Valley, ,6,122.116667,17.583333
+Malampay,Northern Mindanao, ,6,125.15,7.6
+Malna,Central Mindanao, ,6,124.483333,8.1
+Malopoy,Western Mindanao, ,6,123.1,8.35
+Malupao,Eastern Visayas, ,6,125.066667,10.466667
+Mambiranan Ilauod,Western Visayas, ,6,122.166667,11.166667
+Mampaen,Central Luzon, ,6,120.3,14.966667
+Mananga,Western Visayas, ,6,122.816667,9.766667
+Mañgandiñgay,Central Luzon, ,6,120.85,15.8
+Mansalanao,Western Visayas, ,6,123.1,10.366667
+Mansangaban,Central Visayas, ,6,123.033333,9.55
+Mapayag,Central Mindanao, ,6,124.55,6.416667
+Maragat,Northern Samar, ,6,124.016667,12.4
+Masi,Cordillera Administrative Region, ,6,121.166667,18.416667
+Maslud,Southern Tagalog, ,6,120.483333,13.3
+Miguel,Camarines Sur, ,6,123.233333,13.983333
+Milado,Western Mindanao, ,6,123.433333,8.366667
+Minahan,Southern Tagalog, ,6,121.55,14.75
+Moraza,Central Luzon, ,6,120.233333,15.166667
+Najandig,Central Visayas, ,6,123.133333,9.166667
+Napoles,Western Visayas, ,6,122.9,10.516667
+Nieva,Southern Tagalog, ,6,122.283333,13.733333
+Novela,Northern Mindanao, ,6,125.916667,8.366667
+Nuevo Camp,Northern Mindanao, ,6,125.733333,9.466667
+Nunang,Central Mindanao, ,6,124.033333,8.083333
+Obo,Bicol, ,6,124.25,13.716667
+Osiao,Bicol, ,6,123.966667,13.1
+Packed,Cordillera Administrative Region, ,6,121.066667,17.633333
+Paco,Southern Tagalog, ,6,122.633333,13.966667
+Pagsabañgan,Southern Mindanao, ,6,126.2,7.733333
+Pamaypayan,Southern Mindanao, ,6,126.266667,8.133333
+Pantawan,Central Mindanao, ,6,124.45,7.6
+Pasi,Southern Tagalog, ,6,121.3,13.1
+Pianag,Southern Tagalog, ,6,120.866667,12.716667
+Pili,Bicol, ,6,123.316667,13.666667
+Pinamorhohan,Bicol,Lubic Island,6,123.466667,12.4
+Pinugay,Southern Tagalog, ,6,121.266667,14.616667
+Pinuunan,Central Luzon, ,6,120.416667,14.75
+Punta Buri,Iloilo, ,6,123.116667,11.116667
+Rancheria,Cagayan Valley, ,6,121.45,16.2
+Rugan,Central Mindanao, ,6,124.6,7.783333
+Sabaki,Southern Mindanao, ,6,126.083333,7.45
+Sabang,Southern Tagalog,Palawan,6,118.916667,10.2
+Saguiton,Western Mindanao, ,6,123.25,8.333333
+Sagumayon,Central Visayas, ,6,122.8,9.666667
+Sampaloc,Central Luzon, ,6,121.216667,15.733333
+San Mariano,Southern Tagalog, ,6,121.433333,12.633333
+San Miguel,Eastern Visayas, ,6,125.133333,12.316667
+San Rafael,Bicol, ,6,124.133333,12.666667
+Santa Ines,Southern Tagalog, ,6,121.333333,14.716667
+Tabialan,Sulu, ,6,121.9,6.033333
+Tagbacan,Southern Tagalog, ,6,122.35,13.633333
+Taglimao,Northern Mindanao, ,6,124.516667,8.4
+Talavera,Surigao del Norte, ,6,125.7,9.75
+Tamborong,Western Visayas, ,6,122.583333,9.65
+Tingkalungan,Southern Mindanao, ,6,125.433333,6.3
+Tituan,Southern Mindanao, ,6,125.4,6.016667
+Tocawal,Southern Mindanao, ,6,125.3,6.133333
+Tongtong,Sulu, ,6,120.883333,6.133333
+Tubigan, ,Dassalan,6,120.783333,6.433333
+Ulona Tran,Central Mindanao, ,6,124.233333,6.4
+Ulo Ugaga,Central Mindanao, ,6,125.216667,7.533333
+Unidad,Southern Mindanao, ,6,126.233333,8.533333
+Usad,Sulu, ,6,120.55,6.133333
+Ven Colony,Northern Mindanao, ,6,125.033333,8.75
+Wao,Central Mindanao, ,6,124.666667,7.683333
+Quezon Stadt,National Capital Region, ,2,121.065399,14.66287
+Dansalan,Central Mindanao, ,3,124.291901,8.002695
+ , , ,0,0,0
+Tacurong,Central Mindanao,,,,
+Koronadal,Southern Mindanao,,,,

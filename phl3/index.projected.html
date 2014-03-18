@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ReliefWeb - Philippines: Typhoon Haiyan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/style.projected.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<h3 class="section-header">Philippines: Typhoon Haiyan - Daily Snapshot</h3>
+<div id="map" class="section"></div>
+
+<!-- Libraries -->
+<script src="js/hidpi-canvas.js"></script>
+<script src="js/simple_statistics.js"></script>
+<script src="js/spin.min.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/topojson.v1.min.js"></script>
+<script src="js/queue.v1.min.js"></script>
+<script src="js/colorbrewer.js"></script>
+
+<!-- Application -->
+<script src="js/section.map.projected.js"></script>
+<script>
+(function () {
+  sections.map('map').load();
+})();
+</script>
+
+</body>
+</html>
