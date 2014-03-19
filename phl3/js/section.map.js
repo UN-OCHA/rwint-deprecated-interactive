@@ -1,10 +1,28 @@
+/* global d3:false */
+/* global topojson:false */
+/* global queue:false */
+/* global ss:false */
+/* global Spinner:false */
+/* jshint strict: true */
 (function () {
+  "use strict";
 
   if (!window.sections) {
     window.sections = {};
   }
 
   window.sections.map = function (id) {
+    function getPixelRatio(context) {
+      var backingStore = context.backingStorePixelRatio ||
+            context.webkitBackingStorePixelRatio ||
+            context.mozBackingStorePixelRatio ||
+            context.msBackingStorePixelRatio ||
+            context.oBackingStorePixelRatio ||
+            context.backingStorePixelRatio || 1;
+
+      return (window.devicePixelRatio || 1) / backingStore;
+    }
+
     function showLabel() {
       var target = d3.select(d3.event.target);
 
@@ -13,11 +31,7 @@
             name = data.name,
             values = '';
 
-        if (target.classed('country')) {
-          var iso3 = data.iso3;
-          values = ' (' + iso3 + ')';
-        }
-        else if (target.classed('municipality')) {
+       if (target.classed('municipality')) {
           var stat = stats[dateCurrent][data.code];
 
           values = ' ' + d3.keys(stat).map(function (k) {
@@ -127,125 +141,93 @@
           height = 150,
           mesh = topojson.mesh(data, data.objects.layer1, function(a, b) { return a === b; });
 
-      var minimapProjection = d3.geo.mercator().scale(1).translate([0,0]);
+      var path = d3.geo.path().projection(null);
 
-      var minimapPath = d3.geo.path().projection(minimapProjection);
-
-      var b = minimapPath.bounds(mesh),
-          s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
-          t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
-
-      minimapProjection.scale(s).translate(t);
+      var b = data.bbox,
+          c = [(b[2] + b[0]) / 2, (b[3] + b[1]) / 2],
+          s = 1 / Math.max((b[2] - b[0]) / width, (b[3] - b[1]) / height),
+          t = [width / 2 - s * c[0], height / 2 - s * c[1]];
 
       var context = control.append('canvas')
           .attr('width', width)
           .attr('height', height)
           .node().getContext('2d');
 
+      context.translate(t[0], t[1]);
+      context.scale(s, s);
+
       context.strokeStyle = '#ccc';
       context.fillStyle = '#fff';
-      context.beginPath();
-      minimapPath.context(context)(mesh);
+      context.lineWidth = 0.1;
+
+      path.context(context)(mesh);
+
       context.fill();
       context.stroke();
 
-      var minimapOldScale = 0;
-
-      var minimapZoom = d3.behavior.zoom()
-        .center([width / 2, height / 2])
-        .scaleExtent([1, 256])
-        .on('zoom', function () {
-          var l = minimapProjection.invert(d3.mouse(control.node())),
-              p = projection(l),
-              c = zoom.center(),
-              t = zoom.translate(),
-              s = zoom.scale();
-
-          zoom.translate([c[0] - p[0] * s, c[1] - p[1] * s]);
-
-          s = d3.event.scale / zoom.scale();
-
-          var n = Math.log(s) / Math.LN2,
-              k = s > minimapOldScale ? Math.ceil(n) : Math.floor(n),
-              z = Math.pow(2, k);
-
-          minimapOldScale = z;
-
-          applyZoom(0, z);
-        });
-
-      var drag = d3.behavior.drag()
-          //.origin(function(d) { return d; })
-          .on("dragstart", dragstarted)
-          .on("drag", dragged)
-          .on("dragend", dragended);
+      var w = d3.select(window);
 
       var selection = control.append('svg')
-          .attr('width', width)
-          .attr('height', height)
-          .call(minimapZoom)
-          //.call(minimapZoom)
+          .attr({width: width, height: height})
+          .on({
+            'dblclick': function () {
+              var x = c[0]  +  (d3.event.offsetX - width / 2) / s,
+                  y = c[1]  +  (d3.event.offsetY - height / 2) / s;
+
+              handleZoom(x, y, d3.event.shiftKey ? 0.5 : 2);
+              d3.event.preventDefault();
+            },
+            'mousedown': function () {
+              var ox = d3.event.clientX,
+                  oy = d3.event.clientY;
+
+              function move() {
+                var x = d3.event.clientX,
+                    y = d3.event.clientY;
+                if (x !== ox || y !== oy) {
+                  //minimap.translate(x - ox, y - oy);
+                  handleTranslate(-(x - ox) * s, -(y - oy) * s);
+                  ox = x; oy = y;
+                }
+                d3.event.preventDefault();
+              }
+
+              function stop() {
+                w.on('mousemove', null).on('mouseup', null);
+              }
+
+              w.on('mousemove', move).on('mouseup', stop);
+              d3.event.preventDefault();
+            }
+          })
         .append("rect")
           .attr('class', 'selection')
-          .attr("x", 0)
-          .attr("y", 0)
-          .attr("width", width)
-          .attr("height", height)
-          //.attr('stroke', '#ff7800')
-          //.attr('stroke-opacity', 0.5)
-          //.attr('fill', '#ff7800')
-          //.attr('fill-opacity', 0.2)
-          .call(drag);
+          .attr({x: 0, y: 0, width: width, height: height})
+          ;//.attr('vector-effect', 'non-scaling-stroke');
 
+      minimap.focus = d3.select('.focus').node();
+      minimap.selection = selection;
+      minimap.matrix = [1, 0, 0, 1, 0, 0];
+      minimap.update = function () {
+        var b = this.focus.getBoundingClientRect(),
+            s = Math.min(width / (b.right - b.left), height / (b.bottom - b.top)),
+            w = s * window.innerWidth,
+            h = s * window.innerHeight,
+            x = (width - s * (b.right + b.left)) / 2,
+            y = (height - s * (b.bottom + b.top)) / 2;
 
-
-      b = minimapPath.bounds(mesh);
-
-      minimap = {
-        width: width,
-        height: height,
-        center: [(width - (b[1][0] - b[0][0])) / 2, (height - (b[1][1] - b[0][1])) / 2],
-        selection: selection,
-        projection: minimapProjection,
-        zoom: minimapZoom,
-        update: function () {
-          var b = d3.select('.focus').node().getBoundingClientRect(),
-              s = this.height / b.height,
-              h = s * window.innerHeight,
-              w = s * window.innerWidth,
-              x = -s * b.left + this.center[0],
-              y = -s * b.top + this.center[1];
-
-          this.selection
-            .attr("x", x)
-            .attr("y", y)
-            .attr("width", w)
-            .attr("height", h);
-
-          this.zoom.translate(zoom.translate());
-          this.zoom.scale(zoom.scale());
-        }
-      }
+        this.matrix = [1, 0, 0, 1, 0, 0];
+        this.selection.attr({x:x, y:y, width: w, height: h, transform:'none'});
+      };
+      minimap.translate = function(dx, dy) {
+        this.matrix[4] += dx; this.matrix[5] += dy;
+        this.selection.attr('transform', 'matrix(' + this.matrix.join(' ') + ')');
+      };
     }
 
-    function dragstarted(d) {
-      d3.event.sourceEvent.stopPropagation();
-      d3.select('body').classed("dragging", true);
-    }
 
-    function dragged(d) {
-      var t = zoom.translate(),
-          s = zoom.scale();
-      zoom.translate([t[0] - d3.event.dx * 2 * s, t[1] - d3.event.dy * 2 * s]);
-      scaleMap();
-    }
-
-    function dragended(d) {
-      d3.select('body').classed("dragging", false);
-    }
-
-    function updateMiniMap() {
-      if (minimap) {
+    function updateMinimap() {
+      if (minimap.update) {
         minimap.update();
       }
     }
@@ -257,162 +239,92 @@
       control.append('a')
           .attr('class', 'zoom-in')
           .html('+')
-          .on('click', function () { applyZoom(1); });
+          .on('click', function () { handleZoom(0, 0, 2); });
 
       control.append('a')
           .attr('class', 'zoom-out')
           .html('-')
-          .on('click', function () { applyZoom(-1); });
-    }
-
-    function handleZoom() {
-      var s = d3.event.scale,
-          n = Math.log(s) / Math.LN2,
-          k = s > oldScale ? Math.ceil(n) : Math.floor(n),
-          z = Math.pow(2, k);
-
-      oldScale = z;
-
-      applyZoom(0, z / s);
-    }
-
-    // Redraw the map based on the zoom level or translation.
-    function applyZoom(offset, multiplier) {
-      var t = zoom.translate(),
-          s = zoom.scale(),
-          c = zoom.center(),
-          d = zoom.scaleExtent(),
-          m = multiplier || 1,
-          o = offset || 0,
-          n = Math.log(s * m) / Math.LN2,
-          k = (o >= 0 ? Math.floor(n) : Math.ceil(n)) + o,
-          l = [(c[0] - t[0]) / s, (c[1] - t[1]) / s],
-          z = Math.max(d[0], Math.min(d[1], Math.pow(2, k))),
-          p = [l[0] * z + t[0], l[1] * z + t[1]];
-
-      zoom.scale(z);
-      zoom.translate([t[0] + c[0] - p[0], t[1] + c[1] - p[1]]);
-
-      scaleMap();
-    }
-
-    function scaleMap() {
-      var t = zoom.translate(),
-          s = zoom.scale(),
-          c = zoom.center(),
-          tx = Math.min(c[0] - bounds[0][0] * s, Math.max(t[0], c[0] - bounds[1][0] * s)),
-          ty = Math.min(c[1] - bounds[0][1] * s, Math.max(t[1], c[1] - bounds[1][1] * s)),
-          dashArray = ['none', [2 / s, 2 / s].join(','), 1 / s];
-
-      t = zoom.translate([tx, ty]).translate();
-
-      svg.attr('transform', 'translate(' + t.join(',') + ')scale(' + s + ')');
-
-      svg.selectAll('.municipality')
-        .attr('stroke-width', 0.2 / s);
-
-      svg.selectAll('.boundaries.outer')
-        .attr('stroke-width', 0.2 / s);
-
-      svg.selectAll('.boundaries.inner')
-        .attr('stroke-width', 0.2 / s)
-        .attr('stroke-dasharray', function (d) { return dashArray[d.properties.type]; });
-
-      updateMiniMap();
-    }
-
-    function getPixelRatio(context) {
-      var backingStore = context.backingStorePixelRatio ||
-            context.webkitBackingStorePixelRatio ||
-            context.mozBackingStorePixelRatio ||
-            context.msBackingStorePixelRatio ||
-            context.oBackingStorePixelRatio ||
-            context.backingStorePixelRatio || 1;
-
-      return (window.devicePixelRatio || 1) / backingStore;
-    }
-
-    function drawCanvas() {
-      context.clearRect(0, 0, canvas.attr('width'), canvas.attr('height'));
-
-      context.strokeStyle = '#766951';
-      context.fillStyle = '#d7c7ad';
-
-      context.beginPath();
-
-      path.context(context)(canvas.datum());
-
-      context.fill();
-      context.stroke();
+          .on('click', function () { handleZoom(0, 0, 0.5); });
     }
 
     // Draw the map.
-    function drawMap(world, boundaries, country) {
-      var jsonWorld = topojson.feature(world, world.objects.layer1),
-          jsonCountry = topojson.feature(country, country.objects.layer1);
+    function drawMap(world, boundaries, country, regions, cities) {
+      var iso3 = 'PHL';
 
-      var b = path.bounds(jsonCountry),
-          s = .95 / Math.max((b[1][0] - b[0][0]) / width, (b[1][1] - b[0][1]) / height),
-          t = [(width - s * (b[1][0] + b[0][0])) / 2, (height - s * (b[1][1] + b[0][1])) / 2];
+      // World.
+      var groupWorld = svg.append('g')
+          .attr('class', 'world');
 
-      projection.scale(s).translate(t);
-
-      bounds = path.bounds(jsonCountry);
-
-      var dashArray = ['none', '2,2', '1'];
-
-      var features = jsonWorld.features.filter(function(f) { return f.properties.iso3 !== 'PHL'; });
-
-      // Add the countries.
-      svg.selectAll('.country')
-          .data(features)
+      // Countries
+      groupWorld.append('g')
+          .attr('class', 'countries')
+        .selectAll('.country')
+          .data(topojson.feature(world, world.objects.layer1).features.filter(function(f) {
+            return f.properties.iso3 !== iso3;
+          }))
         .enter().append('path')
-          .attr('class', function (d) { return 'country ' + d.properties.iso3; })
-          .attr('d', path)
-          .attr('fill', '#fff')
-          .attr('stroke', 'none');
+          .attr('class', 'country')
+          .attr('d', path);
 
-      // Add the focused country.
-      svg.append('g')
-          .attr('class', 'focus')
+      // Outer Boundaries.
+      groupWorld.append('path')
+          .datum(topojson.mesh(world, world.objects.layer1, function(a, b) {
+            return a === b && a.properties.iso3 !== iso3;
+          }))
+          .attr('class', 'boundaries outer')
+          .attr('d', path)
+          .attr('vector-effect', 'non-scaling-stroke');
+
+      // Inner boundaries.
+      d3.values(boundaries.objects).forEach(function (layer, i) {
+        groupWorld.append('path')
+          .datum(topojson.feature(boundaries, layer))
+          .attr('class', 'boundaries inner' + ['', ' dashed', ' dotted'][i])
+          .attr('d', path)
+          .attr('vector-effect', 'non-scaling-stroke');
+      });
+
+
+      // Focused country.
+      var groupCountry = svg.append('g')
+          .attr('class', 'focus');
+
+      // Municipalities.
+      groupCountry.append('g')
+          .attr('class', 'municipalities')
         .selectAll('.municipality')
-          .data(jsonCountry.features)
+          .data(topojson.feature(country, country.objects.layer1).features)
         .enter().append('path')
           .attr('class', 'municipality')
           .attr('d', path)
-          .attr('fill', '#fff')
-          .attr('stroke', 'none');
+          .attr('vector-effect', 'non-scaling-stroke');
 
-      // Country international boundaries.
-      svg.append('path')
-          .datum(topojson.mesh(country, country.objects.layer1, function(a, b) { return a === b; }))
+      // Provinces.
+      groupCountry.append('path')
+          .datum(topojson.mesh(country, country.objects.layer1, function(a, b) {
+            return a.properties.province !== b.properties.province;
+          }))
           .attr('d', path)
+          .attr('class', 'boundaries province')
+          .attr('vector-effect', 'non-scaling-stroke');
+
+      // Regions.
+      groupCountry.append('path')
+          .datum(topojson.mesh(country, country.objects.layer1, function(a, b) {
+            return a.properties.region !== b.properties.region;
+          }))
+          .attr('d', path)
+          .attr('class', 'boundaries region')
+          .attr('vector-effect', 'non-scaling-stroke');
+
+      // Outer Boundaries.
+      groupCountry.append('path')
+          .datum(topojson.mesh(country, country.objects.layer1, function(a, b) {
+            return a === b;
+          }))
           .attr('class', 'boundaries outer')
-          .attr('fill', 'none')
-          .attr('stroke', '#999')
-          .attr('stroke-width', 0.2);
-
-      // Outer boundaries.
-      svg.append('path')
-          .datum(topojson.mesh(world, world.objects.layer1, function(a, b) { return a === b && a.properties.iso3 !== 'PHL'; }))
           .attr('d', path)
-          .attr('class', 'boundaries outer')
-          .attr('fill', 'none')
-          .attr('stroke', '#999')
-          .attr('stroke-width', 0.2);
-
-      // Inner boundaries.
-      svg.selectAll('.boundaries.inner')
-          .data(topojson.feature(boundaries, boundaries.objects.layer1).features)
-        .enter().append('path')
-          .attr('class', 'boundaries inner')
-          .attr('d', path)
-          .attr('fill', 'none')
-          .attr('stroke', '#999')
-          .attr('stroke-width', 0.2)
-          .attr('stroke-dasharray', function (d) { return dashArray[d.properties.type]; });
-
-      scaleMap();
+          .attr('vector-effect', 'non-scaling-stroke');
 
       addZoom();
       addDateSelector();
@@ -420,7 +332,7 @@
       addLegend();
       addMiniMap(country);
 
-      updateMiniMap();
+      createZoom(country.bbox, width, height);
     }
 
     function setData(data) {
@@ -431,7 +343,7 @@
         if (d.date) {
           var date = formatter.parse(d.date).getTime();
           if (!stats.hasOwnProperty(date)) {
-            stats[date] = {}
+            stats[date] = {};
           }
 
           stats[date][d.code] = {
@@ -446,7 +358,7 @@
       });
 
       dateMin = min;
-      dateMax = max
+      dateMax = max;
       dateCurrent = max;
     }
 
@@ -496,6 +408,97 @@
       updateLegend(color);
     }
 
+    function createZoom(bbox, width, height) {
+      var matrix = [1, 0, 0, 1, 0, 0],
+          ctm = svgContainer.node().getScreenCTM(),
+          container = svgContainer.node(),
+          w = d3.select(window),
+          focus = d3.select('.focus').node();
+
+      function resize() {
+        ctm = svgContainer.node().getScreenCTM();
+        updateMinimap();
+      }
+
+      w.on({'resize': resize, 'scroll': resize});
+
+      function convert(x, y, inverse) {
+        var point = container.createSVGPoint();
+        point.x = x; point.y = y;
+        point = point.matrixTransform(inverse ? ctm.inverse() : ctm);
+        return [point.x, point.y];
+      }
+
+      function mouse() {
+        var event = d3.event;
+        return convert(event.clientX, event.clientY, true);
+      }
+
+      function update(dx, dy, scale) {
+        pan(dx, dy);
+        zoom(scale);
+        svg.attr('transform', 'matrix(' + matrix.join(' ') + ')');
+        updateMinimap();
+      }
+
+      function pan(dx, dy) {
+        matrix[4] += dx ? width / 2 - dx : 0;
+        matrix[5] += dy ? height / 2 - dy : 0;
+      }
+
+      function zoom(scale) {
+        if (scale) {
+          for (var i = 0, l = matrix.length; i < l; i++) {
+            matrix[i] *= scale;
+          }
+          pan(scale * width / 2, scale * height / 2);
+        }
+      }
+
+      svgContainer.on('dblclick', function () {
+        var l = mouse();
+        update(l[0], l[1], d3.event.shiftKey ? 0.5 : 2);
+        d3.event.preventDefault();
+      });
+
+      svgContainer.on('mousedown', function () {
+        var origin = mouse();
+
+        function move() {
+          var l = mouse();
+          if (l[0] !== origin[0] || l[1] !== origin[1]) {
+            update(width / 2 + origin[0] - l[0], height / 2 + origin[1] - l[1]);
+            origin = l;
+          }
+          d3.event.preventDefault();
+        }
+
+        function stop() {
+          w.on('mousemove', null).on('mouseup', null);
+        }
+
+        w.on('mousemove', move).on('mouseup', stop);
+      });
+
+      var b = bbox,
+          c = [(b[2] + b[0]) / 2, (b[3] + b[1]) / 2],
+          s = 1 / Math.max((b[2] - b[0]) / width, (b[3] - b[1]) / height);
+
+      update(c[0], c[1], s);
+
+      handleZoom = function (dx, dy, scale) {
+        if (dx && dy) {
+          scale *= matrix[0];
+          matrix = [1, 0, 0, 1, 0, 0];
+        }
+        update(dx, dy, scale);
+      };
+
+      handleTranslate = function(dx, dy) {
+        update(width / 2 - dx * matrix[0] / s, height / 2 - dy * matrix[0] / s);
+      };
+    }
+
     // Load the map data.
     function loadData() {
       var loader = queue();
@@ -504,50 +507,29 @@
 
       loader
           .defer(d3.csv, 'data/data.csv.json')
-          .defer(d3.json, 'data/un.countries-ms3.topojson')
-          .defer(d3.json, 'data/un.boundaries.topojson')
-          .defer(d3.json, 'data/un.phl.topojson');
+          .defer(d3.json, 'data/un.countries.mercator.topojson')
+          .defer(d3.json, 'data/un.boundaries.mercator.topojson')
+          .defer(d3.json, 'data/un.phl.mercator.topojson')
+          .defer(d3.csv, 'data/un.phl.regions.csv.json')
+          .defer(d3.csv, 'data/un.phl.cities.csv.json');
 
-      loader.await(function (error, data, world, boundaries, country, countries) {
+      loader.await(function (error, data, world, boundaries, country, regions, cities) {
         spinner.stop();
         if (error === null) {
           setData(data);
 
-          drawMap(world, boundaries, country);
+          drawMap(world, boundaries, country, regions, cities);
 
           updateMap();
         }
       });
     }
 
-    // Calculate 'count' thresholds from 'max' value.
-    function computeSteps(max, count) {
-      var magnitude = Math.floor(Math.log(max) / Math.LN10),
-          stepHop = Math.pow(10, magnitude),
-          stepMax = Math.floor(max / stepHop) * stepHop,
-          divide = stepMax > 10,
-          steps = [], i, l;
-
-      steps.push(stepMax);
-      for (i = 0, l = Math.min(count, stepMax) - 1; i < l; i++) {
-        if (divide) {
-          stepHop = stepMax <= stepHop ? stepHop / 10 : stepHop;
-          stepMax = stepHop * Math.floor(stepMax / (2 * stepHop));
-        }
-        else {
-          stepMax -= 1;
-        }
-        steps.push(stepMax >= 1 ? stepMax : 0);
-      }
-      steps.push(1);
-      return steps.reverse();
-    }
-
     /********
      * Main *
      ********/
     var width = 1000,
-        height = 600,
+        height = 650,
         container = d3.select('#' + id),
         spinner = new Spinner(),
         formatter = d3.format(",.0f"),
@@ -555,8 +537,9 @@
         stats = {},
         activeIndex = 'affectedPeople',
         dateMin = 0, dateMax = 0, dateCurrent = 0,
-        minimap, originalScale, originalTranslate,
-        bounds;
+        minimap = {},
+        handleZoom = function () {},
+        handleTranslate = function () {};
 
     // Add layers.
     var layerMap = container.append('div').attr('class', 'layer-map'),
@@ -571,41 +554,22 @@
     // Label.
     var label = layerMarker.append('div')
         .style('display', 'none')
-        .attr('class', 'label right')
-        .html('hello world');
+        .attr('class', 'label right');
 
-    var projectionScale = width / 2 / Math.PI,
-        projectionTranslate = [width / 2, height / 2];
+    var path = d3.geo.path()
+        .projection(null)
+        .pointRadius(0);
 
-    var projection = d3.geo.mercator()
-        .scale(1)
-        .translate([0, 0]);
-
-    var path = d3.geo.path().projection(projection);
-
-    var oldScale = 0;
-    var zoom = d3.behavior.zoom()
-        .center([width / 2, height / 2])
-        .scaleExtent([1, 256])
-        .on('zoom', handleZoom);
-
-    zoom(layerMap);
-
-    window.onresize = function () {
-      updateMiniMap();
-    };
-    window.onscroll = function () {
-      updateMiniMap();
-    };
-
-    var svg = layerMap.append('svg')
-        //.attr('width', width)
-        //.attr('height', height)
+    var svgContainer = layerMap.append('svg')
         .attr('width', '100%')
         .attr('height', '100%')
-        .attr('preserveAspectRatio', 'xMidYMin slice')
-        .attr('viewBox', '0 0 ' + width + ' ' + height)
-      .append('g')
+        .attr('preserveAspectRatio', 'xMidYMid meet')
+        .attr('viewBox', '0 0 ' + width + ' ' + height);
+
+    var svgDefs = svgContainer.append('defs');
+
+    var svg = svgContainer.append('g')
+        .attr('transform', 'matrix(1 0 0 1 0 0)')
         .on('mousemove', moveLabel)
         .on('mouseover', showLabel)
         .on('mouseout', hideLabel);
