@@ -23,7 +23,7 @@
       return (window.devicePixelRatio || 1) / backingStore;
     }
 
-    function showLabel() {
+    function showTooltip() {
       var target = d3.select(d3.event.target);
 
       if (target.classed('country') || target.classed('municipality')) {
@@ -39,23 +39,23 @@
           }).filter(function (v) { return v !== ''; }).join(' ');
         }
 
-        label.style('display', 'block')
+        tooltip.style('display', 'block')
             .html('<span class="name">' + name + '</span>' + values);
       }
     }
 
-    function hideLabel() {
-      label.style('display', 'none');
+    function hideTooltip() {
+      tooltip.style('display', 'none');
     }
 
-    function moveLabel() {
+    function moveTooltip() {
       var position = d3.mouse(container.node()),
           x = position[0],
           y = position[1],
-          w = parseInt(label.style('width'), 10),
+          w = parseInt(tooltip.style('width'), 10),
           right = (x > parseInt(container.style('width'), 10) / 2);
 
-      label.classed('left', right).classed('right', !right)
+      tooltip.classed('left', right).classed('right', !right)
           .style({
             'top': (y - 16) + 'px',
             'left': (right ? x - 32 - w : x + 16) + 'px'
@@ -185,7 +185,6 @@
                 var x = d3.event.clientX,
                     y = d3.event.clientY;
                 if (x !== ox || y !== oy) {
-                  //minimap.translate(x - ox, y - oy);
                   handleTranslate(-(x - ox) * s, -(y - oy) * s);
                   ox = x; oy = y;
                 }
@@ -202,26 +201,21 @@
           })
         .append("rect")
           .attr('class', 'selection')
-          .attr({x: 0, y: 0, width: width, height: height})
-          ;//.attr('vector-effect', 'non-scaling-stroke');
+          .attr({x: 0, y: 0, width: width, height: height});
 
+      minimap.container = layerMap.node();
       minimap.focus = d3.select('.focus').node();
       minimap.selection = selection;
-      minimap.matrix = [1, 0, 0, 1, 0, 0];
       minimap.update = function () {
-        var b = this.focus.getBoundingClientRect(),
+        var sb = this.container.getBoundingClientRect(),
+            b = this.focus.getBoundingClientRect(),
             s = Math.min(width / (b.right - b.left), height / (b.bottom - b.top)),
-            w = s * window.innerWidth,
-            h = s * window.innerHeight,
-            x = (width - s * (b.right + b.left)) / 2,
-            y = (height - s * (b.bottom + b.top)) / 2;
+            w = s * (sb.right - sb.left),
+            h = s * (sb.bottom - sb.top),
+            x = sb.left * s + (width - s * (b.right + b.left)) / 2,
+            y = sb.top * s + (height - s * (b.bottom + b.top)) / 2;
 
-        this.matrix = [1, 0, 0, 1, 0, 0];
-        this.selection.attr({x:x, y:y, width: w, height: h, transform:'none'});
-      };
-      minimap.translate = function(dx, dy) {
-        this.matrix[4] += dx; this.matrix[5] += dy;
-        this.selection.attr('transform', 'matrix(' + this.matrix.join(' ') + ')');
+        this.selection.attr({x:x, y:y, width: w, height: h});
       };
     }
 
@@ -247,8 +241,189 @@
           .on('click', function () { handleZoom(0, 0, 0.5); });
     }
 
+    function updateInfo(data, regions, cities) {
+      var symbols = {'M': 'million', 'K': 'thousands'};
+      var formatter = function (n) {
+        var v = d3.formatPrefix(n);
+        return v.scale(n).toFixed(1) + ' ' + symbols[v.symbol];
+      };
+
+      var totals = {
+        affectedPeople: 0,
+        IDP: 0,
+        damagedHouses: 0
+      };
+
+      var day = d3.keys(stats).pop();
+
+      var date = d3.time.format("%d %b %Y")(new Date(parseInt(day, 10)));
+
+      var stat = stats[day];
+
+      d3.keys(stat).forEach(function (k) {
+        var municipality = stat[k],
+            region = regions[parseInt(k.substr(0, 2), 10) - 1],
+            affectedPeople = municipality.affectedPeople || 0,
+            IDP = municipality.IDP || 0,
+            damagedHouses = municipality.damagedHouses || 0;
+
+        region.affectedPeople = (region.affectedPeople || 0) + affectedPeople;
+        region.IDP = (region.IDP || 0) + IDP;
+        region.damagedHouses = (region.damagedHouses || 0) + damagedHouses;
+
+        totals.affectedPeople += affectedPeople;
+        totals.IDP += IDP;
+        totals.damagedHouses += damagedHouses;
+      });
+
+      var tooltip = d3.select('body').append('div')
+          .attr('class', 'tooltip info right');
+
+      function createGraph(section, title, type, data) {
+        data = data.filter(function (d) { return typeof d[type] !== 'undefined'; });
+
+        data.sort(function (a, b) {
+          return b[type] - a[type];
+        });
+
+        var barHeight = 20,
+            width = 300,
+            height = data.length * barHeight,
+            margin = {
+              left: 40,
+              top: 20,
+              right: 10,
+              bottom: 20
+            };
+
+        var formatter = d3.format('.2s');
+
+        var graph = section.append('div')
+            .attr('class', 'graph');
+
+        graph.append('h4')
+            .attr('class', 'title')
+            .html('Number of ' + title.toLowerCase());
+
+        var svg = graph.append('svg')
+            .attr('width', width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom)
+          .append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+        var xScale = d3.scale.linear()
+            .range([0, width])
+            .domain([0, d3.max(data, function (d) { return d[type]; })]);
+
+        var xAxis = d3.svg.axis()
+            .scale(xScale)
+            .orient("bottom")
+            .tickFormat(formatter)
+            .ticks(6);
+
+        svg.selectAll("grid")
+            .data(xScale.ticks(6))
+          .enter().append("line")
+            .attr({
+                "class": "grid",
+                "x1" : function(d) { return xScale(d); },
+                "x2" : function(d) { return xScale(d); },
+                "y1" : 0,
+                "y2" : height + 5,
+                "fill" : "none",
+                "shape-rendering" : "crispEdges",
+                "stroke" : "#eee",
+                "stroke-width" : "1px"
+            });
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+        var commas = d3.format("0,000");
+
+        var bar = svg.selectAll('.bar')
+            .data(data)
+          .enter().append('g')
+            .attr('class', 'bar')
+            .attr('transform', function (d, i) { return 'translate(0,' + i * barHeight + ')'; })
+            .on('mousemove', function mouseover () {
+              tooltip.style({left: d3.event.clientX + 16 + 'px', top: d3.event.clientY - 16 + 'px'});
+            })
+            .on('mouseover', function mouseout () {
+              var datum = d3.select(this).datum();
+              tooltip
+                .html(datum.Rname + ' (' + datum.Region_nam + ')' + '</br><span>' + title + ':</span> <strong>' + commas(datum[type]) + '</strong>')
+                .style({display: 'block', left: d3.event.clientX + 16 + 'px', top: d3.event.clientY - 16 + 'px'});
+            })
+            .on('mouseout', function mouseout () {
+              tooltip.style('display', 'none');
+            });
+
+        bar.append('text')
+            .attr('class', 'category')
+            .attr('x', -3)
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em")
+            .text(function(d) { return d.Rname; });
+
+        bar.append('rect')
+            .attr('width', function (d) { return xScale(d[type]); })
+            .attr('height', barHeight - 4)
+            .attr("y", 2);
+
+        bar.append('text')
+            .attr('class', function (d) {
+              return 'value ' + (xScale(d[type]) > width / 10 ? 'end' : 'start');
+            })
+            .attr('x', function (d) {
+              var x = xScale(d[type]);
+              return x > width / 10 ? x -3 : x + 3;
+            })
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em")
+            .text(function(d) { return formatter(d[type]); });
+      }
+
+      // Affected people section.
+      var section = d3.select('#info .section.affected-people');
+      section.append('div')
+          .attr('class', 'total affectedPeople')
+          .html('<i class="icon-affectedPeople"></i>' +
+            '<strong>' + formatter(totals.affectedPeople) + '</strong>' +
+            '<em>affected (' + date + ')</em>');
+
+      createGraph(section, 'Affected people', 'affectedPeople', regions);
+
+      section.append('div')
+          .attr('class', 'total IDP')
+          .html('<i class="icon-IDP"></i>' +
+            '<strong>' + formatter(totals.IDP) + '</strong>' +
+            '<em>displaced (' + date + ')</em>');
+
+      createGraph(section, 'Displaced people', 'IDP', regions);
+
+      section.append('p')
+        .html('Source: DSWD');
+
+      // Damages section
+      var section = d3.select('#info .section.damages');
+
+      section.append('div')
+          .attr('class', 'total damagedHouses')
+          .html('<i class="icon-damagedHouses"></i>' +
+            '<strong>' + formatter(totals.damagedHouses) + '</strong>' +
+            '<em>damaged houses (' + date + ')</em>');
+
+      createGraph(section, 'Damaged houses', 'damagedHouses', regions);
+
+      section.append('p')
+        .html('Source: DROMIC');
+    }
+
     // Draw the map.
-    function drawMap(world, boundaries, country, regions, cities) {
+    function drawMap(world, boundaries, country, regions, cities, track) {
       var iso3 = 'PHL';
 
       // World.
@@ -326,6 +501,65 @@
           .attr('d', path)
           .attr('vector-effect', 'non-scaling-stroke');
 
+      // Region labels.
+      svg.append('g')
+          .attr('class', 'regions')
+        .selectAll('region')
+          .data(regions)
+        .enter().append('text')
+          .attr('class', 'region')
+          .attr('transform', function(d) { return 'translate(' + projection([d.POINT_X, d.POINT_Y]) + ')'; })
+          .attr('dy', '.35em')
+          .text(function(d) { return d.Rname; });
+
+      // Cities labels.
+      var features = d3.values(cities).filter(function (d) { return d.CLASS == 1; }).map(function (d) {
+        return {
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: projection([d.LONGITUDE, d.LATITUDE])
+          },
+          properties: {
+            name: d.NAME,
+            type: parseInt(d.CLASS, 10)
+          }
+        };
+      });
+
+      var citiesGroup = svg.append('g')
+          .attr('class', 'cities');
+
+      citiesGroup.selectAll('anchor')
+          .data(features)
+        .enter().append('circle')
+          .attr('class', 'anchor')
+          .attr('cx', function (d) { return d.geometry.coordinates[0]; })
+          .attr('cy', function (d) { return d.geometry.coordinates[1]; })
+          .attr('r', 6)
+          .attr('vector-effect', 'non-scaling-stroke');
+
+      citiesGroup.selectAll('label')
+          .data(features)
+        .enter().append('text')
+          .attr('class', 'label')
+          //.attr('transform', function (d) { return 'translate(' + d.geometry.coordinates + ')'; })
+          .attr('x', function (d) { return d.geometry.coordinates[0]; })
+          .attr('y', function (d) { return d.geometry.coordinates[1]; })
+          //.attr('dx', '-6')
+          .text(function (d) { return d.properties.name; });
+
+      // Typhoon track.
+      svg.append('path')
+          .datum(track)
+          .attr('class', 'track')
+          .attr('d', function(d) {
+            return 'M' + d.map(function (e) {
+              return projection([e.LON, e.LAT]);
+            }).join('L');
+          })
+          .attr('vector-effect', 'non-scaling-stroke');
+
       addZoom();
       addDateSelector();
       addIndexSelector();
@@ -333,6 +567,58 @@
       addMiniMap(country);
 
       createZoom(country.bbox, width, height);
+    }
+
+    // Inverse transformation matrix.
+    function inverseMatrix(m) {
+      var a = m[0],
+          b = m[2],
+          c = m[4],
+          d = m[1],
+          e = m[3],
+          f = m[5],
+          det = a * e - b * d,
+          A = e / det,
+          B = -b / det,
+          C = (b * f - c * e) / det,
+          D = -d / det,
+          E = a / det,
+          F = (c * d - a * f) / det;
+
+      return [A, D, B, E, C, F];
+    }
+
+    function multiplyMatrices(m, M) {
+      var a = m[0],
+          b = m[2],
+          c = m[4],
+          d = m[1],
+          e = m[3],
+          f = m[5],
+          A = M[0],
+          B = M[2],
+          C = M[4],
+          D = M[1],
+          E = M[3],
+          F = M[5];
+
+      return [
+        a * A + b * D,
+        d * A + e * D,
+        a * B + b * E,
+        d * B + e * E,
+        a * C + b * F,
+        d * C + e * F];
+    }
+
+    function updateNonScalable(scale) {
+      d3.selectAll('.cities .anchor')
+          .attr('r', 6 / scale);
+
+      d3.selectAll('.cities .label')
+          .style('font-size', 20 / scale)
+          .attr('dx', -10 / scale)
+          .attr('dy', 6 / scale);
     }
 
     function setData(data) {
@@ -452,6 +738,8 @@
             matrix[i] *= scale;
           }
           pan(scale * width / 2, scale * height / 2);
+
+          updateNonScalable(matrix[0]);
         }
       }
 
@@ -511,16 +799,19 @@
           .defer(d3.json, 'data/un.boundaries.mercator.topojson')
           .defer(d3.json, 'data/un.phl.mercator.topojson')
           .defer(d3.csv, 'data/un.phl.regions.csv.json')
-          .defer(d3.csv, 'data/un.phl.cities.csv.json');
+          .defer(d3.csv, 'data/un.phl.cities.csv.json')
+          .defer(d3.csv, 'data/track.csv');
 
-      loader.await(function (error, data, world, boundaries, country, regions, cities) {
+      loader.await(function (error, data, world, boundaries, country, regions, cities, track) {
         spinner.stop();
         if (error === null) {
           setData(data);
 
-          drawMap(world, boundaries, country, regions, cities);
+          drawMap(world, boundaries, country, regions, cities, track);
 
           updateMap();
+
+          updateInfo(data, regions, cities);
         }
       });
     }
@@ -551,10 +842,14 @@
     layerControl.append('div').attr('class', 'bottom right');
     layerControl.append('div').attr('class', 'bottom left');
 
-    // Label.
-    var label = layerMarker.append('div')
+    // Tooltip.
+    var tooltip = layerMarker.append('div')
         .style('display', 'none')
-        .attr('class', 'label right');
+        .attr('class', 'tooltip right');
+
+    var projection = d3.geo.mercator()
+        .scale(width / 2 / Math.PI)
+        .translate([width / 2, height / 2]);
 
     var path = d3.geo.path()
         .projection(null)
@@ -568,11 +863,24 @@
 
     var svgDefs = svgContainer.append('defs');
 
+    svgDefs.append('marker')
+        .attr({
+          id: 'track-marker',
+          viewBox: '0 0 1 1',
+          refY: 0.5,
+          markerWidth: 1,
+          markerHeight: 1,
+          orient: 'auto',
+          markerUnits: 'userSpaceOnUse'
+        })
+      .append('path')
+        .attr('d', 'M0,0.5v-0.5l1,0.5l-1,0.5z');
+
     var svg = svgContainer.append('g')
         .attr('transform', 'matrix(1 0 0 1 0 0)')
-        .on('mousemove', moveLabel)
-        .on('mouseover', showLabel)
-        .on('mouseout', hideLabel);
+        .on('mousemove', moveTooltip)
+        .on('mouseover', showTooltip)
+        .on('mouseout', hideTooltip);
 
     return {
       load: function () {

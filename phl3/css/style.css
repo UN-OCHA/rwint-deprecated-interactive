@@ -23,6 +23,12 @@ body {
   padding: 0;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: green;
 }
 
 i {
@@ -73,38 +79,298 @@ svg {
   color: #c95a23;
 }
 
-.section {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 600px;
+/**
+ * Labels.
+ */
+.tooltip {
+  font-weight: normal;
+}
+.tooltip .name {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.tooltip i {
+  font-size: 10px;
+  margin: 0 2px 0 6px;
+}
+.tooltip {
+  background: #ebebeb;
+  background: rgba(235, 235, 235, 0.81);
+  background-clip: padding-box;
+  border-color: #777;
+  border-color: rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 4px;
+  color: #111;
+  display: block;
+  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 1px 6px;
+  position: absolute;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 6;
+}
+.tooltip.clickable {
+  cursor: pointer;
+}
+.tooltip:before,
+.tooltip:after {
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  content: none;
+  position: absolute;
+  top: 5px;
+}
+.tooltip:before {
+  border-right: 6px solid black;
+  border-right-color: inherit;
+  left: -10px;
+}
+.tooltip:after {
+  border-left: 6px solid black;
+  border-left-color: inherit;
+  right: -10px;
+}
+.tooltip.right:before,
+.tooltip.left:after {
+  content: "";
 }
 
-h3.section-header {
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  text-align: center;
+.tooltip.info {
+  background: rgba(235, 235, 235, 0.9);
+  border-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  z-index: 9999999;
+}
+.tooltip.info span {
+  font-weight: normal;
+}
+
+#header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 40px;
+}
+#content {
+  position: absolute;
+  /*height: auto;*/
+  bottom: 40px;
+  top: 40px;
+  left: 0;
+  right: 0;
+  background: red;
+}
+#footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background: black;
+  color: white;
+}
+
+#header {
   background: #026CB6;
-  height: 50px;
-  line-height: 50px;
-  margin: 0;
-  color: #fff;
-  display: block;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   z-index: 2;
+}
+#header h3 {
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  text-align: left;
+  line-height: 40px;
+  padding-left: 10px;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#footer {
+  background: #026CB6;
+  z-index: 2;
+}
+#footer .disclaimer {
+  font-size: 10px;
+  line-height: 15px;
+  color: #fff;
+  padding: 5px;
 }
 
 #map {
   background: #e9eef9;
+  position: absolute;
+  top: 0;
+  left: 400px;
+  right: 0;
+  bottom: 0;
+}
+.layer-map {
+  position: relative;
+  height: 100%;
+  width: 100%;
 }
 
-/**
- * Map layer.
- */
-/**
- * Marker Layer.
- */
+#info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 400px;
+  background: white;
+  border-right: 1px solid #aaa;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  overflow-y: scroll;
+}
+#info .tabs,
+#info .tabs li {
+  margin: 0;
+  padding: 0;
+}
+#info .tabs {
+  margin-top: 20px;
+  position: relative;
+}
+#info .tabs li {
+  display: inline;
+}
+#info .tabs li > label {
+  font-size: 11px;
+  color: #666;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 1px solid #999;
+  background: #dadada;
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  z-index: 2;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+#info .tabs li:first-child > label {
+  margin-left: 3px;
+}
+#info .tabs li > label:hover {
+  color: #333;
+  background: #bababa;
+}
+#info .section {
+  border-top: 1px solid #999;
+  display: none;
+  position: absolute;
+  top: 24px;
+  padding: 10px;
+  color: #000;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+#info .section p {
+  color: #666;
+}
+#info .tabs li > input[name=tabs] {
+  display: none;
+}
+#info .tabs li >input[name=tabs]:checked ~ .section {
+  display: block;
+}
+#info .tabs li > input[name=tabs]:checked + label {
+  background: #fff;
+  color: #026CB6;
+  border-bottom: 1px solid #fff;
+}
+#info #timeline {
+  width: 100%;
+  height: 700px;
+}
+#info .section .total {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid #026CB6;
+  border-bottom: 1px solid #026CB6;
+  padding: 5px;
+  margin: 30px 0 10px;
+  height: 50px;
+}
+#info .section .total i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 3px;
+  left: 5px;
+  font-size: 50px;
+}
+#info .section .total strong,
+#info .section .total em {
+  display: block;
+  margin-left: 60px;
+}
+#info .section .total strong {
+  color: #026CB6;
+  font-size: 24px;
+}
+#info .section .total em {
+  color: #999;
+  font-size: 14px;
+}
+
+#info .section .graph {
+  position: relative;
+}
+#info .section .graph .title {
+  color: rgb(244, 121, 50);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 10px;
+}
+#info .section .graph .axis text {
+  font: 10px sans-serif;
+  fill: #999;
+}
+#info .section .graph .axis path,
+#info .section .graph .axis line {
+  fill: none;
+  stroke: none;
+  shape-rendering: crispEdges;
+}
+#info .section .graph .grid {
+  stroke: #ccc;
+}
+#info .section .graph .bar rect {
+  fill: #026CB6;
+}
+#info .section .graph .bar:hover rect {
+  stroke: #ccc;
+}
+#info .section .graph .bar .category {
+  text-anchor: end;
+  fill: #026CB6;
+}
+#info .section .graph .bar .value {
+  font-size: 10px;
+}
+#info .section .graph .bar .value.start {
+  text-anchor: start;
+  fill: #333;
+}
+#info .section .graph .bar .value.end {
+  text-anchor: end;
+  fill: #fff;
+}
 /**
  * Control layer.
  */
@@ -115,7 +381,7 @@ h3.section-header {
 .layer-control > div {
   position: absolute;
   z-index: 1000;
-  pointer-events: none;
+  /*pointer-events: none;*/
 }
 
 .layer-control > div.top {
@@ -247,7 +513,7 @@ h3.section-header {
   width: 150px;
   height: 150px;
   background: rgba(235, 235, 235, 0.81);
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 .control.minimap canvas {
@@ -259,11 +525,6 @@ h3.section-header {
   z-index: 1;
 }
 
-.control.minimap {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-}
 .control.minimap svg {
   position: absolute;
   top: 0;
@@ -276,89 +537,81 @@ h3.section-header {
 
 .control.minimap .selection {
   position: absolute;
-  /*outline: 1px solid rgba(255, 120, 0, 0.5);
-  background: rgba(255, 120, 0, 0.2);*/
   z-index: 2;
   stroke: #111111;
   stroke-width: 1px;
   fill-opacity: 0.15;
   fill: #000000;
-  /* fill: url(#minimapGradient); */
-  /* filter: url(#minimapDropShadow); */
   /*cursor: move;*/
 }
 
+/*.sidebar {
+  background: white;
+  position: absolute;
+  border: 2px solid #aaa;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  top: 10px;
+  left: -400px;
+  bottom: 10px;
+  width: 400px;
+}
+.sidebar.visible {
+  left: 10px;
+}
+.sidebar.visible ~ div.left {
+  left: 440px;
+}
+.sidebar ~ div.left {
+  left: 30px;
+}
+.sidebar .close {
+  position: absolute;
+  top: -2px;
+  right: -22px;
+  cursor: pointer;
+  background: white;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 18px;
+  vertical-align: middle;
+  border: 2px solid #aaa;
+  border-left: none;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 20px;
+  color: #555;
+}
+.sidebar .close:after {
+  content: "\BB";
+}
+.sidebar.visible .close:after {
+  content: "\AB";
+}
+.sidebar #info {
+  display: block;
+  display: block;
+  z-index: 10;
+  position: absolute;
+  background: white;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.sidebar {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}*/
+
+
+
+
 .dragging {
   cursor: move;
-}
-
-/**
- * Labels.
- */
-.label {
-  font-weight: normal;
-}
-
-.label .name {
-  text-transform: capitalize;
-  font-weight: bold;
-}
-
-.label i {
-  font-size: 10px;
-  margin: 0 2px 0 6px;
-}
-.label {
-  background: #ebebeb;
-  background: rgba(235, 235, 235, 0.81);
-  background-clip: padding-box;
-  border-color: #777;
-  border-color: rgba(0, 0, 0, 0.25);
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 4px;
-  color: #111;
-  display: block;
-  font: 12px/20px "Helvetica Neue", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 1px 6px;
-  position: absolute;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  z-index: 6;
-}
-
-.label.clickable {
-  cursor: pointer;
-}
-
-.label:before,
-.label:after {
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  content: none;
-  position: absolute;
-  top: 5px;
-}
-
-.label:before {
-  border-right: 6px solid black;
-  border-right-color: inherit;
-  left: -10px;
-}
-
-.label:after {
-  border-left: 6px solid black;
-  border-left-color: inherit;
-  right: -10px;
-}
-
-.label.right:before,
-.label.left:after {
-  content: "";
 }
 
 .country {
@@ -421,18 +674,42 @@ path {
   stroke-dasharray: 1;
 }
 
-.cities .anchors {
+.cities .anchor {
   stroke-linecap: round;
   stroke: #000;
+  stroke-width: 1;
+  pointer-events: none;
 }
 .cities .label {
-  font: 300 14px Arial;
+  font: 300 16px Arial;
   fill: #333;
-  /*alignment-baseline: middle;*/
+  text-anchor: end;
+  pointer-events: none;
 }
 .cities .label.start {
   text-anchor: start;
 }
 .cities .label.end {
   text-anchor: end;
+}
+
+.regions .region {
+  fill: #777;
+  fill-opacity: .4;
+  font-size: 1.5px;
+  font-weight: 300;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+.track {
+  fill: none;
+  stroke: rgba(161, 217, 155, 0.3);
+  stroke-width: 5;
+  marker-mid: url(#track-marker);
+  pointer-events: none;
+}
+#track-marker {
+  fill: rgba(161, 217, 155, 0.3);
+  pointer-events: none;
 }
