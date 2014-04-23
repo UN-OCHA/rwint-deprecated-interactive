@@ -1,162 +1,92 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Philippines Typhoon Haiyan</title>
-
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-    
-    <!-- map -->
-    <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.js'></script>
-    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.2/mapbox.css' rel='stylesheet' />
-    
-    <!-- menu -->
-   	<script src="../SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
-    <link href="../SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css">
-    
-    <!-- style for map -->
-    <style>
-    body { margin:0; padding:0; }
-    #map {
-	position:absolute;
-	top:0;
-	bottom:0;
-	width:100%;
-	left: 400px;
-}
-    </style>
-    
-	<!-- general text style -->
-	<link href="../interactive.css" rel="stylesheet" type="text/css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ReliefWeb Labs - Philippines: Typhoon Haiyan</title>
+<link rel="icon" type="image/ico" href="favicon.ico">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-	<div id='map'></div>
- 
-	<!-- header line -->
-    <div id='header'>
-      <a href='/' class='title'>PHILIPPINES TYPHOON HAIYAN</a>
-      <ul class='pages'>
-        <li>
-          <a href='http://reliefweb.int/disaster/tc-2013-000139-phl' class='timeline-popup-show' target='_blank'>ReliefWeb</a>
-        </li>
-        <li>
-          <a href='https://philippines.humanitarianresponse.info/' target='_blank' >Humanitarian Info</a>
-        </li>
-        <li>
-          <a href='http://www.unocha.org/crisis/typhoonhaiyan' target='_blank' >OCHA</a>
-        </li>
-        <li>
-          <a href='http://fts.unocha.org/pageloader.aspx?page=emerg-emergencyDetails&appealID=1043' target='_blank' >FTS</a>
-        </li>
 
-      </ul>
-      <a href='http://unocha.org' target='_blank' class='ocha'>UN OCHA</a>
-    </div>
-	<!-- left sidebar -->
-    <div id='sidebar'>
-    &nbsp;
-    	<div id="TabbedPanels1" class="TabbedPanels">
-              <ul class="TabbedPanelsTabGroup">
-                <li class="TabbedPanelsTab" tabindex="0">Overview</li>
-                <li class="TabbedPanelsTab" tabindex="0">Affected people</li>
-                <li class="TabbedPanelsTab" tabindex="0">Damages</li>
-                <li class="TabbedPanelsTab" tabindex="0">Funding</li>
-              </ul>
-         
-         	<div class="TabbedPanelsContentGroup">
-            
-            	<!--Overview-->
-                <div class="TabbedPanelsContent">
-                    <h2>Overview</h2>
-                    <h3>Typhoon Haiyan</h3>
-                    <p>Typhoon Haiyan (known locally as Yolanda) made first landfall in the early morning of 8 November 2013 in the Philippines, devastating nine regions and affecting over 15 million people. More than 5,000 were confirmed deaths.</p>
-                    <HR color="#026CB6" size="1" NOSHADE>
-                    <h3>Timeline of events</h3>
-                    <iframe src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Ap0itMVUpmqcdGlPaXRfbDctT3lYRS10MGpoVDVNMUE&font=PT&maptype=TERRAIN&lang=en&height=700' width='100%' height='700' frameborder='0'></iframe>
-                </div>
-                
-                <!--Affected-->
-                <div class="TabbedPanelsContent">
-                	<h2>Affected people</h2>
+<div id="header">
+  <a href="/" class="title">Philippines - Typhoon Haiyan</a>
+  <a href="http://reliefweb.int/disaster/tc-2013-000139-phl" class="link" target="_blank">ReliefWeb</a>
+  <a href="https://philippines.humanitarianresponse.info/" class="link" target="_blank">Humanitarian Info</a>
+  <a href="http://www.unocha.org/crisis/typhoonhaiyan" class="link" target="_blank">OCHA</a>
+  <a href="http://fts.unocha.org/pageloader.aspx?page=emerg-emergencyDetails&amp;appealID=1043" class="link" target="_blank">FTS</a>
+  <a href="http://unocha.org" target="_blank" class="ocha" title="UN OCHA"><img src="css/images/logo-ocha.png" /></a>
+</div>
 
-                    An estimated 13 million people in nine regions—over 10 per cent of the country's population—are affected. At least 3 million people are displaced by the typhoon. Thousands of people have been killed or are still missing. Tens of thousands suffering from injuries.<br />&nbsp;
-                    <table width="100%" border="0" class="blue_line">
-                    	<tr>
-                    		<td width="50"><img src="../_images/affected.gif" width="50" height="50" /></td>
-                    		<td>
-                    			<div class="big_number">13 million</div>
-                    			<div class="number_text">affected (23 Nov '13)</div></td>
-                    	</tr>
-                    </table>
-                    <br /><div class="graph_title">Number of affected people</div>
-                    <script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/a/reliefweb.int/spreadsheet/tq?key=0Ap0itMVUpmqcdGtrUThmUmdpZnY3UWZULTFWZk5MWmc&transpose=0&headers=1&merge=COLS&range=A1%3AA10%2CC1%3AC10&gid=0&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":16},"series":{"0":{"color":"#026CB6"}},"animation":{"duration":500},"width":300,"hAxis":{"useFormatFromData":false,"formatOptions":{"source":"inline","scaleFactor":"1000000","suffix":"M"},"minValue":null,"format":"0.##","viewWindow":{"min":null,"max":null},"maxValue":null},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},{"useFormatFromData":true}],"booleanRole":"certainty","title":"","height":200,"domainAxis":{"direction":1},"legend":"none","annotations":{"domain":{}},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"BarChart","chartName":"Chart 1"} </script>
-                    <table width="100%" border="0" class="blue_line">
-                    	<tr>
-                    		<td width="50"><img src="../_images/displaced.gif" width="50" height="50" /></td><td><div class="big_number">4 million</div><div class="number_text">
-                    displaced (7 Dec 03)</div></td>
-                    	</tr>
-                    </table>
-                    <br /><div class="graph_title">Number of displaced people</div>
-                    <script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/a/reliefweb.int/spreadsheet/tq?key=0Ap0itMVUpmqcdGtrUThmUmdpZnY3UWZULTFWZk5MWmc&transpose=0&headers=1&merge=COLS&range=A1%3AA10%2CD1%3AD10&gid=0&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":16},"series":{"0":{"color":"#026CB6"}},"animation":{"duration":500},"width":300,"hAxis":{"useFormatFromData":false,"formatOptions":{"source":"inline","scaleFactor":"1000000","suffix":"M"},"minValue":null,"format":"0.##","viewWindow":{"min":null,"max":null},"maxValue":null},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},{"useFormatFromData":true}],"booleanRole":"certainty","title":"","height":200,"domainAxis":{"direction":1},"legend":"none","annotations":{"domain":{}},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"BarChart","chartName":"Chart 1"} </script>
-                    Source: DSWD
-                </div>
-                
-                <!--Damage-->
-                <div class="TabbedPanelsContent">
-                	<h2>Damages</h2>
-                    The typhoon caused incredible destruction to shelter and housing in many communities along its path. Many cities and towns experienced widespread destruction, with as much as 90 per cent of housing destroyed in some areas. Inferior quality materials and poor construction underscore much of the devastation to houses: observations from the field confirm that many of the houses destroyed were built from wood and other fragile materials. The priority is to support self-recovery while also ensuring safe temporary shelter for those unable to repair or reconstruct their homes. <br />&nbsp;
-                    <table width="100%" border="0" class="blue_line">
-                    	<tr>
-                    		<td width="50"><img src="../_images/house_damaged.gif" width="50" height="50" /></td>
-                    		<td>
-                    		<div class="big_number">1 million</div>
-                   		 	<div class="number_text">houses damaged (23 Nov '13)</div>
-                    		</td>
-                    	</tr>
-                    </table>
-                    <script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/a/reliefweb.int/spreadsheet/tq?key=0Ap0itMVUpmqcdGtrUThmUmdpZnY3UWZULTFWZk5MWmc&transpose=0&headers=1&merge=COLS&range=A1%3AA10%2CE1%3AE10&gid=0&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":16},"series":{"0":{"color":"#026CB6"}},"animation":{"duration":500},"width":350,"hAxis":{"useFormatFromData":false,"formatOptions":{"source":"inline","scaleFactor":"1000000","suffix":"M"},"minValue":null,"format":"0.##","viewWindow":{"min":null,"max":null},"maxValue":null},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},{"useFormatFromData":true}],"booleanRole":"certainty","title":"","height":200,"domainAxis":{"direction":1},"legend":"none","annotations":{"domain":{}},"isStacked":false,"tooltip":{}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"BarChart","chartName":"Chart 1"} </script>
-                </div>
-                
-                <!--Funding -->
-                <div class="TabbedPanelsContent">
-                	<h2>Funding</h2>
-                    In November 2013, the United Nations and its partners have launched their humanitarian plans for 2014 with the appeal totalling US$791 billion to support the Government of the Philippines' response to the immediate humanitarian needs of the people affected by Typhoon Haiyan (Yolanda) and complements the Government's Yolanda Rehabilitation and Recovery Plan.
-                    <h3>Strategic Response Plan (Nov 2013 - Oct 2014)</h3>
-                        <table width="100%" border="0" class="blue_line" cellspacing="5">
-                        	<tr>
-                                <td width="35"><img src="../_images/requested.gif" width="35" height="35"></td>
-                                <td><div class="big_number">$791M</div>
-                                requested</td>
-                                <td width="35"><img src="../_images/funded.gif" width="35" height="35"></td>
-                                <td><div class="big_number">$254M</div>
-                                funded</td>
-                                <td width="35"><img src="../_images/percent.gif" width="35" height="35"></td>
-                                <td><div class="big_number">32%</div>
-                                funded</td>
-                        	</tr>
-                        </table>
-					<script type="text/javascript" src="//ajax.googleapis.com/ajax/static/modules/gviz/1.0/chart.js"> {"dataSourceUrl":"//docs.google.com/a/reliefweb.int/spreadsheet/tq?key=0Ap0itMVUpmqcdGtrUThmUmdpZnY3UWZULTFWZk5MWmc&transpose=0&headers=0&merge=COLS&range=A1%3AA14%2CC1%3AC14%2CD1%3AD14&gid=2&pub=1","options":{"titleTextStyle":{"bold":true,"color":"#000","fontSize":16},"series":{"0":{"color":"#026CB6"},"1":{"color":"#CCC"}},"animation":{"duration":500},"width":380,"hAxis":{"useFormatFromData":false,"formatOptions":{"source":"inline","scaleFactor":"1000000","suffix":"M"},"minValue":null,"format":"0.##","viewWindow":{"min":null,"max":null},"logScale":false,"maxValue":null},"vAxes":[{"useFormatFromData":true,"minValue":null,"viewWindowMode":null,"viewWindow":null,"maxValue":null},{"useFormatFromData":true}],"booleanRole":"certainty","title":"","height":371,"legend":"none","focusTarget":"series","isStacked":true,"tooltip":{"trigger":"none"}},"state":{},"view":{},"isDefaultVisualization":false,"chartType":"BarChart","chartName":"Chart 4"} </script>
-                    <h2>Total funding to emergency</h2>
-                    <table width="100%" border="0" class="blue_line" cellspacing="5">
-                        	<tr>
-                                <td width="35"><img src="../_images/funded.gif" width="35" height="35"></td>
-                                <td><div class="big_number">$532M</div>
-                                funded</td>
-                        	</tr>
-                        </table>
-                </div>
-          	</div>
+<div id="content">
+  <div id="info">
+    <ul class="tabs">
+      <li>
+        <input type="radio" name="tabs" id="tab1" checked="checked"/>
+        <label for="tab1">Overview</label>
+        <div class="section overview">
+          <h2>Overview</h2>
+          <h3>Typhoon Haiyan</h3>
+          <p>Typhoon Haiyan (known locally as Yolanda) made first landfall in the early morning of 8 November 2013 in the Philippines, devastating nine regions and affecting over 15 million people. More than 5,000 were confirmed deaths.</p>
+          <HR color="#026CB6" size="1" NOSHADE>
+          <h3>Timeline of events</h3>
+          <iframe id="timeline" src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Ap0itMVUpmqcdGlPaXRfbDctT3lYRS10MGpoVDVNMUE&font=PT&maptype=TERRAIN&lang=en&height=700' width='100%' height='700' frameborder='0'></iframe>
         </div>
-    </div>
+      </li>
+      <li>
+        <input type="radio" name="tabs" id="tab2"/>
+        <label for="tab2">Affected People</label>
+        <div class="section affected-people">
+          <h2>Affected people</h2>
+          <p>An estimated 13 million people in nine regions—over 10 per cent of the country's population—are affected. At least 3 million people are displaced by the typhoon. Thousands of people have been killed or are still missing. Tens of thousands suffering from injuries.</p>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="tabs" id="tab3"/>
+        <label for="tab3">Damages</label>
+        <div class="section damages">
+          <h2>Damages</h2>
+          <p>The typhoon caused incredible destruction to shelter and housing in many communities along its path. Many cities and towns experienced widespread destruction, with as much as 90 per cent of housing destroyed in some areas. Inferior quality materials and poor construction underscore much of the devastation to houses: observations from the field confirm that many of the houses destroyed were built from wood and other fragile materials. The priority is to support self-recovery while also ensuring safe temporary shelter for those unable to repair or reconstruct their homes.</p>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="tabs" id="tab4"/>
+        <label for="tab4">Funding</label>
+        <div class="section funding">
+          <h2>Funding</h2>
+          <p>In November 2013, the United Nations and its partners have launched their humanitarian plans for 2014 with the appeal totalling US$791 billion to support the Government of the Philippines' response to the immediate humanitarian needs of the people affected by Typhoon Haiyan (Yolanda) and complements the Government's Yolanda Rehabilitation and Recovery Plan.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="map"></div>
+</div>
 
-    <!--script for menu -->
-	<script type="text/javascript">
-	var TabbedPanels1 = new Spry.Widget.TabbedPanels("TabbedPanels1");
-	</script>
-    <script>
-    var map = L.mapbox.map('map', 'reliefweb.1_AVMU_World')
-    .setView([10, 125], 6);
-    </script>
+<div id="footer">
+  <div class="sources">Sources: UNCS (international boundary), Government of Philippines (administrative boundaries), UNISYS (typhoon track), DROMIC (affected people, IDPs and damages), FTS (funding)</div>
+  <div class="disclaimer">The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</div>
+</div>
+
+<!-- Libraries -->
+<script src="js/hidpi-canvas.js"></script>
+<script src="js/simple_statistics.js"></script>
+<script src="js/spin.min.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/topojson.v1.min.js"></script>
+<script src="js/queue.v1.min.js"></script>
+<script src="js/colorbrewer.js"></script>
+
+<!-- Application -->
+<script src="js/section.map.js"></script>
+<script>
+(function () {
+  var spinner = new Spinner().spin(document.querySelector('#info .section.overview'));
+  document.getElementById('timeline').onload = function() {
+    spinner.stop();
+  };
+  sections.map('map').load();
+})();
+</script>
+
 </body>
 </html>
