@@ -23,6 +23,33 @@
       return (window.devicePixelRatio || 1) / backingStore;
     }
 
+    function wrap(text, width) {
+      var c = document.createElement('canvas').getContext('2d');
+      c.font = text.style('font');
+      text.each(function() {
+        var text = d3.select(this),
+            words = text.text().split(/\s+/).reverse(),
+            word,
+            line = [],
+            lineNumber = 0,
+            lineHeight = 0.9, // ems
+            y = text.attr("y"),
+            dy = parseFloat(text.attr("dy")),
+            tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y).attr("dx", "-.35em");//.attr("dy", dy + "em");
+        while ((word = words.pop()) && lineNumber < 1) {
+          line.push(word);
+          tspan.text(line.join(" "));
+          if (c.measureText(tspan.text()).width > width) {
+            line.pop();
+            tspan.text(line.join(" "));
+            line = [word];
+            tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight + "em").attr("dx", "-.35em").text(word);
+          }
+        }
+        text.attr('dy', (1 - lineNumber) * dy + 'em');
+      });
+    }
+
     function showTooltip() {
       var target = d3.select(d3.event.target);
 
@@ -129,8 +156,34 @@
           }).reverse().join('<br/>');
 
       html = '<h4><i class="icon-' + activeIndex + '"></i>' + indexes[activeIndex] + '</h4>' + html;
+      html += '<div class="source">Source: DROMIC</div>';
 
       layerControl.select('.control.legend').html(html);
+    }
+
+    function addTrack(track) {
+      // Typhoon track.
+      var layer = svg.append('path')
+          .datum(track)
+          .attr('class', 'track')
+          .attr('d', function(d) {
+            return 'M' + d.map(function (e) {
+              return projection([e.LON, e.LAT]);
+            }).join('L');
+          })
+          .attr('vector-effect', 'non-scaling-stroke');
+
+      layerControl.select('.top.right').append('div')
+          .attr('class', 'control track')
+          .html('<input type="checkbox" name="track" id="track" value="1" checked/>' +
+                '<label for="track">Typhoon track</label>' +
+                '<div class="source">Source: UNISYS</div>')
+          .on('click', function() {
+            var target = d3.event.target;
+            if (target.name === 'track') {
+              layer.style('display', target.checked ? 'block' : 'none');
+            }
+          });
     }
 
     function addMiniMap(data) {
@@ -390,31 +443,31 @@
       var section = d3.select('#info .section.affected-people');
       section.append('div')
           .attr('class', 'total affectedPeople')
-          .html('<i class="icon-affectedPeople"></i>' +
-            '<strong>' + formatter(totals.affectedPeople) + '</strong>' +
-            '<em>affected (' + date + ')</em>');
+          .html('<div><i class="icon-affectedPeople"></i>' +
+            '<div><strong>' + formatter(totals.affectedPeople) + '</strong>' +
+            '<em>affected (' + date + ')</em></div></div>');
 
       createGraph(section, 'Affected people', 'affectedPeople', regions);
 
       section.append('div')
           .attr('class', 'total IDP')
-          .html('<i class="icon-IDP"></i>' +
-            '<strong>' + formatter(totals.IDP) + '</strong>' +
-            '<em>displaced (' + date + ')</em>');
+          .html('<div><i class="icon-IDP"></i>' +
+            '<div><strong>' + formatter(totals.IDP) + '</strong>' +
+            '<em>displaced (' + date + ')</em></div></div>');
 
       createGraph(section, 'Displaced people', 'IDP', regions);
 
       section.append('p')
-        .html('Source: DSWD');
+        .html('Source: DROMIC');
 
       // Damages section
       var section = d3.select('#info .section.damages');
 
       section.append('div')
           .attr('class', 'total damagedHouses')
-          .html('<i class="icon-damagedHouses"></i>' +
-            '<strong>' + formatter(totals.damagedHouses) + '</strong>' +
-            '<em>damaged houses (' + date + ')</em>');
+          .html('<div><i class="icon-damagedHouses"></i>' +
+            '<div><strong>' + formatter(totals.damagedHouses) + '</strong>' +
+            '<em>damaged houses (' + date + ')</em></div></div>');
 
       createGraph(section, 'Damaged houses', 'damagedHouses', regions);
 
@@ -502,14 +555,20 @@
           .attr('vector-effect', 'non-scaling-stroke');
 
       // Region labels.
+      regions.forEach(function (d) {
+        d.geometry = {
+            type: 'Point',
+            coordinates: projection([d.POINT_X, d.POINT_Y])
+        };
+      });
       svg.append('g')
           .attr('class', 'regions')
         .selectAll('region')
           .data(regions)
         .enter().append('text')
           .attr('class', 'region')
-          .attr('transform', function(d) { return 'translate(' + projection([d.POINT_X, d.POINT_Y]) + ')'; })
-          .attr('dy', '.35em')
+          .attr('x', function (d) { return d.geometry.coordinates[0]; })
+          .attr('y', function (d) { return d.geometry.coordinates[1]; })
           .text(function(d) { return d.Rname; });
 
       // Cities labels.
@@ -547,23 +606,13 @@
           .attr('x', function (d) { return d.geometry.coordinates[0]; })
           .attr('y', function (d) { return d.geometry.coordinates[1]; })
           //.attr('dx', '-6')
-          .text(function (d) { return d.properties.name; });
-
-      // Typhoon track.
-      svg.append('path')
-          .datum(track)
-          .attr('class', 'track')
-          .attr('d', function(d) {
-            return 'M' + d.map(function (e) {
-              return projection([e.LON, e.LAT]);
-            }).join('L');
-          })
-          .attr('vector-effect', 'non-scaling-stroke');
+          .text(function (d) { return d.properties.name + ' \u272A'; });
 
       addZoom();
       addDateSelector();
       addIndexSelector();
       addLegend();
+      addTrack(track);
       addMiniMap(country);
 
       createZoom(country.bbox, width, height);
@@ -616,9 +665,12 @@
           .attr('r', 6 / scale);
 
       d3.selectAll('.cities .label')
-          .style('font-size', 20 / scale)
-          .attr('dx', -10 / scale)
-          .attr('dy', 6 / scale);
+          .style('font-size', 20 / scale + 'px')
+          .attr('dx', 8 / scale)
+          .attr('dy', 8 / scale);
+
+      d3.selectAll('.regions .region')
+          .style('font-size', 24 / scale + 'px');
     }
 
     function setData(data) {
@@ -787,6 +839,210 @@
       };
     }
 
+    function updateFTS(appeal, clusters, emergency) {
+      var formatter = function (n) {
+        var v = d3.formatPrefix(n);
+        return v.scale(n).toFixed(2) + v.symbol;
+      };
+
+      var labelFormatter = function (n) {
+        var v = d3.formatPrefix(n);
+        return Math.round(v.scale(n)) + v.symbol;
+      };
+
+      var percentage = d3.format(".0%");
+
+      var tooltip = d3.select('body').append('div')
+          .attr('class', 'tooltip info right');
+
+      function createGraph(section, title, data) {
+        data.sort(function (a, b) {
+          return b.current_requirement - a.current_requirement;
+        });
+
+        var barHeight = 20,
+            width = 240,
+            height = data.length * barHeight,
+            margin = {
+              left: 100,
+              top: 20,
+              right: 10,
+              bottom: 20
+            };
+
+        var graph = section.append('div')
+            .attr('class', 'graph');
+
+        graph.append('h4')
+            .attr('class', 'title')
+            .html(title);
+
+        var svg = graph.append('svg')
+            .attr('width', width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom)
+          .append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+        var xScale = d3.scale.linear()
+            .range([0, width])
+            .domain([0, d3.max(data, function (d) { return d.current_requirement; })]);
+
+        var xAxis = d3.svg.axis()
+            .scale(xScale)
+            .orient("bottom")
+            .tickFormat(formatter)
+            .ticks(6);
+
+        svg.selectAll("grid")
+            .data(xScale.ticks(6))
+          .enter().append("line")
+            .attr({
+                "class": "grid",
+                "x1" : function(d) { return xScale(d); },
+                "x2" : function(d) { return xScale(d); },
+                "y1" : 0,
+                "y2" : height + 5,
+                "fill" : "none",
+                "shape-rendering" : "crispEdges",
+                "stroke" : "#eee",
+                "stroke-width" : "1px"
+            });
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+        var bar = svg.selectAll('.bar')
+            .data(data)
+          .enter().append('g')
+            .attr('class', 'bar')
+            .attr('transform', function (d, i) { return 'translate(0,' + i * barHeight + ')'; })
+            .on('mousemove', function mouseover () {
+              tooltip.style({left: d3.event.clientX + 16 + 'px', top: d3.event.clientY - 16 + 'px'});
+            })
+            .on('mouseover', function mouseout () {
+              var d = d3.select(this).datum();
+
+              var covered = percentage(d.current_requirement ? d.funding / d.current_requirement : 1),
+                  requested = formatter(d.current_requirement),
+                  funded = formatter(d.funding);
+
+              tooltip
+                .html(d.name + '<br/>' +
+                  '<span>Covered:</span> <strong>' + covered + '</strong><br/>' +
+                  '<span>Requested:</span> <strong>$' + requested + '</strong><br/>' +
+                  '<span>Funded:</span> <strong>$' + funded + '</strong>'
+                  )
+                .style({display: 'block', left: d3.event.clientX + 16 + 'px', top: d3.event.clientY - 16 + 'px'});
+            })
+            .on('mouseout', function mouseout () {
+              tooltip.style('display', 'none');
+            });
+
+        bar.append('text')
+            .attr('class', 'category')
+            .attr('x', 0)
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em")
+            .text(function(d) { return d.name; })
+            .call(wrap, margin.left);
+
+        bar.append('rect')
+            .attr('class', 'requested')
+            .attr('width', function (d) { return xScale(d.current_requirement); })
+            .attr('height', barHeight - 4)
+            .attr("y", 2);
+
+        bar.append('rect')
+            .attr('class', 'funded')
+            .attr('width', function (d) { return xScale(d.funding); })
+            .attr('height', barHeight - 4)
+            .attr("y", 2);
+
+        bar.append('text')
+            .attr('class', function (d) {
+              return 'value ' + (xScale(d.funding) > width / 10 ? 'end' : 'start');
+            })
+            .attr('x', function (d) {
+              var x = xScale(d.funding);
+              return x > width / 10 ? x -3 : x + 3;
+            })
+            .attr("y", barHeight / 2)
+            .attr("dy", ".35em")
+            .text(function(d) { return labelFormatter(d.funding); });
+      }
+
+      function createPie(container, appeal) {
+        var data = [
+          appeal.funding,
+          appeal.current_requirements - appeal.funding
+        ];
+
+        var width = 40,
+            height = 40,
+            radius = Math.min(width, height) / 2;
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius)
+            .innerRadius(0);
+
+        var pie = d3.layout.pie()
+            .sort(null)
+            .value(function(d) { return d; });
+
+        var svg = container.append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+        var g = svg.selectAll(".arc")
+            .data(pie(data))
+          .enter().append("g")
+            .attr("class", "arc");
+
+        g.append("path")
+            .attr("d", arc)
+            .style("fill", function(d, i) { return i === 0 ? '#026cb6' : '#ccc'; });
+      }
+
+      var covered = percentage(appeal.current_requirements ? appeal.funding / appeal.current_requirements : 1),
+          requested = labelFormatter(appeal.current_requirements),
+          funded = labelFormatter(appeal.funding);
+
+      var section = d3.select('#info .section.funding');
+
+      section.append('h3')
+          .html("Strategic Response Plan (Nov 2013 - Oct 2014)");
+      section.append('div')
+          .attr('class', 'total appeal')
+          .html('<div><i class="icon-requested"></i>' +
+            '<div><strong>$' + requested + '</strong>' +
+            '<em>requested</em></div></div>' +
+            '<div><i class="icon-funded"></i>' +
+            '<div><strong>$' + funded + '</strong>' +
+            '<em>funded</em></div></div>' +
+            '<div><i class="icon-covered"></i>' +
+            '<div><strong>' + covered + '</strong>' +
+            '<em>covered</em></div></div>');
+
+      createPie(section.select('.icon-covered'), appeal);
+
+      createGraph(section, "Funding by clusters (USD)", clusters)
+
+      section.append('h3')
+          .html("Total funding to emergency");
+      section.append('div')
+          .attr('class', 'total funding')
+          .html('<div><i class="icon-funded"></i>' +
+            '<div><strong>$' + labelFormatter(emergency.total) + '</strong>' +
+            '<em>funded</em></div></div>');
+
+      section.append('p')
+        .html('Source: FTS');
+    }
+
     // Load the map data.
     function loadData() {
       var loader = queue();
@@ -814,6 +1070,18 @@
           updateInfo(data, regions, cities);
         }
       });
+    }
+
+    function loadFTS(appealId) {
+      queue()
+          .defer(d3.json, 'http://fts.rwdev.org/api/v1/appeal/id/' + appealId + '.json')
+          .defer(d3.json, 'http://fts.rwdev.org/api/v1/cluster/appeal/' + appealId + '.json')
+          .defer(d3.json, 'http://fts.rwdev.org/api/v1/funding.json?emergency=16439')
+          .await(function (error, appeal, clusters, emergency) {
+            if (error === null) {
+              updateFTS(appeal[0], clusters, emergency);
+            }
+          });
     }
 
     /********
@@ -886,6 +1154,8 @@
       load: function () {
         // Load the data.
         loadData();
+        // Load FTS data with appeal ID.
+        loadFTS(1043);
       }
     };
   };

@@ -28,7 +28,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: green;
 }
 
 i {
@@ -42,42 +41,47 @@ svg {
 .icon-reports:before {
   content: "\e61a";
 }
-
 .icon-jobs:before {
   content: "\e60a";
 }
-
 .icon-training:before {
   content: "\e607";
 }
-
 .icon-disasters:before {
   content: "\e62f";
 }
-
 .icon-affectedPeople:before {
   content: "\e6a7";
 }
-
 .icon-damagedHouses:before {
   content: "\e63f";
 }
-
 .icon-IDP:before {
   content: "\e62d";
+}
+.icon-funded:before {
+  content: "\e606";
+}
+.icon-requested:before {
+  content: "\e602";
 }
 
 .icon-affectedPeople {
   color: #026cb6;
 }
-
 .icon-damagedHouses {
   color: #ba1222;
 }
-
 .icon-IDP {
   color: #c95a23;
 }
+.icon-funded {
+  color: #026cb6;
+}
+.icon-requested {
+  color: #026cb6;
+}
+
 
 /**
  * Labels.
@@ -165,7 +169,6 @@ svg {
   top: 40px;
   left: 0;
   right: 0;
-  background: red;
 }
 #footer {
   position: absolute;
@@ -173,8 +176,8 @@ svg {
   right: 0;
   bottom: 0;
   height: 40px;
-  background: black;
   color: white;
+  border-top: 1px solid #333;
 }
 
 #header {
@@ -182,7 +185,11 @@ svg {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   z-index: 2;
 }
-#header h3 {
+#header a {
+  color: #ccc;
+  text-decoration: none;
+}
+#header .title {
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
@@ -194,16 +201,25 @@ svg {
   color: #fff;
   text-transform: uppercase;
 }
+#header img {
+  height: 40px;
+}
+#header .ocha {
+    float: right;
+}
+#header .link {
+  margin-left: 30px;
+}
 
 #footer {
   background: #026CB6;
   z-index: 2;
-}
-#footer .disclaimer {
-  font-size: 10px;
-  line-height: 15px;
+  overflow-y: auto;
+  padding: 3px;
+  font-size: 9px;
   color: #fff;
-  padding: 5px;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 
 #map {
@@ -245,12 +261,13 @@ svg {
   display: inline;
 }
 #info .tabs li > label {
-  font-size: 11px;
+  font-size: 14px;
   color: #666;
   font-weight: bold;
-  padding: 5px 10px;
-  border: 1px solid #999;
-  background: #dadada;
+  padding: 5px 0px;
+  margin-left: 2px;
+  /*border: 1px solid #999;*/
+  /*background: #dadada;*/
   list-style: none;
   cursor: pointer;
   display: inline-block;
@@ -261,18 +278,32 @@ svg {
        box-sizing: border-box;
 }
 #info .tabs li:first-child > label {
-  margin-left: 3px;
+  margin-left: 5px;
+}
+#info .tabs li > label:after {
+  content: "▸";
+  font-size: 20px;
+  margin-top: -5px;
+  margin-left: 5px;
+  display: inline-block;
+  line-height: 20px;
+  vertical-align: middle;
+  color: #666;
+}
+#info .tabs li:last-child > label:after {
+  display: none;
 }
 #info .tabs li > label:hover {
   color: #333;
-  background: #bababa;
+  /*background: #bababa;*/
 }
 #info .section {
-  border-top: 1px solid #999;
+  border-top: 2px solid #026CB6;
   display: none;
   position: absolute;
   top: 24px;
   padding: 10px;
+  margin-top: 5px;
   color: #000;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -283,13 +314,14 @@ svg {
 #info .tabs li > input[name=tabs] {
   display: none;
 }
-#info .tabs li >input[name=tabs]:checked ~ .section {
+#info .tabs li > input[name=tabs]:checked ~ .section {
   display: block;
 }
-#info .tabs li > input[name=tabs]:checked + label {
-  background: #fff;
+#info .tabs li > input[name=tabs]:checked + label,
+#info .tabs li > input[name=tabs]:checked + label:after {
+  /*background: #fff;*/
   color: #026CB6;
-  border-bottom: 1px solid #fff;
+  /*border-bottom: 1px solid #fff;*/
 }
 #info #timeline {
   width: 100%;
@@ -297,33 +329,43 @@ svg {
 }
 #info .section .total {
   position: relative;
-  width: 100%;
   border-top: 1px solid #026CB6;
   border-bottom: 1px solid #026CB6;
   padding: 5px;
   margin: 30px 0 10px;
-  height: 50px;
+  height: 40px;
+}
+#info .section .total > div {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
 }
 #info .section .total i {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 3px;
-  left: 5px;
-  font-size: 50px;
+  display: inline-block;
+  font-size: 40px;
+  margin-right: 5px;
+  vertical-align: top
 }
-#info .section .total strong,
+#info .section .total > div > div {
+  display: inline-block;
+  height: 40px;
+  margin-right: 5px;
+}
+#info .section .total strong {
+  float: left;
+}
 #info .section .total em {
-  display: block;
-  margin-left: 60px;
+  font-style: normal;
+  float: left;
+  clear: left;
 }
 #info .section .total strong {
   color: #026CB6;
-  font-size: 24px;
+  font-size: 20px;
 }
 #info .section .total em {
   color: #999;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 #info .section .graph {
@@ -354,7 +396,7 @@ svg {
   fill: #026CB6;
 }
 #info .section .graph .bar:hover rect {
-  stroke: #ccc;
+  stroke: #aaa;
 }
 #info .section .graph .bar .category {
   text-anchor: end;
@@ -370,6 +412,21 @@ svg {
 #info .section .graph .bar .value.end {
   text-anchor: end;
   fill: #fff;
+}
+#info .section.funding .graph .bar .category {
+  font-size: 10px;
+}
+#info .section.funding .graph .bar rect.funded {
+  fill: #026CB6;
+}
+#info .section.funding .graph .bar rect.requested {
+  fill: #ccc;
+}
+#info .section.funding .total {
+  margin: 10px 0;
+}
+#info .section.funding h3 {
+  color: #666;
 }
 /**
  * Control layer.
@@ -427,7 +484,7 @@ svg {
   border: 2px solid #aaa;
   font-family: Arial, Helvetica, sans-serif;
   color: #555;
-  pointer-events: auto;
+  /*pointer-events: auto;*/
   /*cursor: auto;*/
   clear: both;
 }
@@ -507,6 +564,16 @@ svg {
   color: #777;
   margin-left: 3px;
   margin-right: 5px;
+}
+.control .source {
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.control.track {
+  width: 140px;
+  padding: 5px;
 }
 
 .control.minimap {
@@ -676,8 +743,9 @@ path {
 
 .cities .anchor {
   stroke-linecap: round;
-  stroke: #000;
+  stroke: #fff;
   stroke-width: 1;
+  fill: #fff;
   pointer-events: none;
 }
 .cities .label {
@@ -696,13 +764,13 @@ path {
 .regions .region {
   fill: #777;
   fill-opacity: .4;
-  font-size: 1.5px;
+  font-size: 24px;
   font-weight: 300;
   text-anchor: middle;
   pointer-events: none;
 }
 
-.track {
+path.track {
   fill: none;
   stroke: rgba(161, 217, 155, 0.3);
   stroke-width: 5;
