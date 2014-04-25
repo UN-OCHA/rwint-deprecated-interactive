@@ -11,6 +11,8 @@
     window.sections = {};
   }
 
+  var IE = (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.appVersion.indexOf('Trident/') > 0);
+
   window.sections.map = function (id) {
     function getPixelRatio(context) {
       var backingStore = context.backingStorePixelRatio ||
@@ -68,6 +70,9 @@
 
         tooltip.style('display', 'block')
             .html('<span class="name">' + name + '</span>' + values);
+
+        tooltipWidth = getWidth(tooltip.node());
+        tooltipContainerWidth = getWidth(layerMarker.node());
       }
     }
 
@@ -76,16 +81,17 @@
     }
 
     function moveTooltip() {
-      var position = d3.mouse(container.node()),
-          x = position[0],
-          y = position[1],
-          w = parseInt(tooltip.style('width'), 10),
-          right = (x > parseInt(container.style('width'), 10) / 2);
+      var event = d3.event,
+          x = event.layerX,
+          y = event.layerY,
+          w = tooltipWidth,
+          right = (x > tooltipContainerWidth / 2);
 
-      tooltip.classed('left', right).classed('right', !right)
+      tooltip
+          .attr('class', 'tooltip ' + (right ? 'left' : 'right'))
           .style({
             'top': (y - 16) + 'px',
-            'left': (right ? x - 32 - w : x + 16) + 'px'
+            'left': (right ? x - 16 - w : x + 16) + 'px'
           });
     }
 
@@ -105,12 +111,13 @@
         }
       }
 
-      control.append('select')
+      control.html('Figures by date<br/><select>' + options.reverse().join('') + '</select>');
+
+      control.select('select')
           .on('change', function () {
             dateCurrent = parseInt(this.value, 10);
             updateMap();
-          })
-          .html(options.reverse().join(''));
+          });
     }
 
     function addIndexSelector() {
@@ -184,6 +191,12 @@
               layer.style('display', target.checked ? 'block' : 'none');
             }
           });
+
+      // Internet Explorer...
+      if (IE) {
+        // Disable marker on track path...
+        layer.style('marker-mid', 'none');
+      }
     }
 
     function addMiniMap(data) {
@@ -595,17 +608,14 @@
           .attr('class', 'anchor')
           .attr('cx', function (d) { return d.geometry.coordinates[0]; })
           .attr('cy', function (d) { return d.geometry.coordinates[1]; })
-          .attr('r', 6)
-          .attr('vector-effect', 'non-scaling-stroke');
+          .attr('r', 6);
 
       citiesGroup.selectAll('label')
           .data(features)
         .enter().append('text')
           .attr('class', 'label')
-          //.attr('transform', function (d) { return 'translate(' + d.geometry.coordinates + ')'; })
           .attr('x', function (d) { return d.geometry.coordinates[0]; })
           .attr('y', function (d) { return d.geometry.coordinates[1]; })
-          //.attr('dx', '-6')
           .text(function (d) { return d.properties.name + ' \u272A'; });
 
       addZoom();
@@ -614,6 +624,16 @@
       addLegend();
       addTrack(track);
       addMiniMap(country);
+
+
+      // Internet Explorer...
+      if (IE) {
+        // Store the stroke-width property for retrieval when zooming.
+        d3.selectAll('path[vector-effect=non-scaling-stroke')
+            .attr('data-stroke-width', function () {
+              return parseFloat(d3.select(this).style('stroke-width'));
+            });
+      }
 
       createZoom(country.bbox, width, height);
     }
@@ -671,6 +691,15 @@
 
       d3.selectAll('.regions .region')
           .style('font-size', 24 / scale + 'px');
+
+      // Internet Explorer...
+      if (IE) {
+        // Scale stroke width as 'non-scaling-stroke' is not supported...
+        d3.selectAll('path[vector-effect=non-scaling-stroke')
+            .style('stroke-width', function () {
+              return d3.select(this).attr('data-stroke-width') / scale;
+            });
+      }
     }
 
     function setData(data) {
@@ -1029,7 +1058,7 @@
 
       createPie(section.select('.icon-covered'), appeal);
 
-      createGraph(section, "Funding by clusters (USD)", clusters)
+      createGraph(section, "Funding by clusters (USD)", clusters);
 
       section.append('h3')
           .html("Total funding to emergency");
@@ -1084,6 +1113,11 @@
           });
     }
 
+    function getWidth(element) {
+      var b = element.getBoundingClientRect();
+      return b.right - b.left;
+    }
+
     /********
      * Main *
      ********/
@@ -1114,6 +1148,10 @@
     var tooltip = layerMarker.append('div')
         .style('display', 'none')
         .attr('class', 'tooltip right');
+
+    // Keep a reference of the tooltip width of performance while moving it.
+    var tooltipWidth = 0,
+        tooltipContainerWidth = 0;
 
     var projection = d3.geo.mercator()
         .scale(width / 2 / Math.PI)

@@ -229,6 +229,7 @@ svg {
   left: 400px;
   right: 0;
   bottom: 0;
+  overflow: hidden;
 }
 .layer-map {
   position: relative;
@@ -743,8 +744,7 @@ path {
 
 .cities .anchor {
   stroke-linecap: round;
-  stroke: #fff;
-  stroke-width: 1;
+  stroke: none;
   fill: #fff;
   pointer-events: none;
 }
