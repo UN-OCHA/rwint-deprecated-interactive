@@ -6,6 +6,7 @@
 <title>ReliefWeb Labs - Philippines: Typhoon Haiyan</title>
 <link rel="icon" type="image/ico" href="favicon.ico">
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+<script src="js/spin.min.js"></script>
 </head>
 <body>
 
@@ -32,6 +33,12 @@
           <h3>Timeline of events</h3>
           <iframe id="timeline" src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Ap0itMVUpmqcdGlPaXRfbDctT3lYRS10MGpoVDVNMUE&font=PT&maptype=TERRAIN&lang=en&height=700' width='100%' height='700' frameborder='0'></iframe>
         </div>
+        <script>
+          var spinner = new Spinner().spin(document.querySelector('#info .section.overview'));
+          document.getElementById('timeline').onload = function() {
+            spinner.stop();
+          };
+        </script>
       </li>
       <li>
         <input type="radio" name="tabs" id="tab2"/>
@@ -68,9 +75,8 @@
 </div>
 
 <!-- Libraries -->
-<script src="js/hidpi-canvas.js"></script>
+<script src="js/hidpi-canvas.min.js"></script>
 <script src="js/simple_statistics.js"></script>
-<script src="js/spin.min.js"></script>
 <script src="js/d3.v3.min.js"></script>
 <script src="js/topojson.v1.min.js"></script>
 <script src="js/queue.v1.min.js"></script>
@@ -78,15 +84,7 @@
 
 <!-- Application -->
 <script src="js/section.map.js"></script>
-<script>
-(function () {
-  var spinner = new Spinner().spin(document.querySelector('#info .section.overview'));
-  document.getElementById('timeline').onload = function() {
-    spinner.stop();
-  };
-  sections.map('map').load();
-})();
-</script>
+<script>sections.map('map').load();</script>
 
 </body>
 </html>
