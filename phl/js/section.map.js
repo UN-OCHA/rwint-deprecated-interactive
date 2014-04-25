@@ -127,7 +127,7 @@
             var checked = (k === activeIndex ? ' checked="checked"' : '');
             return '<input type="radio" name="selection" id="selector-' + k + '" value="' + k + '" ' + checked + '/>' +
                    '<label for="selector-' + k + '"><i class="icon-' + k + '"></i>' + indexes[k] + '</label>';
-          }).join('<br/>'))
+          }).join('<br/>') + '<div class="source">Source: <a href="http://www.dswd.gov.ph/">DROMIC</a></div>')
           .on('click', function() {
             var target = d3.event.target;
             if (target.name === 'selection') {
@@ -163,7 +163,7 @@
           }).reverse().join('<br/>');
 
       html = '<h4><i class="icon-' + activeIndex + '"></i>' + indexes[activeIndex] + '</h4>' + html;
-      html += '<div class="source">Source: DROMIC</div>';
+      html += '<div class="source">Source: <a href="http://www.dswd.gov.ph/">DROMIC</a></div>';
 
       layerControl.select('.control.legend').html(html);
     }
@@ -184,7 +184,7 @@
           .attr('class', 'control track')
           .html('<input type="checkbox" name="track" id="track" value="1" checked/>' +
                 '<label for="track">Typhoon track</label>' +
-                '<div class="source">Source: UNISYS</div>')
+                '<div class="source">Source: <a href="http://www.unisys.com/">UNISYS</a></div>')
           .on('click', function() {
             var target = d3.event.target;
             if (target.name === 'track') {
@@ -471,7 +471,8 @@
       createGraph(section, 'Displaced people', 'IDP', regions);
 
       section.append('p')
-        .html('Source: DROMIC');
+        .attr('class', 'source')
+        .html('Source: <a href="http://www.dswd.gov.ph/">DROMIC</a>');
 
       // Damages section
       var section = d3.select('#info .section.damages');
@@ -485,7 +486,8 @@
       createGraph(section, 'Damaged houses', 'damagedHouses', regions);
 
       section.append('p')
-        .html('Source: DROMIC');
+        .attr('class', 'source')
+        .html('Source: <a href="http://www.dswd.gov.ph/">DROMIC</a>');
     }
 
     // Draw the map.
@@ -919,7 +921,7 @@
         var xAxis = d3.svg.axis()
             .scale(xScale)
             .orient("bottom")
-            .tickFormat(formatter)
+            .tickFormat(labelFormatter)
             .ticks(6);
 
         svg.selectAll("grid")
@@ -1069,7 +1071,8 @@
             '<em>funded</em></div></div>');
 
       section.append('p')
-        .html('Source: FTS');
+        .attr('class', 'source')
+        .html('Source: <a href="http://fts.unocha.org/">FTS</a>');
     }
 
     // Load the map data.

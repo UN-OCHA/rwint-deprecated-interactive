@@ -429,6 +429,10 @@ svg {
 #info .section.funding h3 {
   color: #666;
 }
+.source a {
+  color: #666;
+}
+
 /**
  * Control layer.
  */
