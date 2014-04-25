@@ -200,7 +200,7 @@
     }
 
     function addMiniMap(data) {
-      var control = layerControl.select('.bottom.right').append('div')
+      var control = layerControl.select('.bottom.left').append('div')
           .attr('class', 'control minimap');
 
       var width = 150,
