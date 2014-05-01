@@ -1,4 +1,4 @@
-interactive
-===========
+ReliefWeb Labs - Interactive Maps
+=================================
 
-test
+This project aims at providing visualization of data for different humanitarian situations.
