@@ -11,12 +11,7 @@
 <body>
 
 <div id="header">
-  <a href="/" class="title">Philippines: Typhoon Haiyan - Interactive</a>
-  <a href="http://reliefweb.int/disaster/tc-2013-000139-phl" class="link" target="_blank">ReliefWeb</a>
-  <a href="https://philippines.humanitarianresponse.info/" class="link" target="_blank">Humanitarian Info</a>
-  <a href="http://www.unocha.org/crisis/typhoonhaiyan" class="link" target="_blank">OCHA</a>
-  <a href="http://fts.unocha.org/pageloader.aspx?page=emerg-emergencyDetails&amp;appealID=1043" class="link" target="_blank">FTS</a>
-  <a href="http://unocha.org" target="_blank" class="ocha" title="UN OCHA"><img src="css/images/logo-ocha.png" /></a>
+  <a href="#" class="title">Philippines: Typhoon Haiyan - Interactive</a>
 </div>
 
 <div id="content">
@@ -28,11 +23,12 @@
         <div class="section overview">
           <h2>Overview</h2>
           <h3>Typhoon Haiyan</h3>
-          <p>Typhoon Haiyan (known locally as Yolanda) made first landfall in the early morning of 8 November 2013 in the Philippines, devastating nine regions and affecting over 15 million people. More than 5,000 were confirmed deaths.</p>
-          <HR color="#026CB6" size="1" NOSHADE>
+          <p>Typhoon Haiyan (known locally as Yolanda) made first landfall in the early morning of 8 November 2013 in the Philippines, devastating nine regions and affecting over 15 million people. More than 5,000 people were killed.</p>
+          <hr/>
           <h3>Timeline of events</h3>
-          <iframe id="timeline" src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Ap0itMVUpmqcdGlPaXRfbDctT3lYRS10MGpoVDVNMUE&font=PT&maptype=TERRAIN&lang=en&height=700' width='100%' height='700' frameborder='0'></iframe>
+          <iframe id="timeline" src='http://cdn.knightlab.com/libs/timeline/latest/embed/index.html?source=0Ap0itMVUpmqcdGlPaXRfbDctT3lYRS10MGpoVDVNMUE&amp;font=PT&amp;maptype=TERRAIN&amp;lang=en&amp;height=700' width='100%' height='700' frameborder='0'></iframe>
         </div>
+        <!-- Timeframe Loading -->
         <script>
           var spinner = new Spinner().spin(document.querySelector('#info .section.overview'));
           document.getElementById('timeline').onload = function() {
@@ -45,7 +41,7 @@
         <label for="tab2">Affected People</label>
         <div class="section affected-people">
           <h2>Affected people</h2>
-          <p>An estimated 13 million people in nine regions—over 10 per cent of the country's population—are affected. At least 3 million people are displaced by the typhoon. Thousands of people have been killed or are still missing. Tens of thousands suffering from injuries.</p>
+          <p>An estimated 13 million people in nine regions—over 10 per cent of the country's population—were affected. At least 3 million people were displaced by the typhoon. Thousands of people were killed or are still missing. Tens of thousands were injured.</p>
         </div>
       </li>
       <li>
@@ -53,7 +49,7 @@
         <label for="tab3">Damages</label>
         <div class="section damages">
           <h2>Damages</h2>
-          <p>The typhoon caused incredible destruction to shelter and housing in many communities along its path. Many cities and towns experienced widespread destruction, with as much as 90 per cent of housing destroyed in some areas. Inferior quality materials and poor construction underscore much of the devastation to houses: observations from the field confirm that many of the houses destroyed were built from wood and other fragile materials. The priority is to support self-recovery while also ensuring safe temporary shelter for those unable to repair or reconstruct their homes.</p>
+          <p>The typhoon caused incredible destruction to shelter in many communities. Many cities and towns experienced widespread destruction, with as much as 90 per cent of housing destroyed in some areas. The priority is to support self-recovery while also ensuring safe temporary shelter for those unable to repair or reconstruct their homes.</p>
         </div>
       </li>
       <li>
@@ -61,7 +57,7 @@
         <label for="tab4">Funding</label>
         <div class="section funding">
           <h2>Funding</h2>
-          <p>In November 2013, the United Nations and its partners have launched their humanitarian plans for 2014 with the appeal totalling US$791 billion to support the Government of the Philippines' response to the immediate humanitarian needs of the people affected by Typhoon Haiyan (Yolanda) and complements the Government's Yolanda Rehabilitation and Recovery Plan.</p>
+          <p>In November 2013, the United Nations and its partners have launched an appeal for 2014 totalling US$791 million to support the Government of the Philippines' response to the immediate humanitarian needs of the people affected by Typhoon Haiyan (Yolanda).  The appeal complements the Government's Yolanda Rehabilitation and Recovery Plan.</p>
         </div>
       </li>
     </ul>
@@ -70,6 +66,8 @@
 </div>
 
 <div id="footer">
+  <a href="http://unocha.org" target="_blank" class="logo ocha" title="UN OCHA"><img src="css/images/logo-ocha.png" alt="un ocha"/></a>
+  <a href="http://reliefweb.int" target="_blank" class="logo reliefweb" title="ReliefWeb"><img src="css/images/logo-reliefweb.png" alt="reliefweb"/></a>
   <div class="sources">Basemap sources: UNCS, Government of Philippines</div>
   <div class="disclaimer">Disclaimer: The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</div>
 </div>

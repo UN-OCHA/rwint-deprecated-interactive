@@ -34,6 +34,12 @@ i {
   font-style: normal;
 }
 
+hr {
+  border: 0;
+  height: 1px;
+  background: #026CB6;
+}
+
 svg {
   cursor: default;
 }
@@ -94,7 +100,7 @@ svg {
   font-weight: bold;
 }
 .tooltip i {
-  font-size: 10px;
+  font-size: 14px;
   margin: 0 2px 0 6px;
 }
 .tooltip {
@@ -102,7 +108,8 @@ svg {
   background: rgba(235, 235, 235, 0.81);
   background-clip: padding-box;
   border-color: #777;
-  border-color: rgba(0, 0, 0, 0.25);
+  /*border-color: rgba(0, 0, 0, 0.25);*/
+  border-color: rgba(255, 255, 255, 0.9);
   border-radius: 4px;
   border-style: solid;
   border-width: 4px;
@@ -214,12 +221,33 @@ svg {
 #footer {
   background: #026CB6;
   z-index: 2;
-  overflow-y: auto;
+  overflow-y: hidden;
   padding: 3px;
   font-size: 9px;
   color: #fff;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
+}
+
+#footer .logo {
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+#footer .logo.ocha {
+  padding: 2px 0;
+}
+#footer .logo.ocha img {
+  height: 30px;
+}
+#footer .logo.reliefweb {
+  padding: 9px 0;
+}
+#footer .logo.reliefweb img {
+  height: 19px;
+}
+#footer div {
+  padding-left: 185px;
 }
 
 #map {
@@ -265,14 +293,13 @@ svg {
   font-size: 14px;
   color: #666;
   font-weight: bold;
-  padding: 5px 0px;
+  padding: 5px;
   margin-left: 2px;
-  /*border: 1px solid #999;*/
-  /*background: #dadada;*/
+  border: 1px solid #999;
+  background: #dadada;
   list-style: none;
   cursor: pointer;
   display: inline-block;
-  height: 25px;
   position: relative;
   z-index: 2;
   -moz-box-sizing: border-box;
@@ -281,7 +308,7 @@ svg {
 #info .tabs li:first-child > label {
   margin-left: 5px;
 }
-#info .tabs li > label:after {
+/*#info .tabs li > label:after {
   content: "▸";
   font-size: 20px;
   margin-top: -5px;
@@ -293,18 +320,18 @@ svg {
 }
 #info .tabs li:last-child > label:after {
   display: none;
-}
+}*/
 #info .tabs li > label:hover {
   color: #333;
-  /*background: #bababa;*/
+  background: #bababa;
 }
 #info .section {
-  border-top: 2px solid #026CB6;
+  border-top: 1px solid #999;
   display: none;
   position: absolute;
   top: 24px;
   padding: 10px;
-  margin-top: 5px;
+  margin-top: 4px;
   color: #000;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -320,9 +347,9 @@ svg {
 }
 #info .tabs li > input[name=tabs]:checked + label,
 #info .tabs li > input[name=tabs]:checked + label:after {
-  /*background: #fff;*/
+  background: #fff;
   color: #026CB6;
-  /*border-bottom: 1px solid #fff;*/
+  border-bottom: 1px solid #fff;
 }
 #info #timeline {
   width: 100%;
@@ -529,7 +556,7 @@ svg {
 }
 
 .control.selector i {
-  font-size: 12px;
+  font-size: 14px;
   margin-left: 3px;
   margin-right: 5px;
 }
@@ -566,6 +593,7 @@ svg {
 }
 
 .control.legend h4 i {
+  font-size: 14px;
   color: #777;
   margin-left: 3px;
   margin-right: 5px;

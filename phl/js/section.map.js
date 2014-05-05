@@ -240,7 +240,7 @@
               var x = c[0]  +  (d3.event.offsetX - width / 2) / s,
                   y = c[1]  +  (d3.event.offsetY - height / 2) / s;
 
-              handleZoom(x, y, d3.event.shiftKey ? 0.5 : 2);
+              handleZoom(x, y, d3.event.shiftKey ? 0.5 : 2, true);
               d3.event.preventDefault();
             },
             'mousedown': function () {
@@ -828,7 +828,8 @@
 
       svgContainer.on('dblclick', function () {
         var l = mouse();
-        update(l[0], l[1], d3.event.shiftKey ? 0.5 : 2);
+        //update(l[0], l[1], d3.event.shiftKey ? 0.5 : 2);
+        handleZoom(l[0], l[1], d3.event.shiftKey ? 0.5 : 2, false);
         d3.event.preventDefault();
       });
 
@@ -857,12 +858,18 @@
 
       update(c[0], c[1], s);
 
-      handleZoom = function (dx, dy, scale) {
-        if (dx && dy) {
-          scale *= matrix[0];
-          matrix = [1, 0, 0, 1, 0, 0];
+      var ox = matrix[4], oy = matrix[5];
+
+      handleZoom = function (dx, dy, scale, reset) {
+        // Limit the zoom.
+        var ns = scale * matrix[0];
+        if (ns >= s && ns < s * 32) {
+          if (reset && dx && dy) {
+            scale *= matrix[0];
+            matrix = [1, 0, 0, 1, 0, 0];
+          }
+          update(dx, dy, scale);
         }
-        update(dx, dy, scale);
       };
 
       handleTranslate = function(dx, dy) {
