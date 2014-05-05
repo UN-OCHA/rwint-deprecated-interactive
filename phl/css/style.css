@@ -1,7 +1,20 @@
 @font-face {
   font-family: 'humanitarian_icons';
   src: url("fonts/humanitarian_icons.eot");
-  src: url("fonts/humanitarian_icons.eot?#iefix") format("embedded-opentype"), url("fonts/humanitarian_icons.ttf") format("truetype"), url("fonts/humanitarian_icons.woff") format("woff"), url("fonts/humanitarian_icons.svg#icomoon") format("svg");
+  src: url("fonts/humanitarian_icons.eot?#iefix") format("embedded-opentype"),
+    url("fonts/humanitarian_icons.ttf") format("truetype"),
+    url("fonts/humanitarian_icons.woff") format("woff"),
+    url("fonts/humanitarian_icons.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'social';
+  src:url('fonts/social.eot?-pmdvh1');
+  src:url('fonts/social.eot?#iefix-pmdvh1') format('embedded-opentype'),
+    url('fonts/social.woff?-pmdvh1') format('woff'),
+    url('fonts/social.ttf?-pmdvh1') format('truetype'),
+    url('fonts/social.svg?-pmdvh1#social') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -217,6 +230,32 @@ svg {
 #header .link {
   margin-left: 30px;
 }
+
+#header span {
+  color: white;
+  float: right;
+  font-size: 26px;
+  margin-right: 10px;
+  margin-top: 6px;
+  cursor: pointer;
+}
+#header .st_googleplus_custom:before {
+  font-family: 'social';
+  content: "\e600";
+}
+#header .st_facebook_custom:before {
+  font-family: 'social';
+  content: "\e601";
+}
+#header .st_twitter_custom:before {
+  font-family: 'social';
+  content: "\e602";
+}
+#header .st_pinterest_custom:before {
+  font-family: 'social';
+  content: "\e603";
+}
+
 
 #footer {
   background: #026CB6;
